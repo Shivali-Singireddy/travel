@@ -9,7 +9,7 @@ function Article({ article }: { article: ArticleWithSlug }) {
   return (
     <article className="md:grid md:grid-cols-4 md:items-baseline">
       <Card className="md:col-span-3">
-        <Card.Title href={`/articles/${blog.slug}`}>
+        <Card.Title href={`/blog/${article.slug}`}>
           {article.title}
         </Card.Title>
         <Card.Eyebrow
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     'All of my long-form thoughts on programming, leadership, product design, and more, collected in chronological order.',
 }
 
-export default async function ArticlesIndex() {
+export default async function BlogIndex() {
   let articles = await getAllArticles()
 
   return (
