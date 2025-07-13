@@ -41,16 +41,16 @@ function Appearance({
 }
 
 export const metadata: Metadata = {
-  title: 'Africa',
+  title: 'Countries',
   description:
-    'About my travels in Africa.',
+    'About my travels',
 }
 
 export default function Speaking() {
   return (
     <SimpleLayout
-      title="About my travels to Africa"
-      intro="One of my favorite ways to share my ideas is live on stage, where there’s so much more communication bandwidth than there is in writing, and I love podcast interviews because they give me the opportunity to answer questions instead of just present my opinions."
+      title="About my travels to different countries"
+      intro="I am splitting this up by country"
     >
       <div className="space-y-20">
         <SpeakingSection title="Conferences">
