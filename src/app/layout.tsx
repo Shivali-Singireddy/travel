@@ -7,9 +7,9 @@ import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Spencer Sharp',
+    template: '%s - Shivali Singireddy',
     default:
-      'Shivali Singireddy - Software designer, founder, and amateur astronaut',
+      'Shivali Singireddy - Traveler, Consultant',
   },
   description:
     'I’m Shivali.',
