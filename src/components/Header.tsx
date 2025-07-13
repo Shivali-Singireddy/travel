@@ -226,10 +226,8 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<'nav'>) {
     { label: 'Asia', href: '/continents/asia' },
   ]}
 />
+        <NavItem href="/blog">Personal Blog</NavItem>
         <NavItem href="/about">About</NavItem>
-        <NavItem href="/articles">Articles</NavItem>
-        <NavItem href="/projects">Projects</NavItem>
-        <NavItem href="/uses">Uses</NavItem>
       </ul>
     </nav>
   )
