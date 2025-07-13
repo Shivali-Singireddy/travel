@@ -15,7 +15,6 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import avatarImage from '@/images/avatar.jpg'
-import { useState } from 'react'
 import { Transition } from '@headlessui/react'
 
 function CloseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
