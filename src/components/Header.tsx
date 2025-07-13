@@ -165,6 +165,7 @@ function NavItem({
 
 type DropdownNavItemProps = {
   label: string
+  href: string
   items: {
     label: string
     href: string
