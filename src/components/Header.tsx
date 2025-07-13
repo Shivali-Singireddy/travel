@@ -189,14 +189,6 @@ function DropdownNavItem() {
         <ul className="absolute left-0 mt-2 w-48 rounded-md bg-white shadow-lg ring-1 ring-black/5 dark:bg-zinc-800 dark:ring-white/10">
           <li>
             <Link
-              href="/continents/south_america"
-              className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-zinc-700"
-            >
-              Asia
-            </Link>
-          </li>
-          <li>
-            <Link
               href="/continents/europe"
               className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-zinc-700"
             >
@@ -205,10 +197,34 @@ function DropdownNavItem() {
           </li>
           <li>
             <Link
+              href="/continents/north_america"
+              className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-zinc-700"
+            >
+              North America
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/continents/south_america"
+              className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-zinc-700"
+            >
+              South America
+            </Link>
+          </li>
+          <li>
+            <Link
               href="/continents/africa"
               className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-zinc-700"
             >
               Africa
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/continents/asia"
+              className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-zinc-700"
+            >
+              Asia
             </Link>
           </li>
         </ul>
