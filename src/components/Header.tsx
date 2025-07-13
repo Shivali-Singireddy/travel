@@ -124,7 +124,7 @@ function MobileNavigation(
             <MobileNavItem href="/about">About</MobileNavItem>
             <MobileNavItem href="/articles">Articles</MobileNavItem>
             <MobileNavItem href="/projects">Projects</MobileNavItem>
-            <MobileNavItem href="/speaking">Speaking</MobileNavItem>
+            <MobileNavItem href="/continents">Continents</MobileNavItem>
             <MobileNavItem href="/uses">Uses</MobileNavItem>
           </ul>
         </nav>
@@ -162,14 +162,69 @@ function NavItem({
   )
 }
 
+
+function DropdownNavItem() {
+  const [isOpen, setIsOpen] = useState(false)
+
+  return (
+    <li
+      className="relative"
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
+    >
+      <button
+        className="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400"
+      >
+        Continents
+      </button>
+      <Transition
+        show={isOpen}
+        enter="transition ease-out duration-100"
+        enterFrom="transform opacity-0 scale-95"
+        enterTo="transform opacity-100 scale-100"
+        leave="transition ease-in duration-75"
+        leaveFrom="transform opacity-100 scale-100"
+        leaveTo="transform opacity-0 scale-95"
+      >
+        <ul className="absolute left-0 mt-2 w-48 rounded-md bg-white shadow-lg ring-1 ring-black/5 dark:bg-zinc-800 dark:ring-white/10">
+          <li>
+            <Link
+              href="/continents/south_america"
+              className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-zinc-700"
+            >
+              Asia
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/continents/europe"
+              className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-zinc-700"
+            >
+              Europe
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/continents/africa"
+              className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-zinc-700"
+            >
+              Africa
+            </Link>
+          </li>
+        </ul>
+      </Transition>
+    </li>
+  )
+}
+
 function DesktopNavigation(props: React.ComponentPropsWithoutRef<'nav'>) {
   return (
     <nav {...props}>
       <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg ring-1 shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
+        <DropdownNavItem href="/continents">Continents</DropdownNavItem>
         <NavItem href="/about">About</NavItem>
         <NavItem href="/articles">Articles</NavItem>
         <NavItem href="/projects">Projects</NavItem>
-        <NavItem href="/continents">Continents</NavItem>
         <NavItem href="/uses">Uses</NavItem>
       </ul>
     </nav>
