@@ -41,15 +41,15 @@ function Appearance({
 }
 
 export const metadata: Metadata = {
-  title: 'Countries',
+  title: 'Continents',
   description:
     'About my travels',
 }
 
-export default function Speaking() {
+export default function Continents() {
   return (
     <SimpleLayout
-      title="About my travels to different countries"
+      title="About my travels to different continents"
       intro="I am splitting this up by country"
     >
       <div className="space-y-20">
