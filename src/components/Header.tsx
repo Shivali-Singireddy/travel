@@ -122,11 +122,9 @@ function MobileNavigation(
         </div>
         <nav className="mt-6">
           <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
+            <MobileNavItem href="/continents">Destinations</MobileNavItem>
+            <MobileNavItem href="/blog">Personal Blog</MobileNavItem>
             <MobileNavItem href="/about">About</MobileNavItem>
-            <MobileNavItem href="/articles">Articles</MobileNavItem>
-            <MobileNavItem href="/projects">Projects</MobileNavItem>
-            <MobileNavItem href="/continents">Continents</MobileNavItem>
-            <MobileNavItem href="/uses">Uses</MobileNavItem>
           </ul>
         </nav>
       </PopoverPanel>
@@ -221,7 +219,7 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<'nav'>) {
         
         <NavItem href="/">Home</NavItem>
         <DropdownNavItem
-            label="Continents"
+            label="Destinations"
             href="/continents"
             items={[
               { label: 'Europe', href: '/continents/europe' },
