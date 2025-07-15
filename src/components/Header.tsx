@@ -216,8 +216,8 @@ export function DropdownNavItem({ label, items }: DropdownNavItemProps) {
 
 function DesktopNavigation(props: React.ComponentPropsWithoutRef<'nav'>) {
   return (
-    <nav {...props}>
-      <ul className="flex justify-center space-x-6 text-base font-semibold text-purple-900 dark:text-purple-200">
+    <nav {...props} className="w-full">
+      <ul className="flex w-full justify-between px-8 text-base font-semibold text-purple-900 dark:text-purple-200 bg-transparent">
         <NavItem href="/">Home</NavItem>
         <DropdownNavItem
           label="Destinations"
@@ -460,9 +460,9 @@ export function Header() {
                   }}
                 />
                 <div className="flex flex-1">
-{/*                   <AvatarContainer> */}
-                  <Avatar />
-{/*                   </AvatarContainer> */}
+                  <AvatarContainer>
+                    <Avatar />
+                  </AvatarContainer>
                 </div>
               </div>
             </div>
