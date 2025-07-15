@@ -449,7 +449,7 @@ export function Header() {
               position: 'var(--header-inner-position)' as React.CSSProperties['position'],
             }}
           >
-            <div className="absolute top-3 left-0 origin-left transition-opacity">
+            <div className="absolute top-3 left-0 origin-left">
               <AvatarContainer>
                 <Avatar />
               </AvatarContainer>
