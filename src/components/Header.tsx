@@ -456,38 +456,6 @@ export function Header() {
             ref={avatarRef}
             className="order-last mt-[calc(--spacing(16)-(--spacing(3)))]"
           />
-
-{/*           <Container
-            className="top-0 order-last -mb-3 pt-3"
-            style={{
-              position:
-                'var(--header-position)' as React.CSSProperties['position'],
-            }}
-          >
-            <div
-              className="w-full max-w-none px-6 top-(--header-top,--spacing(6))"
-              style={{
-                position:
-                  'var(--header-inner-position)' as React.CSSProperties['position'],
-              }}
-            >
-              <div className="relative">
-                <AvatarContainer
-                  className="absolute top-3 left-0 origin-left transition-opacity"
-                  style={{
-                    opacity: 'var(--avatar-border-opacity, 0)',
-                    transform: 'var(--avatar-border-transform)',
-                  }}
-                />
-                <AvatarContainer className="absolute top-3 left-0 origin-left transition-opacity" />
-                <div className="flex flex-1">
-                  <AvatarContainer>
-                    <Avatar />
-                  </AvatarContainer>
-                </div>
-              </div>
-            </div>
-          </Container> */}
 {/*           </>
         )} */}
         <div
@@ -499,11 +467,11 @@ export function Header() {
           }}
         >
             <div className="flex w-full items-center justify-between bg-purple-100 dark:bg-purple-900 px-6 py-4 shadow-md">
-              <div className="flex flex-1 justify-end md:justify-center">
-                <MobileNavigation className="pointer-events-auto md:hidden" />
-                <DesktopNavigation className="pointer-events-auto hidden md:block" />
-              </div>
-              <div className="flex justify-end md:flex-1">
+{/*               <div className="flex flex-1 justify-end md:justify-center">
+              <MobileNavigation className="pointer-events-auto md:hidden" /> */}
+              <DesktopNavigation className="pointer-events-auto hidden md:block" />
+{/*               </div>
+              <div className="flex justify-end md:flex-1"> */}
                 <div className="pointer-events-auto">
                   <ThemeToggle />
                 </div>
