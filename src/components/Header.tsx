@@ -476,7 +476,7 @@ export function Header() {
               </div>
             </div> */}
           <div className="bg-purple-100 dark:bg-purple-900 px-6 py-4 shadow-md">
-            <div className="mx-auto flex max-w-fit items-center gap-4">
+            <div className="mx-auto flex max-w-screen-md items-center justify-center gap-6">
               <div className="pointer-events-auto md:hidden">
                 <MobileNavigation />
               </div>
