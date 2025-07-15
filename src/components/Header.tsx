@@ -431,43 +431,43 @@ export function Header() {
           </div>
         </div> */}
         
-        {isHomePage && (
-          <>
+{/*         {isHomePage && (
+          <> */}
+          <div
+            ref={avatarRef}
+            className="order-last mt-[calc(--spacing(16)-(--spacing(3)))]"
+          />
+          <Container
+            className="top-0 order-last -mb-3 pt-3"
+            style={{
+              position:
+                'var(--header-position)' as React.CSSProperties['position'],
+            }}
+          >
             <div
-              ref={avatarRef}
-              className="order-last mt-[calc(--spacing(16)-(--spacing(3)))]"
-            />
-            <Container
-              className="top-0 order-last -mb-3 pt-3"
+              className="w-full max-w-none px-6 top-(--header-top,--spacing(6))"
               style={{
                 position:
-                  'var(--header-position)' as React.CSSProperties['position'],
+                  'var(--header-inner-position)' as React.CSSProperties['position'],
               }}
             >
-              <div
-                className="w-full max-w-none px-6 top-(--header-top,--spacing(6))"
-                style={{
-                  position:
-                    'var(--header-inner-position)' as React.CSSProperties['position'],
-                }}
-              >
-                <div className="relative">
-                  <AvatarContainer
-                    className="absolute top-3 left-0 origin-left transition-opacity"
-                    style={{
-                      opacity: 'var(--avatar-border-opacity, 0)',
-                      transform: 'var(--avatar-border-transform)',
-                    }}
-                  />
-                  <Avatar
-                    large
-                    className="block h-16 w-16 origin-left"
-                    style={{ transform: 'var(--avatar-image-transform)' }}
-                  />
-                </div>
+              <div className="relative">
+                <AvatarContainer
+                  className="absolute top-3 left-0 origin-left transition-opacity"
+                  style={{
+                    opacity: 'var(--avatar-border-opacity, 0)',
+                    transform: 'var(--avatar-border-transform)',
+                  }}
+                />
+                <Avatar
+                  large
+                  className="block h-16 w-16 origin-left"
+                  style={{ transform: 'var(--avatar-image-transform)' }}
+                />
               </div>
-            </Container>
-          </>
+            </div>
+          </Container>
+{/*           </> */}
         )}
         <div
           ref={headerRef}
@@ -497,12 +497,12 @@ export function Header() {
             </div>
         </div>
       </header>
-      {isHomePage && (
+{/*       {isHomePage && (
         <div
           className="flex-none"
           style={{ height: 'var(--content-offset)' }}
         />
-      )}
+      )} */}
     </>
   )
 }
