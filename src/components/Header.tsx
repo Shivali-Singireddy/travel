@@ -459,13 +459,12 @@ export function Header() {
                     transform: 'var(--avatar-border-transform)',
                   }}
                 />
-                <AvatarContainer>
-                  <Avatar
-                     large
-                    className="block h-16 w-16 origin-left"
-                    style={{ transform: 'var(--avatar-image-transform)' }}
-                  />
-                </AvatarContainer>
+                <div className="flex flex-1">
+                  <AvatarContainer>
+                    <Avatar />
+                  </AvatarContainer>
+                  )}
+                </div>
               </div>
             </div>
           </Container>
