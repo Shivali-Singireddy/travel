@@ -216,8 +216,8 @@ export function DropdownNavItem({ label, items }: DropdownNavItemProps) {
 
 function DesktopNavigation(props: React.ComponentPropsWithoutRef<'nav'>) {
   return (
-    <nav {...props} className="w-full">
-      <ul className="flex w-full justify-between px-8 text-base font-semibold text-purple-900 dark:text-purple-200 bg-transparent">
+    <nav {...props}>
+      <ul className="flex justify-center space-x-6 text-base font-semibold text-purple-900 dark:text-purple-200">
         <NavItem href="/">Home</NavItem>
         <DropdownNavItem
           label="Destinations"
