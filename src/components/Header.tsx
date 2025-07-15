@@ -16,6 +16,8 @@ import clsx from 'clsx'
 import { Container } from '@/components/Container'
 import avatarImage from '@/images/avatar.jpg'
 import { Transition } from '@headlessui/react'
+import headerImage from '@/images/heading.jpg'
+
 
 function CloseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -418,10 +420,10 @@ export function Header() {
       <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm dark:bg-zinc-800/90 shadow-md">
         <div className="bg-purple-100 dark:bg-purple-900 py-2 px-6 text-center">
           <div className="flex justify-center py-2">
-            <div className="relative w-[180px] sm:w-[220px] md:w-[260px] h-auto">
+            <div className="max-w-xs px-2.5 lg:px-0">
               <Image
-                src="@/images/heading.jpg"
-                alt="Heading logo"
+                src={headerImage}
+                alt=""
                 sizes="(min-width: 1024px) 32rem, 20rem"
                 className="w-full h-auto rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
               />
