@@ -459,11 +459,13 @@ export function Header() {
                     transform: 'var(--avatar-border-transform)',
                   }}
                 />
-                <Avatar
-                  large
-                  className="block h-16 w-16 origin-left"
-                  style={{ transform: 'var(--avatar-image-transform)' }}
-                />
+                <AvatarContainer>
+                  <Avatar
+                    large
+                    className="block h-16 w-16 origin-left"
+                    style={{ transform: 'var(--avatar-image-transform)' }}
+                  />
+                </AvatarContainer>
               </div>
             </div>
           </Container>
@@ -479,11 +481,11 @@ export function Header() {
         >
             <div className="flex w-full items-center justify-between bg-purple-100 dark:bg-purple-900 px-6 py-4 shadow-md">
               <div className="flex flex-1">
-                {!isHomePage && (
+{/*                 {!isHomePage && (
                   <AvatarContainer>
                     <Avatar />
                   </AvatarContainer>
-                )}
+                )} */}
               </div>
               <div className="flex flex-1 justify-end md:justify-center">
                 <MobileNavigation className="pointer-events-auto md:hidden" />
@@ -497,12 +499,12 @@ export function Header() {
             </div>
         </div>
       </header>
-{/*       {isHomePage && (
+    {isHomePage && (
         <div
           className="flex-none"
           style={{ height: 'var(--content-offset)' }}
         />
-      )} */}
+      )}
     </>
   )
 }
