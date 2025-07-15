@@ -215,7 +215,7 @@ export function DropdownNavItem({ label, items }: DropdownNavItemProps) {
 function DesktopNavigation(props: React.ComponentPropsWithoutRef<'nav'>) {
   return (
     <nav {...props}>
-      <ul className="flex rounded-full bg-white/90 px-6 py-3 text-base font-semibold text-zinc-800 shadow-lg ring-1 shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
+      <ul className="flex w-full justify-around bg-purple-100 px-6 py-3 text-base font-semibold text-purple-800 shadow-md">
         
         <NavItem href="/">Home</NavItem>
         <DropdownNavItem
@@ -416,13 +416,16 @@ export function Header() {
 
   return (
     <>
-      <header
-        className="pointer-events-none relative z-50 flex flex-none flex-col"
-        style={{
-          height: 'var(--header-height)',
-          marginBottom: 'var(--header-mb)',
-        }}
-      >
+      <header className="fixed top-0 w-full z-50 bg-purple-100 text-purple-800 shadow-md">
+        <div className="w-full px-4 py-4">
+          <div className="flex items-center justify-between">
+            <Avatar />
+            <DesktopNavigation className="hidden md:flex" />
+            <MobileNavigation className="md:hidden" />
+            <ThemeToggle />
+          </div>
+        </Container>
+      </header>
         {isHomePage && (
           <>
             <div
