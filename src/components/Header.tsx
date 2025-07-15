@@ -420,7 +420,7 @@ export function Header() {
           <div className="flex justify-center py-2">
             <div className="relative w-[180px] sm:w-[220px] md:w-[260px] h-auto">
               <Image
-                src="/images/heading.png"
+                src="@/images/heading.png"
                 alt="Shivali logo"
                 layout="responsive"
                 width={260}
