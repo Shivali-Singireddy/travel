@@ -416,7 +416,7 @@ export function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-purple-100 backdrop-blur-sm dark:bg-zinc-800/90 shadow-md">
+      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm dark:bg-zinc-800/90 shadow-md">
         {isHomePage && (
           <>
             <div
@@ -470,7 +470,7 @@ export function Header() {
                 'var(--header-inner-position)' as React.CSSProperties['position'],
             }}
           >
-            <div className="relative flex gap-4">
+            <div className="relative flex gap-4 rounded-xl bg-purple-100 dark:bg-purple-900 px-4 py-2 shadow-md">
               <div className="flex flex-1">
                 {!isHomePage && (
                   <AvatarContainer>
