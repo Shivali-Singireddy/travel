@@ -462,7 +462,7 @@ export function Header() {
                 <div className="flex flex-1">
                   <AvatarContainer>
                     <Avatar />
-                  </AvatarContainer>
+{/*                   </AvatarContainer> */}
                 </div>
               </div>
             </div>
