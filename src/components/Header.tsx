@@ -418,9 +418,9 @@ export function Header() {
   return (
     <>
       <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm dark:bg-zinc-800/90 shadow-md">
-        <div className="bg-purple-100 dark:bg-purple-900 py-2 px-6 text-center">
+        <div className="flex w-full items-center justify-between bg-transparent px-6 py-4 shadow-md">
           <div className="flex justify-center py-2">
-            <div className="w-full px-0">
+            <div className="max-w-sm px-2.5 lg:px-0 mx-auto">
               <Image
                 src={headerImage}
                 alt=""
@@ -437,13 +437,13 @@ export function Header() {
               ref={avatarRef}
               className="order-last mt-[calc(--spacing(16)-(--spacing(3)))]"
             />
-            <Container
+{/*             <Container
               className="top-0 order-last -mb-3 pt-3"
               style={{
                 position:
                   'var(--header-position)' as React.CSSProperties['position'],
               }}
-            >
+            > */}
               <div
                 className="w-full max-w-none px-6 top-(--header-top,--spacing(6))"
                 style={{
