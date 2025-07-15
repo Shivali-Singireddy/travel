@@ -475,13 +475,13 @@ export function Header() {
                 </div>
               </div>
             </div> */}
-         <div className="bg-purple-100 dark:bg-purple-900 px-6 py-4 shadow-md">
-          <div className="mx-auto max-w-screen-md w-full flex items-center justify-between">
-            <MobileNavigation className="pointer-events-auto md:hidden" />
-            <DesktopNavigation className="pointer-events-auto hidden md:flex" />
-            <ThemeToggle />
+          <div className="bg-purple-100 dark:bg-purple-900 px-6 py-4 shadow-md">
+            <div className="mx-auto max-w-screen-md w-full flex items-center justify-between">
+              <MobileNavigation className="pointer-events-auto md:hidden" />
+              <DesktopNavigation className="pointer-events-auto hidden md:flex" />
+              <ThemeToggle />
+            </div>
           </div>
-        </div>
       </header>
     {isHomePage && (
         <div
