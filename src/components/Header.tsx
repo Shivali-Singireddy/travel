@@ -452,15 +452,16 @@ export function Header() {
               }}
             >
               <div className="relative">
-                <AvatarContainer
+{/*                 <AvatarContainer
                   className="absolute top-3 left-0 origin-left transition-opacity"
                   style={{
                     opacity: 'var(--avatar-border-opacity, 0)',
                     transform: 'var(--avatar-border-transform)',
                   }}
-                />
-{/*                 <div className="flex flex-1">
-                  <AvatarContainer> */}
+                /> */}
+                <AvatarContainer className="absolute top-3 left-0" />
+                <div className="flex flex-1">
+                  <AvatarContainer>
                     <Avatar />
                   </AvatarContainer>
                 </div>
