@@ -420,13 +420,13 @@ export function Header() {
       <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm dark:bg-zinc-800/90 shadow-md">
         <div className="bg-purple-100 dark:bg-purple-900 py-2 px-6 text-center">
           <div className="flex justify-center py-2">
-            <div className="max-w-xs px-2.5 lg:px-0">
+            <div className="w-full px-0">
               <Image
                 src={headerImage}
                 alt=""
-                sizes="(min-width: 1024px) 32rem, 20rem"
+                sizes="(min-width: 1024px) 100vw, 100vw"
                 className="w-full h-auto rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
-              />
+                />
             </div>
           </div>
         </div>
