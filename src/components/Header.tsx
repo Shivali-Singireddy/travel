@@ -398,22 +398,22 @@ export function Header() {
       setProperty('--avatar-border-opacity', scale === toScale ? '1' : '0')
     }
 
-    function updateStyles() {
-      updateHeaderStyles()
-      updateAvatarStyles()
-      isInitial.current = false
-    }
-
-    updateStyles()
-    window.addEventListener('scroll', updateStyles, { passive: true })
-    window.addEventListener('resize', updateStyles)
-
-    return () => {
-      window.removeEventListener('scroll', updateStyles)
-      window.removeEventListener('resize', updateStyles)
-    }
-  }, [isHomePage])
-
+    useEffect(() => {
+      function updateStyles() {
+        updateHeaderStyles()
+        updateAvatarStyles()
+        isInitial.current = false
+      }
+    
+      updateStyles()
+      window.addEventListener('scroll', updateStyles, { passive: true })
+      window.addEventListener('resize', updateStyles)
+    
+      return () => {
+        window.removeEventListener('scroll', updateStyles)
+        window.removeEventListener('resize', updateStyles)
+      }
+    }, [isHomePage])
   return (
     <>
       <header className="fixed top-0 w-full z-50 bg-purple-100 text-purple-800 shadow-md">
