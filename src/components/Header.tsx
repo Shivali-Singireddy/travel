@@ -422,7 +422,7 @@ export function Header() {
               ref={avatarRef}
               className="order-last mt-[calc(--spacing(16)-(--spacing(3)))]"
             />
-            <Container
+            <div
               className="top-0 order-last -mb-3 pt-3"
               style={{
                 position:
