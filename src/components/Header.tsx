@@ -450,8 +450,14 @@ export function Header() {
                 position:
                   'var(--header-inner-position)' as React.CSSProperties['position'],
               }}
+              <div className="flex justify-center">
+                <AvatarContainer>
+                  <Avatar large />
+                </AvatarContainer>
+              </div>
             >
-              <div className="relative">
+{/*               <div className="relative"> */}
+                
 {/*                 <AvatarContainer
                   className="absolute top-3 left-0 origin-left transition-opacity"
                   style={{
@@ -459,11 +465,11 @@ export function Header() {
                     transform: 'var(--avatar-border-transform)',
                   }}
                 /> */}
-                <AvatarContainer className="absolute top-3 left-0 origin-left transition-opacity" />
+{/*                 <AvatarContainer className="absolute top-3 left-0 origin-left transition-opacity" />
                 <div className="flex flex-1">
                   <AvatarContainer>
                     <Avatar />
-                  </AvatarContainer>
+                  </AvatarContainer> */}
                 </div>
               </div>
             </div>
