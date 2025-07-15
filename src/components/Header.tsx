@@ -425,7 +425,7 @@ export function Header() {
                 src={headerImage}
                 alt=""
                 sizes="(min-width: 1024px) 100vw, 100vw"
-                className="w-full h-auto rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+                className=""w-full h-auto bg-zinc-100 object-cover dark:bg-zinc-800"
                 />
             </div>
           </div>
