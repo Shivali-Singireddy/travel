@@ -470,7 +470,7 @@ export function Header() {
                   <AvatarContainer>
                     <Avatar />
                   </AvatarContainer> */}
-                </div>
+                 // </div>
               </div>
             </div>
           </Container>
