@@ -216,8 +216,8 @@ export function DropdownNavItem({ label, items }: DropdownNavItemProps) {
 
 function DesktopNavigation(props: React.ComponentPropsWithoutRef<'nav'>) {
   return (
-    <nav {...props}>
-      <ul className="flex items-center gap-6 px-4 text-base font-semibold text-purple-900 dark:text-purple-200 bg-transparent">
+    <nav {...props} className="w-full flex justify-center">
+      <ul className="flex items-center gap-6 text-base font-semibold text-purple-900 dark:text-purple-200">
         <NavItem href="/">Home</NavItem>
         <DropdownNavItem
           label="Destinations"
@@ -428,7 +428,7 @@ export function Header() {
               <Image
                 src={headerImage}
                 alt="Header"
-                className="h-24 w-auto object-contain dark:bg-zinc-800"
+                className="h-32 w-auto object-contain dark:bg-zinc-800"
                 priority
               />
             </div>
