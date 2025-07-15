@@ -459,10 +459,10 @@ export function Header() {
                     transform: 'var(--avatar-border-transform)',
                   }}
                 />
-                <div className="flex flex-1">
-                  <AvatarContainer>
+{/*                 <div className="flex flex-1">
+                  <AvatarContainer> */}
                     <Avatar />
-{/*                   </AvatarContainer> */}
+                  </AvatarContainer>
                 </div>
               </div>
             </div>
