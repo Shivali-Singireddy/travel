@@ -416,7 +416,7 @@ export function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm dark:bg-zinc-800/90 shadow-md">
+      <header className="sticky top-0 z-50 bg-purple-100 backdrop-blur-sm dark:bg-zinc-800/90 shadow-md">
         {isHomePage && (
           <>
             <div
