@@ -497,12 +497,12 @@ export function Header() {
             </div>
         </div>
       </header>
-{/*       {isHomePage && (
+      {isHomePage && (
         <div
           className="flex-none"
           style={{ height: 'var(--content-offset)' }}
         />
-      )} */}
+      )}
     </>
   )
 }
