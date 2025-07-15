@@ -459,7 +459,7 @@ export function Header() {
                     transform: 'var(--avatar-border-transform)',
                   }}
                 /> */}
-                <AvatarContainer className="absolute top-3 left-0" />
+                <AvatarContainer className="absolute top-3 left-0 origin-left transition-opacity" />
                 <div className="flex flex-1">
                   <AvatarContainer>
                     <Avatar />
