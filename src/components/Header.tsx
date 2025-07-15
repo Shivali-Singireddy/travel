@@ -446,8 +446,6 @@ export function Header() {
       </div>
     </div>
   </header>
-
-{/* 
       
 {/*       <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm dark:bg-zinc-800/90 shadow-md">
         <div className="flex w-full items-center justify-between bg-transparent px-6 py-4 shadow-md">
@@ -461,7 +459,7 @@ export function Header() {
                 />
             </div>
           </div>
-        </div> */}
+        </div>
         <Container
           className="top-0 order-last -mb-3 pt-3"
           style={{
