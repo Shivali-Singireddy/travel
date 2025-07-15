@@ -416,6 +416,15 @@ export function Header() {
   return (
     <>
       <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm dark:bg-zinc-800/90 shadow-md">
+        <div className="bg-purple-100 dark:bg-purple-900 py-2 px-6 text-center">
+          <h1
+            style={{ fontFamily: "'Gwendolyn', serif" }}
+            className="text-3xl font-bold text-purple-900 dark:text-purple-200 select-none"
+          >
+            Shivali
+          </h1>
+        </div>
+        
         {isHomePage && (
           <>
             <div
