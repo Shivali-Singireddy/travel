@@ -450,12 +450,31 @@ export function Header() {
                 position:
                   'var(--header-inner-position)' as React.CSSProperties['position'],
               }}
-              <div className="flex justify-center">
+              <Container
+                className="top-0 order-last -mb-3 pt-3"
+                style={{
+                  position: 'var(--header-position)' as React.CSSProperties['position'],
+                }}
+              >
+                <div
+                  className="w-full max-w-none px-6"
+                  style={{
+                    position: 'var(--header-inner-position)' as React.CSSProperties['position'],
+                  }}
+                >
+                  <div className="flex justify-center pt-4">
+                    <AvatarContainer>
+                      <Avatar large />
+                    </AvatarContainer>
+                  </div>
+                </div>
+              </Container>
+{/*               <div className="flex justify-center">
                 <AvatarContainer>
                   <Avatar large />
                 </AvatarContainer>
               </div>
-            >
+            > */}
 {/*               <div className="relative"> */}
                 
 {/*                 <AvatarContainer
@@ -466,14 +485,14 @@ export function Header() {
                   }}
                 /> */}
 {/*                 <AvatarContainer className="absolute top-3 left-0 origin-left transition-opacity" />
-                <div className="flex flex-1">
-                  <AvatarContainer>
-                    <Avatar />
-                  </AvatarContainer> */}
-                 // </div>
-              </div>
-            </div>
-          </Container>
+          //       <div className="flex flex-1">
+          //         <AvatarContainer>
+          //           <Avatar />
+          //         </AvatarContainer> 
+          //       </div> */}
+          //     </div>
+          //   </div>
+          // </Container>
 {/*           </> */}
 {/*         )} */}
         <div
