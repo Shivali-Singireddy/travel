@@ -215,7 +215,7 @@ export function DropdownNavItem({ label, items }: DropdownNavItemProps) {
 function DesktopNavigation(props: React.ComponentPropsWithoutRef<'nav'>) {
   return (
     <nav {...props}>
-      <ul className="flex w-full justify-around bg-purple-100 px-6 py-3 text-base font-semibold text-purple-800 shadow-md">
+      <ul className="flex rounded-full bg-white/90 px-6 py-3 text-base font-semibold text-zinc-800 shadow-lg ring-1 shadow-zinc-800/5 ring-zinc-900/5 backdrop-blur-sm dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
         
         <NavItem href="/">Home</NavItem>
         <DropdownNavItem
@@ -368,49 +368,53 @@ export function Header() {
     }
 
     function updateAvatarStyles() {
-      if (!isHomePage) return
-  
+      if (!isHomePage) {
+        return
+      }
+
       let fromScale = 1
       let toScale = 36 / 64
       let fromX = 0
       let toX = 2 / 16
-  
+
       let scrollY = downDelay - window.scrollY
-  
+
       let scale = (scrollY * (fromScale - toScale)) / downDelay + toScale
       scale = clamp(scale, fromScale, toScale)
-  
+
       let x = (scrollY * (fromX - toX)) / downDelay + toX
       x = clamp(x, fromX, toX)
-  
-      setProperty('--avatar-image-transform', `translate3d(${x}rem, 0, 0) scale(${scale})`)
-  
+
+      setProperty(
+        '--avatar-image-transform',
+        `translate3d(${x}rem, 0, 0) scale(${scale})`,
+      )
+
       let borderScale = 1 / (toScale / scale)
       let borderX = (-toX + x) * borderScale
       let borderTransform = `translate3d(${borderX}rem, 0, 0) scale(${borderScale})`
-  
+
       setProperty('--avatar-border-transform', borderTransform)
       setProperty('--avatar-border-opacity', scale === toScale ? '1' : '0')
     }
-  
-    useEffect(() => {
-      function updateStyles() {
-        updateHeaderStyles()
-        updateAvatarStyles()
-        isInitial.current = false
-      }
-  
-      updateStyles()
-      window.addEventListener('scroll', updateStyles, { passive: true })
-      window.addEventListener('resize', updateStyles)
-  
-      return () => {
-        window.removeEventListener('scroll', updateStyles)
-        window.removeEventListener('resize', updateStyles)
-      }
-    }, [isHomePage])
-  
-    return (
+
+    function updateStyles() {
+      updateHeaderStyles()
+      updateAvatarStyles()
+      isInitial.current = false
+    }
+
+    updateStyles()
+    window.addEventListener('scroll', updateStyles, { passive: true })
+    window.addEventListener('resize', updateStyles)
+
+    return () => {
+      window.removeEventListener('scroll', updateStyles)
+      window.removeEventListener('resize', updateStyles)
+    }
+  }, [isHomePage])
+
+  return (
     <>
       <header
         className="pointer-events-none relative z-50 flex flex-none flex-col"
