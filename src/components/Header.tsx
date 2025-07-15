@@ -502,7 +502,5 @@ export function Header() {
       {isHomePage && (
         <div className="flex-none" style={{ height: 'var(--content-offset)' }} />
       )}
-    </>
+    <>
   )
-
-}
