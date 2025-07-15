@@ -491,15 +491,15 @@ export function Header() {
               'var(--header-position)' as React.CSSProperties['position'],
           }}
         >
-{/*             <div className="flex w-full items-center justify-between bg-purple-100 dark:bg-purple-900 px-6 py-4 shadow-md">
-              <MobileNavigation className="pointer-events-auto md:hidden" />
-              <DesktopNavigation className="pointer-events-auto hidden md:block" />
-              <div className="flex justify-end md:flex-1">
-                <div className="pointer-events-auto">
-                  <ThemeToggle />
-                </div>
-              </div>
-            </div> */}
+        <div className="flex w-full items-center justify-between bg-purple-100 dark:bg-purple-900 px-6 py-4 shadow-md">
+          <MobileNavigation className="pointer-events-auto md:hidden" />
+          <DesktopNavigation className="pointer-events-auto hidden md:block" />
+          <div className="flex justify-end md:flex-1">
+            <div className="pointer-events-auto">
+              <ThemeToggle />
+            </div>
+          </div>
+        </div>
          <div className="bg-purple-100 dark:bg-purple-900 px-6 py-4 shadow-md">
             <div className="mx-auto max-w-screen-lg flex items-center justify-center gap-6">
               <MobileNavigation className="pointer-events-auto md:hidden" />
