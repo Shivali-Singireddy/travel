@@ -433,6 +433,25 @@ export function Header() {
         
 {/*         {isHomePage && (
           <> */}
+        <Container
+          className="top-0 order-last -mb-3 pt-3"
+          style={{
+            position: 'var(--header-position)' as React.CSSProperties['position'],
+          }}
+        >
+          <div
+            className="w-full max-w-none px-6"
+            style={{
+              position: 'var(--header-inner-position)' as React.CSSProperties['position'],
+            }}
+          >
+            <div className="absolute top-3 left-0 origin-left">
+              <AvatarContainer>
+                <Avatar />
+              </AvatarContainer>
+            </div>
+          </div>
+        </Container>
           <div
             ref={avatarRef}
             className="order-last mt-[calc(--spacing(16)-(--spacing(3)))]"
@@ -490,25 +509,6 @@ export function Header() {
                 </div>
               </div>
             </div>
-        <Container
-          className="top-0 order-last -mb-3 pt-3"
-          style={{
-            position: 'var(--header-position)' as React.CSSProperties['position'],
-          }}
-        >
-          <div
-            className="w-full max-w-none px-6"
-            style={{
-              position: 'var(--header-inner-position)' as React.CSSProperties['position'],
-            }}
-          >
-            <div className="absolute top-3 left-0 origin-left">
-              <AvatarContainer>
-                <Avatar />
-              </AvatarContainer>
-            </div>
-          </div>
-        </Container>
         </div>
       </header>
     {isHomePage && (
