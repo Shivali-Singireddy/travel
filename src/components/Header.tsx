@@ -481,11 +481,11 @@ export function Header() {
         >
             <div className="flex w-full items-center justify-between bg-purple-100 dark:bg-purple-900 px-6 py-4 shadow-md">
               <div className="flex flex-1">
-{/*                 {!isHomePage && (
+                {!isHomePage && (
                   <AvatarContainer>
                     <Avatar />
                   </AvatarContainer>
-                )} */}
+                )}
               </div>
               <div className="flex flex-1 justify-end md:justify-center">
                 <MobileNavigation className="pointer-events-auto md:hidden" />
