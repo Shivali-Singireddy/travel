@@ -369,9 +369,9 @@ export function Header() {
     }
 
     function updateAvatarStyles() {
-      if (!isHomePage) {
-        return
-      }
+      // if (!isHomePage) {
+      //   return
+      // }
 
       let fromScale = 1
       let toScale = 36 / 64
@@ -452,13 +452,13 @@ export function Header() {
               }}
             >
               <div className="relative">
-                <AvatarContainer
+{/*                 <AvatarContainer
                   className="absolute top-3 left-0 origin-left transition-opacity"
                   style={{
                     opacity: 'var(--avatar-border-opacity, 0)',
                     transform: 'var(--avatar-border-transform)',
                   }}
-                />
+                /> */}
                 <AvatarContainer>
                   <Avatar
                     large
