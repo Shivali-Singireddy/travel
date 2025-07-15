@@ -417,7 +417,39 @@ export function Header() {
 
   return (
     <>
-{/* {/*       <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm dark:bg-zinc-800/90 shadow-md">
+      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm dark:bg-zinc-800/90 shadow-md">
+    <div className="bg-purple-100 dark:bg-purple-900 px-6 py-4 shadow-md">
+      <div className="mx-auto max-w-screen-xl flex flex-col items-center gap-4">
+        
+        {/* Top Row: Avatar + Heading Image */}
+        <div className="flex w-full items-center justify-between">
+          <AvatarContainer>
+            <Avatar />
+          </AvatarContainer>
+          <div className="flex-1 flex justify-center">
+            <Image
+              src={headerImage}
+              alt="Header"
+              className="h-12 w-auto object-contain dark:bg-zinc-800"
+              priority
+            />
+          </div>
+        </div>
+  
+        {/* Bottom Row: Navigation + Theme Toggle */}
+        <div className="flex w-full items-center justify-between">
+          <MobileNavigation className="pointer-events-auto md:hidden" />
+          <DesktopNavigation className="pointer-events-auto hidden md:flex" />
+          <ThemeToggle />
+        </div>
+  
+      </div>
+    </div>
+  </header>
+
+{/* 
+      
+{/*       <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm dark:bg-zinc-800/90 shadow-md">
         <div className="flex w-full items-center justify-between bg-transparent px-6 py-4 shadow-md">
           <div className="flex justify-center py-2">
             <div className="w-full max-w-lg px-2.5 lg:px-0 flex justify-center">
@@ -478,7 +510,7 @@ export function Header() {
             </div>
           </div>
         </div>
-      </header>
+      </header> */}
     {isHomePage && (
         <div
           className="flex-none"
@@ -487,33 +519,4 @@ export function Header() {
       )}
     </>
   )
-} */}
-  <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm dark:bg-zinc-800/90 shadow-md">
-    <div className="bg-purple-100 dark:bg-purple-900 px-6 py-4 shadow-md">
-      <div className="mx-auto max-w-screen-xl flex flex-col items-center gap-4">
-        
-        {/* Top Row: Avatar + Heading Image */}
-        <div className="flex w-full items-center justify-between">
-          <AvatarContainer>
-            <Avatar />
-          </AvatarContainer>
-          <div className="flex-1 flex justify-center">
-            <Image
-              src={headerImage}
-              alt="Header"
-              className="h-12 w-auto object-contain dark:bg-zinc-800"
-              priority
-            />
-          </div>
-        </div>
-  
-        {/* Bottom Row: Navigation + Theme Toggle */}
-        <div className="flex w-full items-center justify-between">
-          <MobileNavigation className="pointer-events-auto md:hidden" />
-          <DesktopNavigation className="pointer-events-auto hidden md:flex" />
-          <ThemeToggle />
-        </div>
-  
-      </div>
-    </div>
-  </header>
+}
