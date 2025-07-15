@@ -462,13 +462,6 @@ export function Header() {
               'var(--header-position)' as React.CSSProperties['position'],
           }}
         >
-          <Container
-            className="top-(--header-top,--spacing(6)) w-full"
-            style={{
-              position:
-                'var(--header-inner-position)' as React.CSSProperties['position'],
-            }}
-          >
             <div className="flex w-full items-center justify-between bg-purple-100 dark:bg-purple-900 px-6 py-4 shadow-md">
               <div className="flex flex-1">
                 {!isHomePage && (
@@ -487,7 +480,6 @@ export function Header() {
                 </div>
               </div>
             </div>
-          </Container>
         </div>
       </header>
       {isHomePage && (
