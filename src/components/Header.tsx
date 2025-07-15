@@ -437,7 +437,27 @@ export function Header() {
             ref={avatarRef}
             className="order-last mt-[calc(--spacing(16)-(--spacing(3)))]"
           />
-          <Container
+        <Container
+          className="top-0 order-last -mb-3 pt-3"
+          style={{
+            position: 'var(--header-position)' as React.CSSProperties['position'],
+          }}
+        >
+          <div
+            className="w-full max-w-none px-6"
+            style={{
+              position: 'var(--header-inner-position)' as React.CSSProperties['position'],
+            }}
+          >
+            <div className="flex justify-center pt-4">
+              <AvatarContainer>
+                <Avatar large />
+              </AvatarContainer>
+            </div>
+          </div>
+        </Container>
+
+{/*           <Container
             className="top-0 order-last -mb-3 pt-3"
             style={{
               position:
@@ -469,7 +489,7 @@ export function Header() {
             </div>
           </Container>
 {/*           </> */}
-{/*         )} */}
+{/*         )} */} */}
         <div
           ref={headerRef}
           className="top-0 z-10 h-16 pt-6"
