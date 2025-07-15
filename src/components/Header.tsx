@@ -422,7 +422,7 @@ export function Header() {
               ref={avatarRef}
               className="order-last mt-[calc(--spacing(16)-(--spacing(3)))]"
             />
-            <div
+            <Container
               className="top-0 order-last -mb-3 pt-3"
               style={{
                 position:
@@ -462,25 +462,27 @@ export function Header() {
               'var(--header-position)' as React.CSSProperties['position'],
           }}
         >
-            <div className="flex w-full items-center justify-between bg-purple-100 dark:bg-purple-900 px-6 py-4 shadow-md">
-              <div className="flex flex-1">
-                {!isHomePage && (
-                  <AvatarContainer>
-                    <Avatar />
-                  </AvatarContainer>
-                )}
-              </div>
-              <div className="flex flex-1 justify-end md:justify-center">
-                <MobileNavigation className="pointer-events-auto md:hidden" />
-                <DesktopNavigation className="pointer-events-auto hidden md:block" />
-              </div>
-              <div className="flex justify-end md:flex-1">
-                <div className="pointer-events-auto">
-                  <ThemeToggle />
+            <div className="w-screen bg-purple-100 dark:bg-purple-900 shadow-md">
+              <div className="flex items-center justify-between px-6 py-4">
+                <div className="flex flex-1">
+                  {!isHomePage && (
+                    <AvatarContainer>
+                      <Avatar />
+                    </AvatarContainer>
+                  )}
+                </div>
+                <div className="flex flex-1 justify-end md:justify-center">
+                  <MobileNavigation className="pointer-events-auto md:hidden" />
+                  <DesktopNavigation className="pointer-events-auto hidden md:block" />
+                </div>
+                <div className="flex justify-end md:flex-1">
+                  <div className="pointer-events-auto">
+                    <ThemeToggle />
+                  </div>
                 </div>
               </div>
             </div>
-        </div>
+
       </header>
       {isHomePage && (
         <div
