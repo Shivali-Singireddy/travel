@@ -472,13 +472,13 @@ export function Header() {
               }}
             >
               <div className="relative">
-{/*                 <AvatarContainer
+                <AvatarContainer
                   className="absolute top-3 left-0 origin-left transition-opacity"
                   style={{
                     opacity: 'var(--avatar-border-opacity, 0)',
                     transform: 'var(--avatar-border-transform)',
                   }}
-                /> */}
+                />
                 <AvatarContainer className="absolute top-3 left-0 origin-left transition-opacity" />
                 <div className="flex flex-1">
                   <AvatarContainer>
@@ -487,9 +487,9 @@ export function Header() {
                 </div>
               </div>
             </div>
-          </Container>
-{/*           </> */}
-{/*         )} */} */}
+          </Container> */}
+{/*           </>
+        )} */}
         <div
           ref={headerRef}
           className="top-0 z-10 h-16 pt-6"
