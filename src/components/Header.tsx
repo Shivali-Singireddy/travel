@@ -461,9 +461,9 @@ export function Header() {
                 /> */}
                 <AvatarContainer>
                   <Avatar
-                    large
+{/*                     large
                     className="block h-16 w-16 origin-left"
-                    style={{ transform: 'var(--avatar-image-transform)' }}
+                    style={{ transform: 'var(--avatar-image-transform)' }} */}
                   />
                 </AvatarContainer>
               </div>
