@@ -422,10 +422,8 @@ export function Header() {
               <Image
                 src="@/images/heading.jpg"
                 alt="Heading logo"
-                layout="responsive"
-                width={260}
-                height={80}
-                priority
+                sizes="(min-width: 1024px) 32rem, 20rem"
+                className="w-full h-auto rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
               />
             </div>
           </div>
