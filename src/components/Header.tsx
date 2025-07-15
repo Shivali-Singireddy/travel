@@ -449,9 +449,9 @@ export function Header() {
               position: 'var(--header-inner-position)' as React.CSSProperties['position'],
             }}
           >
-            <div className="flex justify-center pt-4">
+            <div className="absolute top-3 left-0 origin-left transition-opacity">
               <AvatarContainer>
-                <Avatar large />
+                <Avatar />
               </AvatarContainer>
             </div>
           </div>
