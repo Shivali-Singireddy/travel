@@ -417,98 +417,33 @@ export function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm dark:bg-zinc-800/90 shadow-md">
-        <div className="bg-purple-100 dark:bg-purple-900 px-6 py-4 shadow-md">
-          <div className="mx-auto max-w-screen-xl flex flex-col items-center gap-4">
-            
-            {/* Top Row: Avatar + Heading Image */}
-            <div className="flex w-full items-center justify-between">
-              <AvatarContainer>
-                <Avatar />
-              </AvatarContainer>
-              <div className="flex-1 flex justify-center">
-                <Image
-                  src={headerImage}
-                  alt="Header"
-                  className="h-12 w-auto object-contain dark:bg-zinc-800"
-                  priority
-                />
-              </div>
+      <header className="sticky top-0 z-50 shadow-md">
+        {/* Top Section: Avatar + Heading, white background */}
+        <div className="bg-white dark:bg-zinc-800 px-6 py-4">
+          <div className="mx-auto max-w-screen-xl flex items-center justify-between">
+            <AvatarContainer>
+              <Avatar />
+            </AvatarContainer>
+            <div className="flex-1 flex justify-center">
+              <Image
+                src={headerImage}
+                alt="Header"
+                className="h-12 w-auto object-contain dark:bg-zinc-800"
+                priority
+              />
             </div>
+          </div>
+        </div>
       
-            {/* Bottom Row: Navigation + Theme Toggle */}
-            <div className="flex w-full items-center justify-between">
-              <MobileNavigation className="pointer-events-auto md:hidden" />
-              <DesktopNavigation className="pointer-events-auto hidden md:flex" />
-              <ThemeToggle />
-            </div>
-      
+        {/* Bottom Section: Navigation, purple background */}
+        <div className="bg-purple-100 dark:bg-purple-900 px-6 py-4">
+          <div className="mx-auto max-w-screen-xl flex items-center justify-between">
+            <MobileNavigation className="pointer-events-auto md:hidden" />
+            <DesktopNavigation className="pointer-events-auto hidden md:flex" />
+            <ThemeToggle />
           </div>
         </div>
       </header>
-      
-{/*       <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm dark:bg-zinc-800/90 shadow-md">
-        <div className="flex w-full items-center justify-between bg-transparent px-6 py-4 shadow-md">
-          <div className="flex justify-center py-2">
-            <div className="w-full max-w-lg px-2.5 lg:px-0 flex justify-center">
-              <Image
-                src={headerImage}
-                alt=""
-                sizes="(min-width: 1024px) 100vw, 100vw"
-                className= "w-full h-auto bg-zinc-100 object-cover dark:bg-zinc-800"
-                />
-            </div>
-          </div>
-        </div>
-        <Container
-          className="top-0 order-last -mb-3 pt-3"
-          style={{
-            position: 'var(--header-position)' as React.CSSProperties['position'],
-          }}
-        >
-          <div
-            className="w-full max-w-none px-6"
-            style={{
-              position: 'var(--header-inner-position)' as React.CSSProperties['position'],
-            }}
-          >
-            <div className="absolute top-3 left-0 origin-left">
-              <AvatarContainer>
-                <Avatar />
-              </AvatarContainer>
-            </div>
-          </div>
-        </Container>
-          <div
-            ref={avatarRef}
-            className="order-last mt-[calc(--spacing(16)-(--spacing(3)))]"
-          />
-        <div
-          ref={headerRef}
-          className="top-0 z-10 h-16 pt-6"
-          style={{
-            position:
-              'var(--header-position)' as React.CSSProperties['position'],
-          }}
-        >
-        <div className="flex w-full items-center justify-between bg-purple-100 dark:bg-purple-900 px-6 py-4 shadow-md">
-          <MobileNavigation className="pointer-events-auto md:hidden" />
-          <DesktopNavigation className="pointer-events-auto hidden md:block" />
-          <div className="flex justify-end md:flex-1">
-            <div className="pointer-events-auto">
-              <ThemeToggle />
-            </div>
-          </div>
-        </div>
-         <div className="bg-purple-100 dark:bg-purple-900 px-6 py-4 shadow-md">
-            <div className="mx-auto max-w-screen-lg flex items-center justify-center gap-6">
-              <MobileNavigation className="pointer-events-auto md:hidden" />
-              <DesktopNavigation className="pointer-events-auto hidden md:flex" />
-              <ThemeToggle />
-            </div>
-          </div>
-        </div>
-      </header> */}
     {isHomePage && (
         <div
           className="flex-none"
