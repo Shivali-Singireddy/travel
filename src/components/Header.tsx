@@ -430,7 +430,7 @@ export function Header() {
               }}
             >
               <div
-                className="top-(--avatar-top,--spacing(3)) w-full"
+                className="w-full max-w-none px-6 top-(--header-top,--spacing(6))"
                 style={{
                   position:
                     'var(--header-inner-position)' as React.CSSProperties['position'],
