@@ -418,7 +418,7 @@ export function Header() {
   return (
     <>
       <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm dark:bg-zinc-800/90 shadow-md">
-{/*         <div className="flex w-full items-center justify-between bg-transparent px-6 py-4 shadow-md">
+        <div className="flex w-full items-center justify-between bg-transparent px-6 py-4 shadow-md">
           <div className="flex justify-center py-2">
             <div className="w-full max-w-lg px-2.5 lg:px-0 flex justify-center">
               <Image
@@ -429,10 +429,7 @@ export function Header() {
                 />
             </div>
           </div>
-        </div> */}
-        
-{/*         {isHomePage && (
-          <> */}
+        </div>
         <Container
           className="top-0 order-last -mb-3 pt-3"
           style={{
@@ -456,8 +453,6 @@ export function Header() {
             ref={avatarRef}
             className="order-last mt-[calc(--spacing(16)-(--spacing(3)))]"
           />
-{/*           </>
-        )} */}
         <div
           ref={headerRef}
           className="top-0 z-10 h-16 pt-6"
