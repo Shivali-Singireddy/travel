@@ -420,7 +420,7 @@ export function Header() {
       <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm dark:bg-zinc-800/90 shadow-md">
         <div className="flex w-full items-center justify-between bg-transparent px-6 py-4 shadow-md">
           <div className="flex justify-center py-2">
-            <div className="max-w-sm px-2.5 lg:px-0 mx-auto">
+            <div className="max-w-lg px-2.5 lg:px-0 mx-auto">
               <Image
                 src={headerImage}
                 alt=""
