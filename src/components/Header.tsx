@@ -421,9 +421,9 @@ export function Header() {
         {/* Top Section: Avatar + Heading, white background */}
         <div className="bg-white dark:bg-zinc-800 px-6 py-4">
           <div className="mx-auto max-w-screen-xl flex items-center justify-between">
-            <AvatarContainer>
+{/*             <AvatarContainer>
               <Avatar />
-            </AvatarContainer>
+            </AvatarContainer> */}
             <div className="flex-1 flex justify-center">
               <Image
                 src={headerImage}
@@ -437,10 +437,29 @@ export function Header() {
       
         {/* Bottom Section: Navigation, purple background */}
         <div className="bg-purple-100 dark:bg-purple-900 px-6 py-4 shadow-md">
-          <div className="mx-auto max-w-screen-lg flex flex-col items-center gap-4">
-            <DesktopNavigation className="pointer-events-auto hidden md:flex justify-center" />
-            <MobileNavigation className="pointer-events-auto md:hidden" />
-            <ThemeToggle />
+          <div className="mx-auto max-w-screen-xl flex items-center justify-between">
+            {/* Left: Avatar */}
+            <div className="hidden md:block">
+              <AvatarContainer>
+                <Avatar />
+              </AvatarContainer>
+            </div>
+        
+            {/* Center: Desktop Navigation */}
+            <div className="hidden md:flex flex-1 justify-center">
+              <DesktopNavigation />
+            </div>
+        
+            {/* Right: Theme Toggle */}
+            <div className="hidden md:block">
+              <ThemeToggle />
+            </div>
+        
+            {/* Mobile nav */}
+            <div className="md:hidden flex justify-between w-full">
+              <MobileNavigation className="pointer-events-auto" />
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       </header>
