@@ -17,6 +17,23 @@ import { Container } from '@/components/Container'
 import avatarImage from '@/images/avatar.jpg'
 import { Transition } from '@headlessui/react'
 import headerImage from '@/images/heading.jpg'
+import { InstagramIcon, LinkedInIcon } from '@/components/SocialIcons'
+
+function SocialLinkIcon({
+  href,
+  icon: Icon,
+  className,
+}: {
+  href: string
+  icon: React.ComponentType<{ className?: string }>
+  className?: string
+}) {
+  return (
+    <Link href={href} className={clsx(className, 'group')}>
+      <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-teal-500" />
+    </Link>
+  )
+}
 
 
 function CloseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
@@ -421,9 +438,6 @@ export function Header() {
         {/* Top Section: Avatar + Heading, white background */}
         <div className="bg-white dark:bg-zinc-800 px-6 py-4">
           <div className="mx-auto max-w-screen-xl flex items-center justify-between">
-{/*             <AvatarContainer>
-              <Avatar />
-            </AvatarContainer> */}
             <div className="flex-1 flex justify-center">
               <Image
                 src={headerImage}
@@ -458,7 +472,10 @@ export function Header() {
             {/* Mobile nav */}
             <div className="md:hidden flex justify-between w-full">
               <MobileNavigation className="pointer-events-auto" />
-              <ThemeToggle />
+              <div className="flex items-center gap-4">
+                <SocialLinkIcon href="https://www.instagram.com/shivalisingireddy/" icon={InstagramIcon} />
+                <SocialLinkIcon href="https://www.linkedin.com/in/shivalisingireddy" icon={LinkedInIcon} />
+              </div>
             </div>
           </div>
         </div>
