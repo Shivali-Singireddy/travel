@@ -470,7 +470,7 @@ export function Header() {
                 'var(--header-inner-position)' as React.CSSProperties['position'],
             }}
           >
-            <div className="relative flex gap-4 rounded-xl bg-purple-100 dark:bg-purple-900 px-4 py-2 shadow-md">
+            <div className="flex w-full items-center justify-between bg-purple-100 dark:bg-purple-900 px-6 py-4 shadow-md">
               <div className="flex flex-1">
                 {!isHomePage && (
                   <AvatarContainer>
