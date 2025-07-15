@@ -428,7 +428,7 @@ export function Header() {
               <Image
                 src={headerImage}
                 alt="Header"
-                className="h-12 w-auto object-contain dark:bg-zinc-800"
+                className="h-24 w-auto object-contain dark:bg-zinc-800"
                 priority
               />
             </div>
@@ -436,10 +436,10 @@ export function Header() {
         </div>
       
         {/* Bottom Section: Navigation, purple background */}
-        <div className="bg-purple-100 dark:bg-purple-900 px-6 py-4">
-          <div className="mx-auto max-w-screen-xl flex items-center justify-between">
+        <div className="bg-purple-100 dark:bg-purple-900 px-6 py-4 shadow-md">
+          <div className="mx-auto max-w-screen-lg flex flex-col items-center gap-4">
+            <DesktopNavigation className="pointer-events-auto hidden md:flex justify-center" />
             <MobileNavigation className="pointer-events-auto md:hidden" />
-            <DesktopNavigation className="pointer-events-auto hidden md:flex" />
             <ThemeToggle />
           </div>
         </div>
