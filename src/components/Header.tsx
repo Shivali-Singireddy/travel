@@ -411,18 +411,14 @@ export function Header() {
     }, [isHomePage])
   
     return (
-      <>
-        <header className="fixed top-0 w-full z-50 bg-purple-100 text-purple-800 shadow-md">
-          <div className="w-full px-4 py-4">
-            <div className="flex items-center justify-between">
-              <Avatar />
-              <DesktopNavigation className="hidden md:flex" />
-              <MobileNavigation className="md:hidden" />
-              <ThemeToggle />
-            </div>
-          </div>
-        </header>
-  
+    <>
+      <header
+        className="pointer-events-none relative z-50 flex flex-none flex-col"
+        style={{
+          height: 'var(--header-height)',
+          marginBottom: 'var(--header-mb)',
+        }}
+      >
         {isHomePage && (
           <>
             <div
@@ -432,7 +428,8 @@ export function Header() {
             <Container
               className="top-0 order-last -mb-3 pt-3"
               style={{
-                position: 'var(--header-position)' as React.CSSProperties['position'],
+                position:
+                  'var(--header-position)' as React.CSSProperties['position'],
               }}
             >
               <div
@@ -460,18 +457,19 @@ export function Header() {
             </Container>
           </>
         )}
-  
         <div
           ref={headerRef}
           className="top-0 z-10 h-16 pt-6"
           style={{
-            position: 'var(--header-position)' as React.CSSProperties['position'],
+            position:
+              'var(--header-position)' as React.CSSProperties['position'],
           }}
         >
           <Container
             className="top-(--header-top,--spacing(6)) w-full"
             style={{
-              position: 'var(--header-inner-position)' as React.CSSProperties['position'],
+              position:
+                'var(--header-inner-position)' as React.CSSProperties['position'],
             }}
           >
             <div className="relative flex gap-4">
@@ -494,8 +492,13 @@ export function Header() {
             </div>
           </Container>
         </div>
-  
-        {isHomePage && <div className="flex-none" style={{ height: 'var(--content-offset)' }} />}
-      </>
-    )
-  }
+      </header>
+      {isHomePage && (
+        <div
+          className="flex-none"
+          style={{ height: 'var(--content-offset)' }}
+        />
+      )}
+    </>
+  )
+}
