@@ -177,9 +177,9 @@ export default async function Home() {
       <div className="mt-10" />
 
       {/* Sand-Tan Hero Box with Tilted Purple Overlay */}
-      <div className="relative w-full h-[600px] bg-[#FAF5EF] overflow-hidden">
-        {/* Taller, slightly narrower, skewed purple box */}
-        <div className="absolute top-10 left-10 h-[28rem] w-[20rem] bg-[#3B0A69] transform skew-x-12 shadow-xl rounded-md" />
+      <div className="relative w-full h-[600px] bg-[#FAF5EF] border border-[#e0e0e0] overflow-hidden">
+        {/* Purple Rectangle - duller, wider, moved right, no rounded corners */}
+        <div className="absolute top-10 left-[60%] h-[28rem] w-[30rem] bg-[#7D5AA6] shadow-md" />
       </div>
       
       <Container className="mt-9">
