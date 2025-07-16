@@ -489,10 +489,10 @@ export function Header() {
           ref={headerRef}
           className="sticky top-0 z-50 bg-purple-100 dark:bg-purple-900 shadow-md"
         >
-          <div className="mx-auto max-w-screen-xl flex items-center justify-between px-0 py-3">
+          <div className="mx-auto max-w-screen-xl flex items-center justify-between px-6 py-4">
             
             {/* Left: Header Image */}
-            <div className="flex-shrink-0 mr-12">
+            <div className="flex-shrink-0 mr-14">
               <Image
                 src={headerImage}
                 alt="Header"
@@ -507,7 +507,7 @@ export function Header() {
             </div>
   
             {/* Right: Social Icons + Avatar */}
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-0">
               <SocialLinkIcon
                 href="https://www.instagram.com/shivalisingireddy/"
                 icon={InstagramIcon}
