@@ -181,9 +181,9 @@ export default async function Home() {
         <div className="absolute top-0 left-1/2 h-full w-1/2 bg-[#7A5E8A]" />
       
         {/* Left Tilted Purple Rectangle with Offset Outline */}
-        <div className="absolute top-1/2 left-[5%] -translate-y-1/2">
+        <div
           {/* Purple Box */}
-          <div
+          <div div className="absolute top-1/2 left-[5%] -translate-y-1/2">
             className="relative z-10 bg-[#7A5E8A]"
             style={{
               width: '400px',
@@ -192,7 +192,7 @@ export default async function Home() {
             }}
           />
           {/* Offset Outline Box */}
-          <div
+          <div className="absolute top-1/2 left-[5%] -translate-y-1/2">
             className="absolute border border-black"
             style={{
               width: '400px',
@@ -205,19 +205,6 @@ export default async function Home() {
         </div>
       </div>
 
-      
-      <Container className="mt-9">
-        <div className="max-w-2xl">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Welcome to Shivali Travels!
-          </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I'm 22 years old and I just graduated with a bachelors degree in both Artificial Intelligence 
-            and Business Analytics with a minor in Economics from MIT. I love to spend my summers travelling
-            and wanted to share some of the tips I have learned from my experiences abroad.
-          </p>
-        </div>
-      </Container>
       <Photos />
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
