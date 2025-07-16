@@ -181,9 +181,9 @@ export default async function Home() {
         <div className="absolute top-0 left-1/2 h-full w-1/2 bg-[#7A5E8A]" />
       
         {/* Left Tilted Purple Rectangle with Offset Outline */}
-        <div
+        <div className="absolute top-1/2 left-[5%] -translate-y-1/2">
           {/* Purple Box */}
-          <div div className="absolute top-1/2 left-[5%] -translate-y-1/2">
+          <div
             className="relative z-10 bg-[#7A5E8A]"
             style={{
               width: '400px',
