@@ -26,7 +26,15 @@ export function Footer() {
         <div className="border-t border-zinc-100 pt-10 pb-16 dark:border-zinc-700/40">
           <ContainerInner>
             <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
+              {/* Favicon Image */}
+              <img 
+                src="app/favicon.ico" 
+                alt="Favicon" 
+                className="mb-4 w-6 h-6 md:mb-0 md:mr-6" 
+              />
+
               <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-800 dark:text-zinc-200">
+                <NavLink href="/continents">Destinations</NavLink>
                 <NavLink href="/continents">Continents</NavLink>
                 <NavLink href="/blog">Personal Blog</NavLink>
                 <NavLink href="/about">About</NavLink>                        
