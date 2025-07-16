@@ -473,8 +473,8 @@ export function Header() {
             <div className="md:hidden flex justify-between w-full">
               <MobileNavigation className="pointer-events-auto" />
               <div className="flex items-center gap-4">
-{/*                 <SocialLinkIcon href="https://www.instagram.com/shivalisingireddy/" icon={InstagramIcon} />
-                <SocialLinkIcon href="https://www.linkedin.com/in/shivalisingireddy" icon={LinkedInIcon} /> */}
+                <SocialLinkIcon href="https://www.instagram.com/shivalisingireddy/" icon={InstagramIcon} />
+                <SocialLinkIcon href="https://www.linkedin.com/in/shivalisingireddy" icon={LinkedInIcon} />
               </div>
             </div>
           </div>
