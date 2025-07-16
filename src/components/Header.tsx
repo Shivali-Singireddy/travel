@@ -483,6 +483,8 @@ export function Header() {
             </div>
           </div>
         </header>
+      <div className="flex-none" style={{ height: 'var(--content-offset)' }} />
+
       ) : (
         // All Other Pages Header
         <header
@@ -530,9 +532,7 @@ export function Header() {
           </div>
         </header>
       )}
-  
-      {/* Keeps layout spacing consistent */}
-      <div className="flex-none" style={{ height: 'var(--content-offset)' }} />
+
     </>
   )
 }
