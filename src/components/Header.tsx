@@ -481,49 +481,6 @@ export function Header() {
         </div>
       </header>
 
-{/*       <header ref={headerRef} className="sticky top-0 z-50 bg-white dark:bg-zinc-800">
-        <div className="bg-white dark:bg-zinc-800 px-6 py-4 custom-dotted-border">
-          <div className="mx-auto max-w-screen-xl flex items-center justify-between">
-            <div className="flex-1 flex justify-center">
-              <Image
-                src={headerImage}
-                alt="Header"
-                className="h-32 w-auto object-contain dark:bg-zinc-800"
-                priority
-              />
-            </div>
-          </div>
-        </div>
-      
-        <div className="sticky top-0 z-50 bg-purple-100 dark:bg-purple-900 px-6 py-4 shadow-md">
-          <div className="mx-auto max-w-screen-xl flex items-center justify-between">
-            {/* Left: Avatar */}
-            <div className="hidden md:block">
-              <AvatarContainer>
-                <Avatar />
-              </AvatarContainer>
-            </div>
-      
-            <div className="hidden md:flex flex-1 justify-center">
-              <DesktopNavigation />
-            </div>
-      
-            <div className="flex items-center gap-4">
-              <SocialLinkIcon href="https://www.instagram.com/shivalisingireddy/" icon={InstagramIcon} />
-              <SocialLinkIcon href="https://www.linkedin.com/in/shivalisingireddy" icon={LinkedInIcon} />
-            </div>
-      
-            <div className="md:hidden flex justify-between w-full">
-              <MobileNavigation className="pointer-events-auto" />
-              <div className="flex items-center gap-4">
-                <SocialLinkIcon href="https://www.instagram.com/shivalisingireddy/" icon={InstagramIcon} />
-                <SocialLinkIcon href="https://www.linkedin.com/in/shivalisingireddy" icon={LinkedInIcon} />
-              </div>
-            </div>
-          </div>
-        </div>
-      </header> */}
-
     <div
         className="flex-none"
         style={{ height: 'var(--content-offset)' }}
