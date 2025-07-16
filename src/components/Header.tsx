@@ -434,7 +434,7 @@ export function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 shadow-md">
+      <header className="z-40">
         {/* Top Section: Avatar + Heading, white background */}
         <div className="bg-white dark:bg-zinc-800 px-6 py-4">
           <div className="mx-auto max-w-screen-xl flex items-center justify-between">
@@ -450,7 +450,7 @@ export function Header() {
         </div>
       
         {/* Bottom Section: Navigation, purple background */}
-        <div className="bg-purple-100 dark:bg-purple-900 px-6 py-4 shadow-md">
+        <div className="sticky top-0 z-50 bg-purple-100 dark:bg-purple-900 px-6 py-4 shadow-md">
           <div className="mx-auto max-w-screen-xl flex items-center justify-between">
             {/* Left: Avatar */}
             <div className="hidden md:block">
