@@ -492,7 +492,7 @@ export function Header() {
           <div className="mx-auto max-w-screen-xl flex items-center justify-between px-6 py-3">
             
             {/* Left: Header Image */}
-            <div className="flex-shrink-0 mr-20">
+            <div className="flex-shrink-0 mr-30">
               <Image
                 src={headerImage}
                 alt="Header"
