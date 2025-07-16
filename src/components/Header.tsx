@@ -435,7 +435,7 @@ export function Header() {
   return (
     <>
       <header className="z-40">
-        {/* Top Section: Avatar + Heading, white background */}
+        {/* Top Section: Avatar + Heading (scrolls normally) */}
         <div className="bg-white dark:bg-zinc-800 px-6 py-4">
           <div className="mx-auto max-w-screen-xl flex items-center justify-between">
             <div className="flex-1 flex justify-center">
@@ -448,8 +448,10 @@ export function Header() {
             </div>
           </div>
         </div>
+
+        <div className="border-t-2 border-purple-600 border-dotted mx-6" />
       
-        {/* Bottom Section: Navigation, purple background */}
+        {/* Bottom Section: Sticky Navigation */}
         <div className="sticky top-0 z-50 bg-purple-100 dark:bg-purple-900 px-6 py-4 shadow-md">
           <div className="mx-auto max-w-screen-xl flex items-center justify-between">
             {/* Left: Avatar */}
@@ -458,18 +460,18 @@ export function Header() {
                 <Avatar />
               </AvatarContainer>
             </div>
-        
+      
             {/* Center: Desktop Navigation */}
             <div className="hidden md:flex flex-1 justify-center">
               <DesktopNavigation />
             </div>
-        
-            {/* Right: Theme Toggle */}
+      
+            {/* Right: Social + Theme Toggle */}
             <div className="flex items-center gap-4">
-                <SocialLinkIcon href="https://www.instagram.com/shivalisingireddy/" icon={InstagramIcon} />
-                <SocialLinkIcon href="https://www.linkedin.com/in/shivalisingireddy" icon={LinkedInIcon} />
+              <SocialLinkIcon href="https://www.instagram.com/shivalisingireddy/" icon={InstagramIcon} />
+              <SocialLinkIcon href="https://www.linkedin.com/in/shivalisingireddy" icon={LinkedInIcon} />
             </div>
-        
+      
             {/* Mobile nav */}
             <div className="md:hidden flex justify-between w-full">
               <MobileNavigation className="pointer-events-auto" />
