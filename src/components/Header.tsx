@@ -434,7 +434,7 @@ export function Header() {
 
   return (
     <>
-{/*       <header className="z-40">
+      <header className="z-40">
         <div className="bg-white dark:bg-zinc-800 px-6 py-4 border-b-4 border-purple-600 border-dotted">
           <div className="mx-auto max-w-screen-xl flex items-center justify-between">
             <div className="flex-1 flex justify-center">
@@ -476,30 +476,6 @@ export function Header() {
               </div>
             </div>
           </div>
-        </div>
-      </header> */}
-      <header>
-        {/* Top Section */}
-        <div className="bg-white dark:bg-zinc-800 px-6 py-4 border-b-4 border-purple-600 border-dotted">
-          <div className="mx-auto max-w-screen-xl flex items-center justify-center">
-            <h1 className="text-xl font-bold">Top Section (scrolls)</h1>
-          </div>
-        </div>
-      
-        <div className="border-t-2 border-purple-600 border-dotted mx-6" />
-      
-        {/* Bottom Sticky Navigation */}
-        <div className="sticky top-0 z-50 bg-purple-100 dark:bg-purple-900 px-6 py-4 shadow-md">
-          <div className="mx-auto max-w-screen-xl flex items-center justify-between">
-            <div>Left</div>
-            <div>Center</div>
-            <div>Right</div>
-          </div>
-        </div>
-      
-        {/* Some content below to scroll */}
-        <div className="h-[150vh] bg-gray-100 p-6">
-          Scroll down to see sticky nav behavior.
         </div>
       </header>
 
