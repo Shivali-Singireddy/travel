@@ -491,10 +491,10 @@ export function Header() {
           ref={headerRef}
           className="sticky top-0 z-50 bg-purple-100 dark:bg-purple-900 shadow-md"
         >
-          <div className="mx-auto max-w-screen-xl flex items-center justify-between px-6 py-2">
+          <div className="mx-auto max-w-screen-xl flex items-center justify-between px-3 py-3">
             
             {/* Left: Header Image */}
-            <div className="flex-shrink-0 mr-8">
+            <div className="flex-shrink-0 mr-12">
               <Image
                 src={headerImage}
                 alt="Header"
