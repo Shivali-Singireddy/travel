@@ -14,7 +14,7 @@ export async function GET(req: Request) {
   }
 
   let feed = new Feed({
-    title: 'Weekends with Shivali,
+    title: 'Weekends with Shivali',
     description: 'Your blog description',
     author,
     id: siteUrl,
