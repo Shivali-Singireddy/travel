@@ -174,6 +174,8 @@ export default async function Home() {
 
   return (
     <>
+      <div className="mt-10" />
+
       <div className="relative w-full h-[600px] bg-[#FAF5EF] border border-[#e0e0e0] overflow-hidden">
         {/* Right Purple Rectangle */}
         <div className="absolute top-0 left-1/2 h-full w-1/2 bg-[#866D97]" />
