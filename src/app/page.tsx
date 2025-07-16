@@ -170,10 +170,19 @@ function Photos() {
 }
 
 export default async function Home() {
+  
+  <div className="relative w-full h-40 bg-[#F4E3C1]">
+    {/* Tilted Purple Box */}
+    <div className="absolute left-0 top-0 h-full w-1/2 bg-purple-500 transform -skew-x-12 origin-left shadow-md" />
+  </div>
   let articles = (await getAllArticles()).slice(0, 4)
 
   return (
     <>
+      {/* Sand Tan Box with Tilted Purple Overlay */}
+      <div className="relative w-full h-40 bg-[#F4E3C1]">
+        <div className="absolute left-0 top-0 h-full w-1/2 bg-purple-500 transform -skew-x-12 origin-left shadow-md" />
+      </div>
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
