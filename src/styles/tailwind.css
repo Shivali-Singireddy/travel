@@ -37,7 +37,8 @@
 
 .custom-dotted-border {
   position: relative;
-  padding-bottom: 0.75rem; /* reduced space for the thinner dotted border */
+  padding-bottom: 1rem; /* more space below content */
+  padding-top: 0.5rem; 
 }
 
 .custom-dotted-border::after {
