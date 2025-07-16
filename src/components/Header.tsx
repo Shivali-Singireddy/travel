@@ -483,15 +483,13 @@ export function Header() {
             </div>
           </div>
         </header>
-      // <div className="flex-none" style={{ height: 'var(--content-offset)' }} />
-
       ) : (
         // All Other Pages Header
         <header
           ref={headerRef}
           className="sticky top-0 z-50 bg-purple-100 dark:bg-purple-900 shadow-md"
         >
-          <div className="mx-auto max-w-screen-xl flex items-center justify-between px-3 py-3">
+          <div className="mx-auto max-w-screen-xl flex items-center justify-between px-0 py-3">
             
             {/* Left: Header Image */}
             <div className="flex-shrink-0 mr-12">
@@ -509,7 +507,7 @@ export function Header() {
             </div>
   
             {/* Right: Social Icons + Avatar */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2">
               <SocialLinkIcon
                 href="https://www.instagram.com/shivalisingireddy/"
                 icon={InstagramIcon}
