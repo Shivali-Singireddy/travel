@@ -34,3 +34,14 @@
   --text-9xl: 8rem;
   --text-9xl--line-height: 1;
 }
+
+.custom-dotted-border {
+  border-bottom: 8px dotted #7c3aed; /* Tailwind's purple-600 */
+  border-image: repeating-linear-gradient(
+    to right,
+    #7c3aed 0,
+    #7c3aed 4px,
+    transparent 4px,
+    transparent 8px
+  ) 8 stretch;
+}
