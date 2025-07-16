@@ -192,7 +192,7 @@ export default async function Home() {
             }}
           />
           {/* Offset Outline Box */}
-          <div className="absolute top-1/2 left-[5%] -translate-y-1/2">
+          <div
             className="absolute border border-black"
             style={{
               width: '400px',
