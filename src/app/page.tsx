@@ -200,8 +200,6 @@ export default async function Home() {
           />
         </div>
       </div>
-
-      </div>
       
       <Container className="mt-9">
         <div className="max-w-2xl">
