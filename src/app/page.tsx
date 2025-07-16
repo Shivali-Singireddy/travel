@@ -181,24 +181,26 @@ export default async function Home() {
         <div className="absolute top-0 left-1/2 h-full w-1/2 bg-[#866D97]" />
       
         {/* Left Rotated Purple Rectangle with Offset Black Border */}
-        <div className="absolute left-4 top-1/2 -translate-y-1/2">
+        <div className="absolute top-1/2 left-[5%] -translate-y-1/2">
           {/* Offset Border */}
           <div
-            className="absolute w-[36%] h-[480px] bg-black -z-10"
+            className="absolute w-[250px] h-[480px] bg-black -z-10"
             style={{
-              transform: 'translate(8px, 8px) rotate(-6deg)',
+              transform: 'translate(10px, 10px) rotate(-8deg)',
               transformOrigin: 'center left',
             }}
           />
           {/* Main Purple Box */}
           <div
-            className="w-[36%] h-[480px] bg-[#866D97]"
+            className="w-[250px] h-[480px] bg-[#7A5E8A]"
             style={{
-              transform: 'rotate(-6deg)',
+              transform: 'rotate(-8deg)',
               transformOrigin: 'center left',
             }}
           />
         </div>
+      </div>
+
       </div>
       
       <Container className="mt-9">
@@ -211,18 +213,6 @@ export default async function Home() {
             and Business Analytics with a minor in Economics from MIT. I love to spend my summers travelling
             and wanted to share some of the tips I have learned from my experiences abroad.
           </p>
-          <div className="mt-6 flex gap-6">
-            <SocialLink
-              href="#"
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
-            />
-            <SocialLink
-              href="#"
-              aria-label="Follow on LinkedIn"
-              icon={LinkedInIcon}
-            />
-          </div>
         </div>
       </Container>
       <Photos />
