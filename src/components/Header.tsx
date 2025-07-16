@@ -434,9 +434,9 @@ export function Header() {
 
   return (
     <>
-      <header className="z-40">
+{/*       <header className="z-40">
         {/* Top Section: Avatar + Heading (scrolls normally) */}
-        <div className="bg-white dark:bg-zinc-800 px-6 py-4">
+        <div className="bg-white dark:bg-zinc-800 px-6 py-4 border-b-4 border-purple-600 border-dotted">
           <div className="mx-auto max-w-screen-xl flex items-center justify-between">
             <div className="flex-1 flex justify-center">
               <Image
@@ -482,7 +482,15 @@ export function Header() {
             </div>
           </div>
         </div>
-      </header>
+      </header> */}
+    <header>
+      <div className="bg-white border-b-4 border-purple-600 border-dotted px-6 py-4">
+        <Image src={headerImage} alt="Header" className="h-32 w-auto" priority />
+      </div>
+      <div className="sticky top-0 bg-purple-100 px-6 py-4 shadow-md">
+        <nav>Sticky Navigation Here</nav>
+      </div>
+    </header>
     {isHomePage && (
         <div
           className="flex-none"
