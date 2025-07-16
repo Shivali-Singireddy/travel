@@ -436,7 +436,52 @@ export function Header() {
 
   return (
     <>
-      <header ref={headerRef} className="sticky top-0 z-50 bg-white dark:bg-zinc-800 custom-dotted-border">
+      <header
+        ref={headerRef}
+        className="sticky top-0 z-50 bg-purple-100 dark:bg-purple-900 shadow-md"
+      >
+        <div className="mx-auto max-w-screen-xl flex items-center justify-between px-6 py-4">
+          
+          {/* Left: Header Image */}
+          <div className="flex-shrink-0">
+            <Image
+              src={headerImage}
+              alt="Header"
+              className="h-20 w-auto object-contain"
+              priority
+            />
+          </div>
+      
+          {/* Center: Navigation */}
+          <div className="hidden md:flex flex-1 justify-center">
+            <DesktopNavigation />
+          </div>
+      
+          {/* Right: Social Icons + Avatar */}
+          <div className="flex items-center gap-4">
+            <SocialLinkIcon
+              href="https://www.instagram.com/shivalisingireddy/"
+              icon={InstagramIcon}
+            />
+            <SocialLinkIcon
+              href="https://www.linkedin.com/in/shivalisingireddy"
+              icon={LinkedInIcon}
+            />
+            <div className="hidden md:block">
+              <AvatarContainer>
+                <Avatar />
+              </AvatarContainer>
+            </div>
+          </div>
+      
+          {/* Mobile Nav (only shows on small screens) */}
+          <div className="md:hidden flex flex-1 justify-end">
+            <MobileNavigation className="pointer-events-auto" />
+          </div>
+        </div>
+      </header>
+
+{/*       <header ref={headerRef} className="sticky top-0 z-50 bg-white dark:bg-zinc-800">
         <div className="bg-white dark:bg-zinc-800 px-6 py-4 custom-dotted-border">
           <div className="mx-auto max-w-screen-xl flex items-center justify-between">
             <div className="flex-1 flex justify-center">
@@ -477,14 +522,12 @@ export function Header() {
             </div>
           </div>
         </div>
-      </header>
+      </header> */}
 
-    {isHomePage && (
-        <div
-          className="flex-none"
-          style={{ height: 'var(--content-offset)' }}
-        />
-      )}
+    <div
+        className="flex-none"
+        style={{ height: 'var(--content-offset)' }}
+      />
     </>
   )
 }
