@@ -179,8 +179,8 @@ export default async function Home() {
       <div className="relative w-full h-[600px] bg-[#FAF5EF] border border-[#e0e0e0] overflow-visible">
         {/* Right Purple Rectangle */}
         <div className="absolute top-0 left-1/2 h-full w-1/2 bg-[#7A5E8A]" />
-      
-        {/* Left Tilted Purple Rectangle with Offset Outline */}
+        
+        {/* Left Tilted Purple Rectangle with Outline on Top */}
         <div className="absolute top-1/2 left-[5%] -translate-y-1/2">
           {/* Purple Box */}
           <div
@@ -191,19 +191,20 @@ export default async function Home() {
               transform: 'rotate(-5deg)',
             }}
           />
-          {/* Offset Outline Box */}
+      
+          {/* Outline Box on Top */}
           <div
-            className="absolute border border-black"
+            className="absolute z-20 border border-black pointer-events-none"
             style={{
               width: '400px',
               height: '480px',
-              transform: 'rotate(-5deg) translate(8px, 8px)', // offset to bottom-right
+              transform: 'rotate(-5deg) translate(8px, 8px)',
               backgroundColor: 'transparent',
-              zIndex: 0,
             }}
           />
         </div>
       </div>
+
 
       <Photos />
       <Container className="mt-24 md:mt-28">
