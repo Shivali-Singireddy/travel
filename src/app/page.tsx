@@ -182,7 +182,7 @@ export default async function Home() {
       
         {/* Left Rotated Purple Rectangle (adjusted) */}
         <div
-          className="absolute bg-[#9A86A9] w-[36%] h-[480px] left-15 top-1/2 -translate-y-1/2 -rotate-2"
+          className="absolute bg-[#9A86A9] w-[36%] h-[480px] left-15 top-1/2 -translate-y-1/2 -rotate-5"
           style={{
             transformOrigin: 'center left',
           }}
