@@ -38,7 +38,7 @@
 .custom-dotted-border {
   position: relative;
   padding-bottom: 2rem; /* more space below content */
-  padding-top: 2rem; 
+  padding-top: 1rem; 
 }
 
 .custom-dotted-border::after {
