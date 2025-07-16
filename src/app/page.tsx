@@ -175,11 +175,19 @@ export default async function Home() {
   return (
     <>
       <div className="mt-10" />
-
-      {/* Sand-Tan Hero Box with Tilted Purple Overlay */}
+      {/* Tan Box with Light Grey Border */}
       <div className="relative w-full h-[600px] bg-[#FAF5EF] border border-[#e0e0e0] overflow-hidden">
-        {/* Purple Rectangle - duller, wider, moved right, no rounded corners */}
-        <div className="absolute top-10 left-[60%] h-[28rem] w-[30rem] bg-[#7D5AA6] shadow-md" />
+      
+        {/* Right Purple Rectangle */}
+        <div className="absolute top-0 left-1/2 h-full w-1/2 bg-[#7D5AA6]" />
+      
+        {/* Left Rotated Purple Rectangle */}
+        <div
+          className="absolute bg-[#7D5AA6] w-[66.6667%] h-[400px] left-0 top-1/2 -translate-y-1/2 -rotate-2"
+          style={{
+            transformOrigin: 'center left'
+          }}
+        />
       </div>
       
       <Container className="mt-9">
