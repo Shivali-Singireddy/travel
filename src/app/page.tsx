@@ -178,11 +178,11 @@ export default async function Home() {
       {/* Tan Box with Light Grey Border */}
       <div className="relative w-full h-[600px] bg-[#FAF5EF] border border-[#e0e0e0] overflow-hidden">
         {/* Right Purple Rectangle */}
-        <div className="absolute top-0 left-1/2 h-full w-1/2 bg-[#7D5AA6]" />
+        <div className="absolute top-0 left-1/2 h-full w-1/2 bg-[#9A86A9]" />
       
         {/* Left Rotated Purple Rectangle (adjusted) */}
         <div
-          className="absolute bg-[#7D5AA6] w-[36%] h-[480px] left-4 top-1/2 -translate-y-1/2 -rotate-2"
+          className="absolute bg-[#9A86A9] w-[36%] h-[480px] left-15 top-1/2 -translate-y-1/2 -rotate-2"
           style={{
             transformOrigin: 'center left',
           }}
