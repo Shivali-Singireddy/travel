@@ -37,17 +37,17 @@
 
 .custom-dotted-border {
   position: relative;
-  padding-bottom: 1rem; /* reduced space for the thinner dotted border */
+  padding-bottom: 0.75rem; /* reduced space for the thinner dotted border */
 }
 
 .custom-dotted-border::after {
   content: '';
   position: absolute;
-  bottom: 1rem; /* moved up slightly from the very bottom */
+  bottom: 0.75rem; /* moved up slightly from the very bottom */
   left: 0;
   width: 100%;
-  height: 8px; /* thinner border */
-  background-image: radial-gradient(circle 3px, #4c1d95 100%, transparent 0); /* smaller dot, dark purple (#4c1d95) */
+  height: 6px; /* thinner border */
+  background-image: radial-gradient(circle 2.5px, #4c1d95 100%, transparent 0); /* smaller dot, dark purple (#4c1d95) */
   background-repeat: repeat-x;
   background-position: bottom left;
   background-size: 20px 8px; /* adjusted size for spacing and height */
