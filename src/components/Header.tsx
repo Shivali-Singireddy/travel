@@ -484,44 +484,30 @@ export function Header() {
         </div>
       </header> */}
     <header>
-      <div className="bg-white border-b-4 border-purple-600 border-dotted px-6 py-4">
-        <Image src={headerImage} alt="Header" className="h-32 w-auto" priority />
-      </div>
-      <div className="sticky top-0 bg-purple-100 px-6 py-4 shadow-md">
-        <div className="sticky top-0 bg-purple-100 px-6 py-4 shadow-md">
-          <div className="mx-auto max-w-screen-xl flex items-center justify-between">
-            {/* Left: Avatar */}
-            <div className="hidden md:block">
-              <AvatarContainer>
-                <Avatar />
-              </AvatarContainer>
-            </div>
-        
-            {/* Center: Desktop Navigation */}
-            <div className="hidden md:flex flex-1 justify-center">
-              <DesktopNavigation />
-            </div>
-        
-            {/* Right: Theme Toggle + Social Icons */}
-            <div className="flex items-center gap-4">
-              <ThemeToggle />
-              <SocialLinkIcon href="https://www.instagram.com/shivalisingireddy/" icon={InstagramIcon} />
-              <SocialLinkIcon href="https://www.linkedin.com/in/shivalisingireddy" icon={LinkedInIcon} />
-            </div>
-        
-            {/* Mobile Navigation */}
-            <div className="md:hidden flex justify-between w-full">
-              <MobileNavigation className="pointer-events-auto" />
-              <div className="flex items-center gap-4">
-                <SocialLinkIcon href="https://www.instagram.com/shivalisingireddy/" icon={InstagramIcon} />
-                <SocialLinkIcon href="https://www.linkedin.com/in/shivalisingireddy" icon={LinkedInIcon} />
-              </div>
-            </div>
-          </div>
+      {/* Top Section */}
+      <div className="bg-white dark:bg-zinc-800 px-6 py-4 border-b-4 border-purple-600 border-dotted">
+        <div className="mx-auto max-w-screen-xl flex items-center justify-center">
+          <h1 className="text-xl font-bold">Top Section (scrolls)</h1>
         </div>
-
+      </div>
+    
+      <div className="border-t-2 border-purple-600 border-dotted mx-6" />
+    
+      {/* Bottom Sticky Navigation */}
+      <div className="sticky top-0 z-50 bg-purple-100 dark:bg-purple-900 px-6 py-4 shadow-md">
+        <div className="mx-auto max-w-screen-xl flex items-center justify-between">
+          <div>Left</div>
+          <div>Center</div>
+          <div>Right</div>
+        </div>
+      </div>
+    
+      {/* Some content below to scroll */}
+      <div className="h-[150vh] bg-gray-100 p-6">
+        Scroll down to see sticky nav behavior.
       </div>
     </header>
+
     {isHomePage && (
         <div
           className="flex-none"
