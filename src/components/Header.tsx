@@ -19,6 +19,8 @@ import { Transition } from '@headlessui/react'
 import headerImage from '@/images/heading.jpg'
 import { InstagramIcon, LinkedInIcon } from '@/components/SocialIcons'
 
+
+
 function SocialLinkIcon({
   href,
   icon: Icon,
@@ -434,8 +436,8 @@ export function Header() {
 
   return (
     <>
-      <header className="z-40">
-        <div className="bg-white dark:bg-zinc-800 px-6 py-4 border-b-4 border-purple-600 border-dotted">
+      <header className="sticky z-40">
+        <div className="bg-white dark:bg-zinc-800 px-6 py-4 custom-dotted-border">
           <div className="mx-auto max-w-screen-xl flex items-center justify-between">
             <div className="flex-1 flex justify-center">
               <Image
@@ -447,8 +449,6 @@ export function Header() {
             </div>
           </div>
         </div>
-
-        <div className="border-t-2 border-purple-600 border-dotted mx-6" />
       
         <div className="sticky top-0 z-50 bg-purple-100 dark:bg-purple-900 px-6 py-4 shadow-md">
           <div className="mx-auto max-w-screen-xl flex items-center justify-between">
