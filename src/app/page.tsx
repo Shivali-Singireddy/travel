@@ -179,31 +179,33 @@ export default async function Home() {
       <div className="relative w-full h-[600px] bg-[#FAF5EF] border border-[#e0e0e0] overflow-visible">
         {/* Right Purple Rectangle */}
         <div className="absolute top-0 left-1/2 h-full w-1/2 bg-[#7A5E8A]" />
-        
+      
         {/* Left Tilted Purple Rectangle with Outline on Top */}
-        <div className="absolute top-1/2 left-[5%] -translate-y-1/2">
+        <div className="absolute top-1/2 left-[5%] -translate-y-1/2 relative" style={{ width: '400px', height: '480px' }}>
           {/* Purple Box */}
           <div
-            className="relative z-10 bg-[#7A5E8A]"
+            className="absolute top-0 left-0 bg-[#7A5E8A]"
             style={{
               width: '400px',
               height: '480px',
               transform: 'rotate(-5deg)',
+              zIndex: 10,
             }}
           />
-      
           {/* Outline Box on Top */}
           <div
-            className="absolute z-20 border border-black pointer-events-none"
+            className="absolute top-0 left-0 border border-black pointer-events-none"
             style={{
               width: '400px',
               height: '480px',
-              transform: 'rotate(-5deg) translate(8px, 8px)',
+              transform: 'rotate(-5deg) translate(8px, 8px)', // offset the outline
               backgroundColor: 'transparent',
+              zIndex: 20,
             }}
           />
         </div>
       </div>
+
 
 
       <Photos />
