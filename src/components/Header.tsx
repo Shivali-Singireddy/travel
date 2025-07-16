@@ -488,7 +488,38 @@ export function Header() {
         <Image src={headerImage} alt="Header" className="h-32 w-auto" priority />
       </div>
       <div className="sticky top-0 bg-purple-100 px-6 py-4 shadow-md">
-        <nav>Sticky Navigation Here</nav>
+        <div className="sticky top-0 bg-purple-100 px-6 py-4 shadow-md">
+          <div className="mx-auto max-w-screen-xl flex items-center justify-between">
+            {/* Left: Avatar */}
+            <div className="hidden md:block">
+              <AvatarContainer>
+                <Avatar />
+              </AvatarContainer>
+            </div>
+        
+            {/* Center: Desktop Navigation */}
+            <div className="hidden md:flex flex-1 justify-center">
+              <DesktopNavigation />
+            </div>
+        
+            {/* Right: Theme Toggle + Social Icons */}
+            <div className="flex items-center gap-4">
+              <ThemeToggle />
+              <SocialLinkIcon href="https://www.instagram.com/shivalisingireddy/" icon={InstagramIcon} />
+              <SocialLinkIcon href="https://www.linkedin.com/in/shivalisingireddy" icon={LinkedInIcon} />
+            </div>
+        
+            {/* Mobile Navigation */}
+            <div className="md:hidden flex justify-between w-full">
+              <MobileNavigation className="pointer-events-auto" />
+              <div className="flex items-center gap-4">
+                <SocialLinkIcon href="https://www.instagram.com/shivalisingireddy/" icon={InstagramIcon} />
+                <SocialLinkIcon href="https://www.linkedin.com/in/shivalisingireddy" icon={LinkedInIcon} />
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </header>
     {isHomePage && (
