@@ -483,7 +483,7 @@ export function Header() {
             </div>
           </div>
         </header>
-      <div className="flex-none" style={{ height: 'var(--content-offset)' }} />
+      // <div className="flex-none" style={{ height: 'var(--content-offset)' }} />
 
       ) : (
         // All Other Pages Header
