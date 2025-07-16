@@ -176,30 +176,35 @@ export default async function Home() {
     <>
       <div className="mt-10" />
 
-      <div className="relative w-full h-[600px] bg-[#FAF5EF] border border-[#e0e0e0] overflow-hidden">
+      <div className="relative w-full h-[600px] bg-[#FAF5EF] border border-[#e0e0e0] overflow-visible">
         {/* Right Purple Rectangle */}
-        <div className="absolute top-0 left-1/2 h-full w-1/2 bg-[#866D97]" />
+        <div className="absolute top-0 left-1/2 h-full w-[60%] bg-[#7A5E8A]" />
       
-        {/* Left Rotated Purple Rectangle with Offset Black Border */}
+        {/* Left Tilted Purple Rectangle with Offset Outline */}
         <div className="absolute top-1/2 left-[5%] -translate-y-1/2">
-          {/* Offset Border */}
+          {/* Offset Outline Box */}
           <div
-            className="absolute w-[250px] h-[480px] bg-black -z-10"
+            className="absolute border border-black"
             style={{
-              transform: 'translate(10px, 10px) rotate(-8deg)',
-              transformOrigin: 'center left',
+              width: '300px',
+              height: '480px',
+              transform: 'rotate(-12deg) translate(8px, 8px)', // offset to bottom-right
+              backgroundColor: 'transparent',
+              zIndex: 0,
             }}
           />
-          {/* Main Purple Box */}
+          {/* Purple Box */}
           <div
-            className="w-[250px] h-[480px] bg-[#7A5E8A]"
+            className="relative z-10 bg-[#7A5E8A]"
             style={{
-              transform: 'rotate(-8deg)',
-              transformOrigin: 'center left',
+              width: '300px',
+              height: '480px',
+              transform: 'rotate(-12deg)',
             }}
           />
         </div>
       </div>
+
       
       <Container className="mt-9">
         <div className="max-w-2xl">
