@@ -465,8 +465,9 @@ export function Header() {
             </div>
         
             {/* Right: Theme Toggle */}
-            <div className="hidden md:block">
-              <ThemeToggle />
+            <div className="flex items-center gap-4">
+                <SocialLinkIcon href="https://www.instagram.com/shivalisingireddy/" icon={InstagramIcon} />
+                <SocialLinkIcon href="https://www.linkedin.com/in/shivalisingireddy" icon={LinkedInIcon} />
             </div>
         
             {/* Mobile nav */}
