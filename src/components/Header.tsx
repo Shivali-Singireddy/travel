@@ -436,7 +436,7 @@ export function Header() {
 
   return (
     <>
-      <header className="sticky z-40">
+      <header ref={headerRef} className="sticky top-0 z-50 bg-white dark:bg-zinc-800 custom-dotted-border">
         <div className="bg-white dark:bg-zinc-800 px-6 py-4 custom-dotted-border">
           <div className="mx-auto max-w-screen-xl flex items-center justify-between">
             <div className="flex-1 flex justify-center">
