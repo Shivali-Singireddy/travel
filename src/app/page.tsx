@@ -173,23 +173,22 @@ function Photos() {
 export default async function Home() {
   let articles = (await getAllArticles()).slice(0, 4)
 
-  return (
+    return (
     <>
       <div className="mt-10" />
-  
-      <div className="relative w-full h-[720px] bg-[#FAF5EF] border border-[#e0e0e0] overflow-visible">
+
+      <div className="relative w-full h-[700px] bg-[#FAF5EF] border border-[#e0e0e0] overflow-visible">
         {/* Right Purple Rectangle */}
         <div className="absolute top-0 left-1/2 h-full w-1/2 bg-[#7A5E8A]" />
-  
-        {/* Amazon Image with offset dark grey border */}
+
+        {/* Amazon Image behind left purple box */}
         <div
           className="absolute left-1/2 -translate-x-1/2"
           style={{
-            top: '68%',
+            top: '68%',                
             width: '320px',
             height: '320px',
-            position: 'absolute',
-            zIndex: 10, // lower zIndex for amazon
+            zIndex: 10, // behind purple box which is zIndex 20+
           }}
         >
           <Image
@@ -210,15 +209,62 @@ export default async function Home() {
             }}
           />
         </div>
-  
+
+        {/* Avatar Image above Amazon */}
+        <div
+          className="absolute left-[calc(50% - 80px)]"
+          style={{
+            top: '45%',
+            width: '160px',
+            height: '160px',
+            zIndex: 15,
+            position: 'absolute',
+          }}
+        >
+          <Image
+            src={avatar}
+            alt="Avatar"
+            className="object-cover"
+            style={{ width: '160px', height: '160px', position: 'relative' }}
+          />
+          {/* Thin white outline inside */}
+          <div
+            className="pointer-events-none"
+            style={{
+              position: 'absolute',
+              top: '4px',
+              left: '4px',
+              width: '152px',
+              height: '152px',
+              border: '1.5px solid white',
+              boxSizing: 'border-box',
+              zIndex: 20,
+            }}
+          />
+        </div>
+
+        {/* Tape Image */}
+        <Image
+          src={tape}
+          alt="Tape"
+          width={96}
+          height={32}
+          className="absolute w-56"
+          style={{
+            top: '-20px',
+            left: 'calc(5% + 90px)',
+            transform: 'rotate(-15deg)',
+            zIndex: 25, // below purple box outline but above amazon
+          }}
+        />
+
         {/* Left Tilted Purple Rectangle with Outline */}
         <div
           className="absolute top-1/2 left-[5%] -translate-y-1/2 relative"
           style={{
             width: '480px',
             height: '560px',
-            position: 'absolute',
-            zIndex: 20, // higher than amazon
+            zIndex: 30,
           }}
         >
           {/* Purple Box */}
@@ -229,7 +275,7 @@ export default async function Home() {
               height: '560px',
               transform: 'rotate(-5deg)',
               position: 'relative',
-              zIndex: 20,
+              zIndex: 30,
             }}
           >
             {/* Inner content counter-rotated */}
@@ -248,70 +294,22 @@ export default async function Home() {
               </p>
             </div>
           </div>
-  
-          {/* Outline Box on Top */}
+
+          {/* Outline Box on Top (offset UP and LEFT) */}
           <div
             className="absolute top-0 left-0 border border-black pointer-events-none"
             style={{
               width: '480px',
               height: '560px',
-              transform: 'rotate(-5deg) translate(8px, 8px)',
+              transform: 'rotate(-5deg) translate(-8px, -8px)', // offset up and left
               backgroundColor: 'transparent',
-              zIndex: 30,
+              zIndex: 40,
               position: 'relative',
             }}
           />
         </div>
-  
-        {/* Avatar Image with white inset border */}
-        <div
-          className="absolute left-1/2 -translate-x-1/2"
-          style={{
-            top: '52%',
-            width: '200px',
-            height: '200px',
-            position: 'absolute',
-            zIndex: 40, // highest zIndex for avatar
-            overflow: 'hidden',
-          }}
-        >
-          <Image
-            src={avatar}
-            alt="Avatar"
-            className="object-cover"
-            style={{ width: '100%', height: '100%', position: 'relative', zIndex: 40 }}
-          />
-          {/* White inset border (thinner: 1px) */}
-          <div
-            style={{
-              position: 'absolute',
-              top: '8px',
-              left: '8px',
-              right: '8px',
-              bottom: '8px',
-              border: '1px solid white',
-              pointerEvents: 'none',
-              boxSizing: 'border-box',
-              zIndex: 41,
-            }}
-          />
-        </div>
-  
-        {/* Tape Image */}
-        <Image
-          src={tape}
-          alt="Tape"
-          width={96}
-          height={32}
-          className="absolute z-50 w-56"
-          style={{
-            top: '-60px',
-            left: 'calc(5% + 80px)', // moved more right
-            transform: 'rotate(-15deg)',
-          }}
-        />
       </div>
-  
+
       <Photos />
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
