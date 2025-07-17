@@ -114,7 +114,7 @@ function MobileNavigation(
         </div>
         <nav className="mt-6">
           <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
-            <MobileNavItem href="/continents">Destinations</MobileNavItem>
+            <MobileNavItem href="/destinations">Destinations</MobileNavItem>
             <MobileNavItem href="/blog">Personal Blog</MobileNavItem>
             <MobileNavItem href="/about">About</MobileNavItem>
           </ul>
@@ -172,7 +172,7 @@ export function DropdownNavItem({ label, items }: DropdownNavItemProps) {
       onMouseLeave={() => setIsOpen(false)}
     >
       <Link
-        href="/continents"
+        href="/destinations"
         className="relative block px-3 py-2 transition hover:text-teal-500 dark:hover:text-teal-400"
       >
         {label}
@@ -213,11 +213,11 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<'nav'>) {
           label="Destinations"
           href="/continents"
           items={[
-            { label: 'Europe', href: '/continents/europe' },
-            { label: 'North America', href: '/continents/north_america' },
-            { label: 'South America', href: '/continents/south_america' },
-            { label: 'Africa', href: '/continents/africa' },
-            { label: 'Asia', href: '/continents/asia' },
+            { label: 'Europe', href: '/destinations/europe' },
+            { label: 'North America', href: '/destinations/north_america' },
+            { label: 'South America', href: '/destinations/south_america' },
+            { label: 'Africa', href: '/destinations/africa' },
+            { label: 'Asia', href: '/destinations/asia' },
           ]}
         />
         <NavItem href="/blog">Personal Blog</NavItem>
