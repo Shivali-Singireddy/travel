@@ -266,8 +266,8 @@ export default async function Home() {
         <div
           className="absolute z-40"
           style={{
-            top: '-40px',     // move up
-            left: '60%',      // move right
+            top: '-20px',     // move up
+            left: '55%',      // move right
             width: 250,
             height: 250,
           }}
@@ -283,8 +283,8 @@ export default async function Home() {
           <div
             className="absolute top-0 left-0 pointer-events-none"
             style={{
-              width: '210px',
-              height: '210px',
+              width: '220px',
+              height: '220px',
               transform: 'translate(15px, 15px)',
               backgroundColor: 'transparent',
               border: '1px solid #FAF5EF',
