@@ -202,9 +202,12 @@ export default async function Home() {
             {/* Inner content counter-rotated to appear upright */}
             <div
               className="text-white text-center h-full flex flex-col justify-center items-center"
-              style={{ transform: 'rotate(5deg)' }}
+              style={{
+                transform: 'rotate(5deg)',
+                fontFamily: 'Georgia, serif',
+              }}
             >
-              <h2 className="text-5xl font-extrabold mb-6">Welcome to Weekends with Shivali</h2>
+              <h2 className="text-6xl font-extrabold mb-6">Welcome to Weekends with Shivali</h2>
               <p className="text-2xl leading-relaxed max-w-[90%]">
                 Hi, I’m Shivali and welcome to my personal blog! With this blog I hope to primarily share
                 my experiences with travelling and other hobbies!
