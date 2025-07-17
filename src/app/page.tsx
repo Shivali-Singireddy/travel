@@ -181,20 +181,19 @@ export default async function Home() {
         {/* Right Purple Rectangle */}
         <div className="absolute top-0 left-1/2 h-full w-1/2 bg-[#7A5E8A]" />
       
+        {/* Amazon Image (moved up and behind purple box) */}
         <div
-          className="absolute left-1/2 -translate-x-1/2"
+          className="absolute left-1/2 -translate-x-1/2 z-10"
           style={{
-            top: '70%',
+            top: '58%', 
             width: '250px',
             height: '250px',
-            zIndex: 3,
           }}
         >
           <Image
             src={amazon}
             alt="Amazon"
             className="w-full h-full object-cover"
-            style={{ position: 'relative', zIndex: 3 }}
           />
           <div
             className="absolute top-0 left-0 border border-gray-800 pointer-events-none"
@@ -203,7 +202,6 @@ export default async function Home() {
               height: '250px',
               transform: 'translate(-8px, -8px)',
               backgroundColor: 'transparent',
-              zIndex: 2,
             }}
           />
         </div>
@@ -222,20 +220,21 @@ export default async function Home() {
           }}
         />
       
+        {/* Left Purple Box with Text */}
         <div
-          className="absolute top-1/2 left-[5%] -translate-y-1/2 relative"
-          style={{ width: '460px', height: '480px' }}
+          className="absolute top-1/2 left-[5%] -translate-y-1/2 z-20"
+          style={{ width: '480px', height: '480px' }}
         >
-          {/* Purple Box */}
+          {/* Purple Background */}
           <div
             className="absolute top-0 left-0 bg-[#7A5E8A] p-6"
             style={{
-              width: '460px',
+              width: '480px',
               height: '480px',
               transform: 'rotate(-5deg)',
-              zIndex: 10,
             }}
           >
+            {/* Upright Text */}
             <div
               className="text-white text-center h-full flex flex-col justify-center items-center"
               style={{
@@ -247,25 +246,26 @@ export default async function Home() {
                 Welcome to Weekends with Shivali
               </h2>
               <p className="text-2xl leading-relaxed max-w-[80%]">
-                Hi, I’m Shivali and welcome to my personal blog! With this blog I hope
-                to primarily share my experiences with travelling and other hobbies!
+                Hi, I’m Shivali and welcome to my personal blog! With this blog I hope to
+                primarily share my experiences with travelling and other hobbies!
               </p>
             </div>
           </div>
       
-          {/* Outline Box on Top */}
+          {/* Purple Outline */}
           <div
             className="absolute top-0 left-0 border border-black pointer-events-none"
             style={{
-              width: '430px',
-              height: '460px',
+              width: '480px',
+              height: '480px',
               transform: 'rotate(-5deg) translate(8px, 8px)',
               backgroundColor: 'transparent',
-              zIndex: 20,
+              zIndex: 30,
             }}
           />
         </div>
       </div>
+
     </>
   )
 }
