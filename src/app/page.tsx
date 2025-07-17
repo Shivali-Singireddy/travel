@@ -181,11 +181,12 @@ export default async function Home() {
         {/* Right Purple Rectangle */}
         <div className="absolute top-0 left-1/2 h-full w-1/2 bg-[#7A5E8A]" />
       
-        {/* Amazon Image (moved up and behind purple box) */}
+        {/* Amazon Image (behind purple box, slightly lower and to the right) */}
         <div
-          className="absolute left-1/2 -translate-x-1/2 z-10"
+          className="absolute -translate-x-1/2 z-10"
           style={{
-            top: '48%', // Move up by decreasing this value
+            top: '52%',
+            left: '52%',
             width: '250px',
             height: '250px',
           }}
@@ -206,7 +207,7 @@ export default async function Home() {
           />
         </div>
       
-        {/* Tape Image */}
+        {/* Tape Image (moved slightly right and up) */}
         <Image
           src={tape}
           alt="Tape"
@@ -214,8 +215,8 @@ export default async function Home() {
           height={32}
           className="absolute z-30 w-56"
           style={{
-            top: '-60px',
-            left: 'calc(5% + 50px)',
+            top: '-70px',
+            left: 'calc(5% + 70px)',
             transform: 'rotate(-15deg)',
           }}
         />
@@ -225,7 +226,6 @@ export default async function Home() {
           className="absolute top-1/2 left-[5%] -translate-y-1/2 z-20"
           style={{ width: '480px', height: '480px' }}
         >
-          {/* Purple Background */}
           <div
             className="absolute top-0 left-0 bg-[#7A5E8A] p-6"
             style={{
@@ -234,15 +234,14 @@ export default async function Home() {
               transform: 'rotate(-5deg)',
             }}
           >
-            {/* Upright Text */}
             <div
-              className="text-white text-center h-full flex flex-col justify-center items-center mt-4"
+              className="text-white text-center h-full flex flex-col justify-center items-center mt-6"
               style={{
                 transform: 'rotate(5deg)',
                 fontFamily: 'Georgia, serif',
               }}
             >
-              <h2 className="text-5xl font-extrabold mb-6">
+              <h2 className="text-6xl font-extrabold mb-6">
                 Welcome to Weekends with Shivali
               </h2>
               <p className="text-2xl leading-relaxed max-w-[80%]">
@@ -252,7 +251,7 @@ export default async function Home() {
             </div>
           </div>
       
-          {/* Purple Outline */}
+          {/* Outline */}
           <div
             className="absolute top-0 left-0 border border-black pointer-events-none"
             style={{
@@ -265,6 +264,7 @@ export default async function Home() {
           />
         </div>
       </div>
+
     </>
   )
 }
