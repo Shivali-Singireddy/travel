@@ -179,17 +179,17 @@ export default async function Home() {
           style={{
             position: 'relative',
             width: 470,       // outline container bigger than image container
-            height: 500,
+            height: 550,
           }}
         >
           {/* Outline */}
           <div
             style={{
               position: 'absolute',
-              top: 50,        // offset upwards
-              left: 750,       // offset leftwards
-              width: 450,      // slightly bigger width than container (470 + 20 offset total)
-              height: 470,     // slightly bigger height (300 + 20)
+              top: 40,        // offset upwards
+              left: 730,       // offset leftwards
+              width: 480,      // slightly bigger width than container (470 + 20 offset total)
+              height: 530,     // slightly bigger height (300 + 20)
               border: '1px solid black',
               borderRadius: 0,
               pointerEvents: 'none',  // don't block mouse events
@@ -202,13 +202,13 @@ export default async function Home() {
             style={{
               position: 'absolute',
               top: 60,        
-              left: 760,
-              width: 430,
-              height: 450,
+              left: 750,
+              width: 440,
+              height: 490,
               overflow: 'hidden',
             }}
           >
-            <RotatingImages width={450} height={450} />
+            <RotatingImages width={500} height={500} />
           </div>
         </div>
 
