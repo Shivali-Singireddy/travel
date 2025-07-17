@@ -20,9 +20,6 @@ import { formatDate } from '@/lib/formatDate'
 import { useEffect, useState } from 'react'
 import type { StaticImageData } from 'next/image'
 
-
-const images = [machupichu, horse]
-
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg
@@ -248,6 +245,12 @@ export default async function Home() {
             }}
           />
         </div>
+
+        <RotatingImageWithFade
+          images= {[machupichu, horse]}
+          width={250}
+          height={250}
+        />
       
         {/* Tape Image (moved slightly right and up) */}
         <Image
@@ -334,11 +337,6 @@ export default async function Home() {
           />
         </div>
       </div>
-      <RotatingImageWithFade
-        images= images
-        width={250}
-        height={250}
-      />
     </>
   )
 }
