@@ -1,4 +1,3 @@
-'use client'
 import Image, { type ImageProps } from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
@@ -18,7 +17,7 @@ import horse from '@/images/photos/horse.jpg'
 
 import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
-import { useEffect, useState } from 'react'
+import { RotatingImages } from '@/components/RotatingImages' // client component
 import type { StaticImageData } from 'next/image'
 
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
@@ -255,11 +254,7 @@ export default async function Home() {
             transform: 'translate(-50%, -50%)',
           }}
         >
-          <RotatingImageWithFade
-            images={[image1, image2, image3]}
-            width={250}
-            height={250}
-          />
+          <RotatingImages width={250} height={250} />
         </div>
       
         {/* Tape Image (moved slightly right and up) */}
