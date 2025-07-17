@@ -180,32 +180,7 @@ export default async function Home() {
             position: 'relative',
             width: 470,       // outline container bigger than image container
             height: 550,
-            <div
-  className="absolute"
-  style={{
-    top: '45%',
-    left: '80%',
-    transform: 'translate(-50%, -50%)',
-    zIndex: 20,
-  }}
->
-  <div
-    style={{
-      position: 'relative',
-      width: 440,
-      height: 490,
-      boxShadow: '0 0 0 1px black',
-      borderRadius: 0,
-      margin: '-3px',
-    }}
-  >
-    <RotatingImages
-      images={[amazon, machupichu, horse]} // example list
-      width={440}
-      height={490}
-    />
-  </div>
-</div>
+            zIndex: 20,
           }}
         >
           {/* Outline */}
