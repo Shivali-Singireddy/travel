@@ -182,7 +182,7 @@ export default async function Home() {
 
         {/* Tape Image */}
         <img
-          src="/images/tape.png" // Update this path as needed
+          src="/images/tape.jpg" // Update this path as needed
           alt="Tape"
           className="absolute left-1/2 -top-6 -translate-x-1/2 z-30 w-24"
         />
@@ -200,9 +200,12 @@ export default async function Home() {
             }}
           >
             {/* Inner content counter-rotated to appear upright */}
-            <div className="text-white text-center" style={{ transform: 'rotate(5deg)' }}>
-              <h2 className="text-4xl font-extrabold mb-4">Welcome to Weekends with Shivali</h2>
-              <p className="text-xl leading-relaxed">
+            <div
+              className="text-white text-center h-full flex flex-col justify-center items-center"
+              style={{ transform: 'rotate(5deg)' }}
+            >
+              <h2 className="text-5xl font-extrabold mb-6">Welcome to Weekends with Shivali</h2>
+              <p className="text-2xl leading-relaxed max-w-[90%]">
                 Hi, I’m Shivali and welcome to my personal blog! With this blog I hope to primarily share
                 my experiences with travelling and other hobbies!
               </p>
