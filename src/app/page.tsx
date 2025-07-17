@@ -190,7 +190,7 @@ export default async function Home() {
           }}
         >
           {/* Image */}
-          <img
+          <Image
             src= {amazon}
             alt="Amazon"
             className="w-full h-full object-cover"
