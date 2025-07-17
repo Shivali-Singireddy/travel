@@ -14,6 +14,7 @@ import logoFacebook from '@/images/logos/facebook.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
 import logoStarbucks from '@/images/logos/starbucks.svg'
 import tape from '@/images/tape.jpg'
+import avatar from '@/images/avatar.jpg'
 import amazon from '@/images/photos/amazon.jpg'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
@@ -184,9 +185,9 @@ export default async function Home() {
         <div
           className="absolute left-1/2 -translate-x-1/2"
           style={{
-            top: '75%',                
-            width: '200px',
-            height: '200px',
+            top: '70%',                
+            width: '250px',
+            height: '250px',
             zIndex: 3,                 // Behind the purple box
           }}
         >
@@ -200,8 +201,8 @@ export default async function Home() {
           <div
             className="absolute top-0 left-0 border border-gray-800 pointer-events-none"
             style={{
-              width: '200px',
-              height: '200px',
+              width: '250px',
+              height: '250px',
               transform: 'translate(-8px, -8px)',
               backgroundColor: 'transparent',
               zIndex: 2,
@@ -217,18 +218,18 @@ export default async function Home() {
           height={32}
           className="absolute top-[70px] left-[calc(5%+10px)] z-30 w-56"
           style={{ 
-            top: '-40px',
+            top: '-50px',
             left: 'calc(5% + 50px)',
             transform: 'rotate(-15deg)' }}
         />
       
         {/* Left Tilted Purple Rectangle with Outline on Top */}
-        <div className="absolute top-1/2 left-[5%] -translate-y-1/2 relative" style={{ width: '400px', height: '480px' }}>
+        <div className="absolute top-1/2 left-[5%] -translate-y-1/2 relative" style={{ width: '430px', height: '480px' }}>
           {/* Purple Box */}
           <div
             className="absolute top-0 left-0 bg-[#7A5E8A] p-6"
             style={{
-              width: '400px',
+              width: '430px',
               height: '480px',
               transform: 'rotate(-5deg)',
               zIndex: 10,
@@ -254,7 +255,7 @@ export default async function Home() {
           <div
             className="absolute top-0 left-0 border border-black pointer-events-none"
             style={{
-              width: '400px',
+              width: '430px',
               height: '480px',
               transform: 'rotate(-5deg) translate(8px, 8px)',
               backgroundColor: 'transparent',
