@@ -216,7 +216,7 @@ export default async function Home() {
           className="absolute z-30 w-56"
           style={{
             top: '-65px',
-            left: 'calc(5% + 85px)',
+            left: 'calc(5% + 90px)',
             transform: 'rotate(-15deg)',
           }}
         />
