@@ -181,33 +181,73 @@ export default async function Home() {
         {/* Right Purple Rectangle */}
         <div className="absolute top-0 left-1/2 h-full w-1/2 bg-[#7A5E8A]" />
       
-        {/* Amazon Image (behind purple box, slightly lower and to the right) */}
+        {/* Amazon + Avatar Image Container */}
         <div
           className="absolute -translate-x-1/2 z-10"
           style={{
             top: '52%',
             left: '52%',
             width: '250px',
-            height: '250px',
+            height: '320px', // unchanged
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: '10px',
           }}
         >
-          <Image
-            src={amazon}
-            alt="Amazon"
-            className="w-full h-full object-cover"
-          />
+          {/* Avatar Image with white inset border */}
           <div
-            className="absolute top-0 left-0 border border-gray-800 pointer-events-none"
             style={{
-              width: '250px',
-              height: '250px',
-              transform: 'translate(-8px, -8px)',
-              backgroundColor: 'transparent',
+              position: 'relative',
+              width: '100px',
+              height: '100px',
+              borderRadius: '50%',
+              overflow: 'hidden',
             }}
-          />
+          >
+            <Image
+              src={avatar}
+              alt="Avatar"
+              className="object-cover"
+              style={{ width: '100%', height: '100%' }}
+            />
+            {/* White inset border */}
+            <div
+              style={{
+                position: 'absolute',
+                top: '6px',
+                left: '6px',
+                right: '6px',
+                bottom: '6px',
+                borderRadius: '50%',
+                border: '3px solid white',
+                pointerEvents: 'none',
+                boxSizing: 'border-box',
+              }}
+            />
+          </div>
+      
+          {/* Amazon Image */}
+          <div style={{ position: 'relative', width: '250px', height: '250px' }}>
+            <Image
+              src={amazon}
+              alt="Amazon"
+              className="w-full h-full object-cover"
+            />
+            <div
+              className="absolute top-0 left-0 border border-gray-800 pointer-events-none"
+              style={{
+                width: '250px',
+                height: '250px',
+                transform: 'translate(-8px, -8px)',
+                backgroundColor: 'transparent',
+                zIndex: 2,
+              }}
+            />
+          </div>
         </div>
       
-        {/* Tape Image (slightly further right) */}
+        {/* Tape Image */}
         <Image
           src={tape}
           alt="Tape"
@@ -216,21 +256,21 @@ export default async function Home() {
           className="absolute z-30 w-56"
           style={{
             top: '-70px',
-            left: 'calc(5% + 80px)', // moved further right
+            left: 'calc(5% + 80px)',
             transform: 'rotate(-15deg)',
           }}
         />
       
-        {/* Left Purple Box with Text */}
+        {/* Left Purple Box */}
         <div
           className="absolute top-1/2 left-[5%] -translate-y-1/2 z-20"
-          style={{ width: '480px', height: '600px' }} // increased height here
+          style={{ width: '420px', height: '540px' }}
         >
           <div
             className="absolute top-0 left-0 bg-[#7A5E8A] p-6"
             style={{
-              width: '480px',
-              height: '600px', // increased height here
+              width: '420px',
+              height: '540px',
               transform: 'rotate(-5deg)',
             }}
           >
@@ -251,12 +291,11 @@ export default async function Home() {
             </div>
           </div>
       
-          {/* Outline */}
           <div
             className="absolute top-0 left-0 border border-black pointer-events-none"
             style={{
-              width: '480px',
-              height: '600px', // increased height here
+              width: '420px',
+              height: '540px',
               transform: 'rotate(-5deg) translate(8px, 8px)',
               backgroundColor: 'transparent',
               zIndex: 30,
@@ -264,7 +303,6 @@ export default async function Home() {
           />
         </div>
       </div>
-
     </>
   )
 }
