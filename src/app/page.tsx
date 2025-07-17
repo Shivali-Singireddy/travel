@@ -188,8 +188,8 @@ export default async function Home() {
             style={{
               position: 'absolute',
               top: 40,        // offset upwards
-              left: 700,       // offset leftwards
-              width: 470,      // slightly bigger width than container (470 + 20 offset total)
+              left: 690,       // offset leftwards
+              width: 490,      // slightly bigger width than container (470 + 20 offset total)
               height: 540,     // slightly bigger height (300 + 20)
               border: '1px solid black',
               borderRadius: 0,
@@ -276,7 +276,7 @@ export default async function Home() {
           className="absolute z-40"
           style={{
             top: '-20px',     // move up
-            left: '45%',      // move right
+            left: '50%',      // move right
             width: 250,
             height: 250,
           }}
