@@ -185,22 +185,22 @@ export default async function Home() {
         <div
           className="absolute -translate-x-1/2 z-10"
           style={{
-            top: '50%',
+            top: '40%',        // moved avatar and amazon container higher
             left: '52%',
             width: '250px',
-            height: '350px', // enough height for avatar + amazon image + gap
+            height: '430px',   // increased height for bigger avatar + amazon + spacing
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            gap: '12px',
+            gap: '20px',
           }}
         >
-          {/* Avatar Image as square, positioned higher */}
+          {/* Avatar Image as bigger square */}
           <div
             style={{
               position: 'relative',
-              width: '100px',
-              height: '100px',
+              width: '160px',
+              height: '160px',
               overflow: 'hidden',
             }}
           >
@@ -214,11 +214,11 @@ export default async function Home() {
             <div
               style={{
                 position: 'absolute',
-                top: '6px',
-                left: '6px',
-                right: '6px',
-                bottom: '6px',
-                border: '3px solid white',
+                top: '8px',
+                left: '8px',
+                right: '8px',
+                bottom: '8px',
+                border: '4px solid white',
                 pointerEvents: 'none',
                 boxSizing: 'border-box',
               }}
@@ -262,7 +262,7 @@ export default async function Home() {
         {/* Left Purple Box */}
         <div
           className="absolute top-1/2 left-[5%] -translate-y-1/2 z-20"
-          style={{ width: '480px', height: '540px' }} // same width, smaller height
+          style={{ width: '480px', height: '540px' }}
         >
           <div
             className="absolute top-0 left-0 bg-[#7A5E8A] p-6"
@@ -273,7 +273,7 @@ export default async function Home() {
             }}
           >
             <div
-              className="text-white text-center h-full flex flex-col justify-center items-center mt-10" // moved text down slightly with mt-10
+              className="text-white text-center h-full flex flex-col justify-center items-center mt-4" // moved text slightly up (mt-4)
               style={{
                 transform: 'rotate(5deg)',
                 fontFamily: 'Georgia, serif',
