@@ -187,7 +187,8 @@ export default async function Home() {
             style={{
               position: 'relative',
               width: 400,
-              height: 400,
+              height: 300,
+              overflow: 'hidden',
               boxShadow: '0 0 0 1px black',
               borderRadius: 0,
               margin: '-3px',
