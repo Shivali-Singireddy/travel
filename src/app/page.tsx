@@ -14,6 +14,7 @@ import logoFacebook from '@/images/logos/facebook.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
 import logoStarbucks from '@/images/logos/starbucks.svg'
 import tape from '@/images/tape.jpg'
+import amazon from '@/images/photos/amazon.jpg'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -179,13 +180,44 @@ export default async function Home() {
         {/* Right Purple Rectangle */}
         <div className="absolute top-0 left-1/2 h-full w-1/2 bg-[#7A5E8A]" />
 
+        {/* Center Image with Offset Border */}
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          style={{
+            width: '320px',
+            height: '220px',
+            zIndex: 5,
+          }}
+        >
+          {/* Image itself */}
+          <img
+            src= amazon // Update path if needed
+            alt="Amazon"
+            className="w-full h-full object-cover"
+            style={{ zIndex: 5, position: 'relative' }}
+          />
+        
+          {/* Offset Border */}
+          <div
+            className="absolute top-0 left-0 border border-gray-800 pointer-events-none"
+            style={{
+              width: '320px',
+              height: '220px',
+              transform: 'translate(-8px, -8px)',
+              backgroundColor: 'transparent',
+              zIndex: 4,
+            }}
+          />
+        </div>
+
         {/* Tape Image */}    
         <Image
           src={tape}
           alt="Tape"
           width={96}
           height={32}
-          className="absolute left-1/2 -top-6 -translate-x-1/2 z-30"
+          className="absolute top-[70px] left-[calc(5%+10px)] z-30 w-36"
+          style={{ transform: 'rotate(-12deg)' }}
         />
       
         {/* Left Tilted Purple Rectangle with Outline on Top */}
