@@ -199,8 +199,8 @@ export default async function Home() {
           <div
             className="absolute top-0 left-0 border border-gray-800 pointer-events-none"
             style={{
-              width: '250px',
-              height: '250px',
+              width: '280px',
+              height: '280px',
               transform: 'translate(-8px, -8px)',
               backgroundColor: 'transparent',
             }}
@@ -270,23 +270,22 @@ export default async function Home() {
           <div
             className="w-full h-full"
             style={{
-              boxShadow: 'inset 0 0 0 4px white', // white inside border
+              // inset white outline, slightly offset and thin
+              boxShadow: 'inset 0 0 0 2px white, inset 0 0 4px 0 rgba(255,255,255,0.5)',
               overflow: 'hidden',
-              // no borderRadius here
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
             }}
           >
-            <div style={{ width: '112px', height: '112px', overflow: 'hidden' }}>
-              <Image
-                src={avatar}
-                alt="Avatar"
-                width={112}
-                height={112}
-                className="object-cover w-full h-full"
-              />
-            </div>
+            <Image
+              src={avatar}
+              alt="Avatar"
+              width={250}
+              height={250}
+              className="object-cover w-full h-full"
+              style={{ display: 'block' }}
+            />
           </div>
         </div>
       </div>
