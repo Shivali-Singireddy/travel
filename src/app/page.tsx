@@ -1,3 +1,4 @@
+'use client'
 import Image, { type ImageProps } from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
@@ -246,11 +247,20 @@ export default async function Home() {
           />
         </div>
 
-        <RotatingImageWithFade
-          images= {[machupichu, horse]}
-          width={250}
-          height={250}
-        />
+        <div
+          className="absolute z-20"
+          style={{
+            top: '52%',
+            left: '75%',
+            transform: 'translate(-50%, -50%)',
+          }}
+        >
+          <RotatingImageWithFade
+            images={[image1, image2, image3]}
+            width={250}
+            height={250}
+          />
+        </div>
       
         {/* Tape Image (moved slightly right and up) */}
         <Image
