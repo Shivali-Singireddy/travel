@@ -9,20 +9,19 @@ import {
   InstagramIcon,
   LinkedInIcon,
 } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
 import tape from '@/images/tape.jpg'
 import avatar from '@/images/avatar.jpg'
 import amazon from '@/images/photos/amazon.jpg'
-import image1 from '@/images/photos/image-1.jpg'
-import image2 from '@/images/photos/image-2.jpg'
-import image3 from '@/images/photos/image-3.jpg'
-import image4 from '@/images/photos/image-4.jpg'
-import image5 from '@/images/photos/image-5.jpg'
+import machupichu from '@/images/photos/machupichu.jpg'
+import horse from '@/images/photos/horse.jpg'
+
 import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
+import { useEffect, useState } from 'react'
+import type { StaticImageData } from 'next/image'
+
+
+const images = [machupichu, horse]
 
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -142,6 +141,49 @@ function Newsletter() {
   )
 }
 
+export function RotatingImageWithFade({
+  images,
+  interval = 3000, // 3 seconds
+  width = 300,
+  height = 300,
+}: {
+  images: StaticImageData[]
+  interval?: number
+  width?: number
+  height?: number
+}) {
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length)
+    }, interval)
+    return () => clearInterval(timer)
+  }, [images.length, interval])
+
+  return (
+    <div
+      className="relative"
+      style={{
+        width,
+        height,
+      }}
+    >
+      {images.map((img, i) => (
+        <Image
+          key={img.src}
+          src={img}
+          alt={`Rotating Image ${i}`}
+          width={width}
+          height={height}
+          className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+            i === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
+          }`}
+        />
+      ))}
+    </div>
+  )
+}
 
 function Photos() {
   let rotations = ['rotate-2', '-rotate-2', 'rotate-2', 'rotate-2', '-rotate-2']
@@ -267,7 +309,7 @@ export default async function Home() {
           className="absolute z-40"
           style={{
             top: '-20px',     // move up
-            left: '55%',      // move right
+            left: '50%',      // move right
             width: 250,
             height: 250,
           }}
@@ -292,6 +334,11 @@ export default async function Home() {
           />
         </div>
       </div>
+      <RotatingImageWithFade
+        images= images
+        width={250}
+        height={250}
+      />
     </>
   )
 }
