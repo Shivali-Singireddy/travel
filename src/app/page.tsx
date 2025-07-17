@@ -185,7 +185,7 @@ export default async function Home() {
         <div
           className="absolute -translate-x-1/2 z-10"
           style={{
-            top: '52%',
+            top: '58%',
             left: '52%',
             width: '250px',
             height: '250px',
@@ -224,7 +224,7 @@ export default async function Home() {
         {/* Left Purple Box with Text */}
         <div
           className="absolute top-1/2 left-[5%] z-20"
-          style={{ width: '480px', height: '500px', transform: 'translateY(-60%)' }}
+          style={{ width: '480px', height: '500px', transform: 'translateY(-55%)' }}
         >
           <div
             className="absolute top-0 left-0 bg-[#7A5E8A] p-6"
