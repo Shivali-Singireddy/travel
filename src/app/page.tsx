@@ -185,7 +185,7 @@ export default async function Home() {
         <div
           className="absolute left-1/2 -translate-x-1/2 z-10"
           style={{
-            top: '58%', 
+            top: '48%', // Move up by decreasing this value
             width: '250px',
             height: '250px',
           }}
@@ -236,7 +236,7 @@ export default async function Home() {
           >
             {/* Upright Text */}
             <div
-              className="text-white text-center h-full flex flex-col justify-center items-center"
+              className="text-white text-center h-full flex flex-col justify-center items-center mt-4"
               style={{
                 transform: 'rotate(5deg)',
                 fontFamily: 'Georgia, serif',
@@ -265,7 +265,6 @@ export default async function Home() {
           />
         </div>
       </div>
-
     </>
   )
 }
