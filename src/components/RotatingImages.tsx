@@ -1,40 +1,47 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import Image from 'next/image'
-import machupichu from '@/images/photos/machupichu.jpg'
-import horse from '@/images/photos/horse.jpg'
+import Image, { type StaticImageData } from 'next/image'
+import { useEffect, useState } from 'react'
 
-const images = [machupichu, horse]
-
-export function RotatingImages({ width = 250, height = 250 }) {
-  const [index, setIndex] = useState(0)
+export function RotatingImages({
+  images = [/* your image array here */],
+  interval = 3000,
+  width = 460,
+  height = 490,
+}: {
+  images: StaticImageData[]
+  interval?: number
+  width?: number
+  height?: number
+}) {
+  const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((i) => (i + 1) % images.length)
-    }, 3000)
-    return () => clearInterval(interval)
-  }, [])
+    const timer = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length)
+    }, interval)
+    return () => clearInterval(timer)
+  }, [images.length, interval])
 
   return (
-    <div style={{ position: 'relative', width, height }}>
+    <div
+      className="relative"
+      style={{
+        width,
+        height,
+        overflow: 'hidden',
+      }}
+    >
       {images.map((img, i) => (
         <Image
           key={img.src}
           src={img}
-          alt={`Image ${i + 1}`}
+          alt={`Rotating Image ${i}`}
           width={width}
-          height={height}
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            transition: 'opacity 0.8s ease-in-out',
-            opacity: i === index ? 1 : 0,
-            objectFit: 'cover',
-          }}
-          priority={i === index} // optional for best performance
+          height={height * 1.3} // optional: make image taller to allow cropping
+          className={`absolute top-0 left-0 w-full h-full object-cover object-center transition-opacity duration-1000 ease-in-out ${
+            i === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
+          }`}
         />
       ))}
     </div>
