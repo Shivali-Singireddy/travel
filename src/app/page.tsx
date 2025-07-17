@@ -184,28 +184,31 @@ export default async function Home() {
         <div className="absolute top-1/2 left-[5%] -translate-y-1/2 relative" style={{ width: '400px', height: '480px' }}>
           {/* Purple Box */}
           <div
-            className="absolute top-0 left-0 bg-[#7A5E8A]"
+            className="absolute top-0 left-0 bg-[#7A5E8A] p-6"
             style={{
               width: '400px',
               height: '480px',
               transform: 'rotate(-5deg)',
               zIndex: 10,
             }}
-          />
-            <div style={{ transform: 'rotate(5deg)' }}>
+          >
+            {/* Inner content counter-rotated to appear upright */}
+            <div className="text-white" style={{ transform: 'rotate(5deg)' }}>
               <h2 className="text-2xl font-bold mb-4">Welcome to Weekends with Shivali</h2>
               <p className="text-base leading-relaxed">
                 Hi, I’m Shivali and welcome to my personal blog! With this blog I hope to primarily share
                 my experiences with travelling and other hobbies!
               </p>
             </div>
+          </div>
+        
           {/* Outline Box on Top */}
           <div
             className="absolute top-0 left-0 border border-black pointer-events-none"
             style={{
               width: '400px',
               height: '480px',
-              transform: 'rotate(-5deg) translate(8px, 8px)', // offset the outline
+              transform: 'rotate(-5deg) translate(8px, 8px)',
               backgroundColor: 'transparent',
               zIndex: 20,
             }}
