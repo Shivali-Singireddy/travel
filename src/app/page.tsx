@@ -188,14 +188,14 @@ export default async function Home() {
             top: '68%',
             width: '320px',
             height: '320px',
-            zIndex: 3, // behind the purple box
+            zIndex: 1, // send behind purple box
           }}
         >
           <Image
             src={amazon}
             alt="Amazon"
             className="w-full h-full object-cover"
-            style={{ position: 'relative', zIndex: 3 }}
+            style={{ position: 'relative', zIndex: 1 }}
           />
           {/* Offset border (up and left) */}
           <div
@@ -205,7 +205,7 @@ export default async function Home() {
               height: '320px',
               transform: 'translate(-8px, -8px)',
               backgroundColor: 'transparent',
-              zIndex: 2,
+              zIndex: 0,
             }}
           />
         </div>
@@ -217,7 +217,7 @@ export default async function Home() {
             top: '52%',
             width: '200px',
             height: '200px',
-            zIndex: 4, // above amazon but below purple box
+            zIndex: 4, // above amazon and purple box
             overflow: 'hidden',
           }}
         >
@@ -227,7 +227,7 @@ export default async function Home() {
             className="object-cover"
             style={{ width: '100%', height: '100%' }}
           />
-          {/* White inset border (thinner) */}
+          {/* White inset border (thinner: 1px) */}
           <div
             style={{
               position: 'absolute',
@@ -235,7 +235,7 @@ export default async function Home() {
               left: '8px',
               right: '8px',
               bottom: '8px',
-              border: '2px solid white',
+              border: '1px solid white',
               pointerEvents: 'none',
               boxSizing: 'border-box',
             }}
@@ -268,7 +268,7 @@ export default async function Home() {
               width: '480px',
               height: '560px',
               transform: 'rotate(-5deg)',
-              zIndex: 10,
+              zIndex: 3, // higher than amazon but lower than avatar
             }}
           >
             {/* Inner content counter-rotated */}
@@ -317,4 +317,5 @@ export default async function Home() {
       </Container>
     </>
   )
+
 }
