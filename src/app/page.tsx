@@ -218,7 +218,7 @@ export default async function Home() {
           height={32}
           className="absolute top-[70px] left-[calc(5%+10px)] z-30 w-56"
           style={{ 
-            top: '-70px',
+            top: '-60px',
             left: 'calc(5% + 50px)',
             transform: 'rotate(-15deg)' }}
         />
