@@ -182,11 +182,11 @@ export default async function Home() {
 
         
         <div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          className="absolute top-75% left-1/2 -translate-x-1/2 -translate-y-1/2"
           style={{
             width: '320px',
             height: '220px',
-            zIndex: 5,
+            zIndex: 3,
           }}
         >
           {/* Image */}
@@ -194,7 +194,7 @@ export default async function Home() {
             src= {amazon}
             alt="Amazon"
             className="w-full h-full object-cover"
-            style={{ position: 'relative', zIndex: 5 }}
+            style={{ position: 'relative', zIndex: 3 }}
           />
   
           {/* Offset Border (up and left) */}
@@ -205,7 +205,7 @@ export default async function Home() {
               height: '220px',
               transform: 'translate(-8px, -8px)',
               backgroundColor: 'transparent',
-              zIndex: 4,
+              zIndex: 2,
             }}
           />
         </div>
@@ -218,7 +218,7 @@ export default async function Home() {
           height={32}
           className="absolute top-[70px] left-[calc(5%+10px)] z-30 w-56"
           style={{ 
-            top: '40px',
+            top: '15px',
             left: 'calc(5% + 50px)',
             transform: 'rotate(-15deg)' }}
         />
