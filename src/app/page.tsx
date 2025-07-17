@@ -176,27 +176,37 @@ export default async function Home() {
         </div>
 
         <div
-          className="absolute z-20"
           style={{
-            top: '45%',     // moved up from 52% to 45%
-            left: '80%',    // moved left from 85% to 80%
-            transform: 'translate(-50%, -50%)',
+            position: 'relative',
+            width: 470,       // outline container bigger than image container
+            height: 300,
           }}
         >
+          {/* Outline */}
+          <div
+            style={{
+              position: 'absolute',
+              top: -10,        // offset upwards
+              left: -10,       // offset leftwards
+              width: 490,      // slightly bigger width than container (470 + 20 offset total)
+              height: 320,     // slightly bigger height (300 + 20)
+              border: '1px solid black',
+              borderRadius: 0,
+              pointerEvents: 'none',  // don't block mouse events
+              boxSizing: 'border-box',
+            }}
+          />
+        
+          {/* Image container */}
           <div
             style={{
               position: 'relative',
-              width: 400,
-              height: 300,
+              width: 450,
+              height: 380,
               overflow: 'hidden',
-              boxShadow: '0 0 0 1px black',
-              borderRadius: 0,
-              margin: '-3px',
             }}
           >
-            <div style={{ width: '100%', height: '100%' }}>
-              <RotatingImages width={400} height={400} />
-            </div>
+            <RotatingImages width={450} height={450} />
           </div>
         </div>
 
