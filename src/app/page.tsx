@@ -179,11 +179,23 @@ export default async function Home() {
           className="absolute z-20"
           style={{
             top: '52%',
-            left: '75%',
+            left: '85%',
             transform: 'translate(-50%, -50%)',
           }}
         >
-          <RotatingImages width={250} height={250} />
+          {/* Outline wrapper */}
+          <div
+            style={{
+              position: 'relative',
+              width: 420,
+              height: 420,
+              boxShadow: '0 0 0 4px black', // external outline using boxShadow
+              borderRadius: '4px', // optional, match corners of RotatingImages if any
+              transform: 'translate(-8px, -8px)', // move the outline slightly outside
+            }}
+          >
+            <RotatingImages width={400} height={400} />
+          </div>
         </div>
       
         {/* Tape Image (moved slightly right and up) */}
@@ -246,7 +258,7 @@ export default async function Home() {
           className="absolute z-40"
           style={{
             top: '-20px',     // move up
-            left: '50%',      // move right
+            left: '45%',      // move right
             width: 250,
             height: 250,
           }}
