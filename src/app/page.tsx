@@ -181,7 +181,6 @@ export default async function Home() {
         <div className="absolute top-0 left-1/2 h-full w-1/2 bg-[#7A5E8A]" />
 
         
-        {/* Center Image with Offset Border */}
         <div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
           style={{
@@ -190,15 +189,15 @@ export default async function Home() {
             zIndex: 5,
           }}
         >
-          {/* Image itself */}
+          {/* Image */}
           <img
-            src= amazon // Update path if needed
+            src= {amazon}
             alt="Amazon"
             className="w-full h-full object-cover"
-            style={{ zIndex: 5, position: 'relative' }}
+            style={{ position: 'relative', zIndex: 5 }}
           />
-        
-          {/* Offset Border */}
+  
+          {/* Offset Border (up and left) */}
           <div
             className="absolute top-0 left-0 border border-gray-800 pointer-events-none"
             style={{
@@ -209,7 +208,7 @@ export default async function Home() {
               zIndex: 4,
             }}
           />
-{/*         </div> */}
+        </div>
 
         {/* Tape Image */}    
         <Image
