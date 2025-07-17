@@ -203,7 +203,7 @@ export default async function Home() {
             style={{
               position: 'absolute',
               top: 60,        
-              left: 725,
+              left: 710,
               width: 450,
               height: 500,
               overflow: 'hidden',
