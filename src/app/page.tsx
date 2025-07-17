@@ -179,17 +179,17 @@ export default async function Home() {
           style={{
             position: 'relative',
             width: 470,       // outline container bigger than image container
-            height: 400,
+            height: 500,
           }}
         >
           {/* Outline */}
           <div
             style={{
               position: 'absolute',
-              top: 30,        // offset upwards
-              left: 800,       // offset leftwards
+              top: 50,        // offset upwards
+              left: 750,       // offset leftwards
               width: 450,      // slightly bigger width than container (470 + 20 offset total)
-              height: 420,     // slightly bigger height (300 + 20)
+              height: 470,     // slightly bigger height (300 + 20)
               border: '1px solid black',
               borderRadius: 0,
               pointerEvents: 'none',  // don't block mouse events
@@ -201,10 +201,10 @@ export default async function Home() {
           <div
             style={{
               position: 'absolute',
-              top: 40,        
-              left: 810,
+              top: 60,        
+              left: 760,
               width: 430,
-              height: 400,
+              height: 450,
               overflow: 'hidden',
             }}
           >
