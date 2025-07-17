@@ -208,7 +208,7 @@ export default async function Home() {
               overflow: 'hidden',
             }}
           >
-            <RotatingImages width={500} height={500} />
+            <RotatingImages width={440} height={490} />
           </div>
         </div>
 
