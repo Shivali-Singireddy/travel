@@ -185,7 +185,7 @@ export default async function Home() {
         <div
           className="absolute -translate-x-1/2 z-10"
           style={{
-            top: '60%',
+            top: '70%',
             left: '55%',
             width: '270px',
             height: '270px',
@@ -276,11 +276,11 @@ export default async function Home() {
             style={{ display: 'block' }}
           />
           <div
-            className="absolute top-0 left-0 border border-white-800 pointer-events-none"
+            className="absolute top-0 left-0 border border-white pointer-events-none"
             style={{
               width: '230px',
               height: '230px',
-              transform: 'translate(-1px, -1px)',
+              transform: 'translate(1px, 1px)',
               backgroundColor: 'transparent',
             }}
           />
