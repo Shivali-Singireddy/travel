@@ -197,7 +197,7 @@ export default async function Home() {
             className="w-full h-full object-cover"
           />
           <div
-            className="absolute top-0 left-0 border border-gray-800 pointer-events-none"
+            className="absolute top-0 left-0 border-2 border-gray-800 pointer-events-none"
             style={{
               width: '300px',
               height: '300px',
@@ -264,8 +264,13 @@ export default async function Home() {
           />
         </div>
         <div
-          className="absolute top-0 left-1/2 -translate-x-1/2 z-40"
-          style={{ width: 250, height: 250 }}
+          className="absolute z-40"
+          style={{
+            top: '-40px',     // move up
+            left: '60%',      // move right
+            width: 250,
+            height: 250,
+          }}
         >
           <Image
             src={avatar}
@@ -278,8 +283,8 @@ export default async function Home() {
           <div
             className="absolute top-0 left-0 pointer-events-none"
             style={{
-              width: '230px',
-              height: '230px',
+              width: '210px',
+              height: '210px',
               transform: 'translate(15px, 15px)',
               backgroundColor: 'transparent',
               border: '1px solid #FAF5EF',
