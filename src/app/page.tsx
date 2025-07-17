@@ -147,7 +147,7 @@ export default async function Home() {
 
       <div className="relative w-[95%] h-[650px] bg-[#FAF5EF] border border-[#e0e0e0] overflow-visible mx-auto">
         {/* Right Purple Rectangle */}
-        <div className="absolute top-0 right-0 h-full w-[40%] bg-[#7A5E8A]" />
+        <div className="absolute top-0 right-0 h-full w-[50%] bg-[#7A5E8A]" />
       
         {/* Amazon Image (behind purple box, slightly lower and to the right) */}
         <div
