@@ -276,7 +276,7 @@ export default async function Home() {
           className="absolute z-40"
           style={{
             top: '-20px',     // move up
-            left: '50%',      // move right
+            left: '48%',      // move right
             width: 250,
             height: 250,
           }}
