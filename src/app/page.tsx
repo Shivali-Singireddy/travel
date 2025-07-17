@@ -187,9 +187,9 @@ export default async function Home() {
             style={{
               position: 'absolute',
               top: 30,        // offset upwards
-              right: -10,       // offset leftwards
-              width: 490,      // slightly bigger width than container (470 + 20 offset total)
-              height: 400,     // slightly bigger height (300 + 20)
+              left: 800,       // offset leftwards
+              width: 450,      // slightly bigger width than container (470 + 20 offset total)
+              height: 420,     // slightly bigger height (300 + 20)
               border: '1px solid black',
               borderRadius: 0,
               pointerEvents: 'none',  // don't block mouse events
@@ -200,9 +200,11 @@ export default async function Home() {
           {/* Image container */}
           <div
             style={{
-              position: 'relative',
-              width: 450,
-              height: 380,
+              position: 'absolute',
+              top: 40,        
+              left: 810,
+              width: 430,
+              height: 400,
               overflow: 'hidden',
             }}
           >
