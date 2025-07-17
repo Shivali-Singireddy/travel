@@ -188,9 +188,9 @@ export default async function Home() {
             style={{
               position: 'absolute',
               top: 40,        // offset upwards
-              left: 730,       // offset leftwards
-              width: 500,      // slightly bigger width than container (470 + 20 offset total)
-              height: 530,     // slightly bigger height (300 + 20)
+              left: 725,       // offset leftwards
+              width: 510,      // slightly bigger width than container (470 + 20 offset total)
+              height: 540,     // slightly bigger height (300 + 20)
               border: '1px solid black',
               borderRadius: 0,
               pointerEvents: 'none',  // don't block mouse events
@@ -203,13 +203,13 @@ export default async function Home() {
             style={{
               position: 'absolute',
               top: 60,        
-              left: 750,
-              width: 460,
-              height: 490,
+              left: 745,
+              width: 470,
+              height: 500,
               overflow: 'hidden',
             }}
           >
-            <RotatingImages images={[machupichu, horse]} width={460} height={490} />
+            <RotatingImages images={[machupichu, horse]} width={470} height={500} />
           </div>
         </div>
 
