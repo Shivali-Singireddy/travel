@@ -215,8 +215,8 @@ export default async function Home() {
           height={32}
           className="absolute z-30 w-56"
           style={{
-            top: '-70px',
-            left: 'calc(5% + 80px)',
+            top: '-65px',
+            left: 'calc(5% + 85px)',
             transform: 'rotate(-15deg)',
           }}
         />
@@ -224,13 +224,13 @@ export default async function Home() {
         {/* Left Purple Box with Text */}
         <div
           className="absolute top-1/2 left-[5%] -translate-y-1/2 z-20"
-          style={{ width: '480px', height: '550px' }}
+          style={{ width: '480px', height: '500px' }}
         >
           <div
             className="absolute top-0 left-0 bg-[#7A5E8A] p-6"
             style={{
               width: '480px',
-              height: '550px',
+              height: '500px',
               transform: 'rotate(-5deg)',
             }}
           >
@@ -256,7 +256,7 @@ export default async function Home() {
             className="absolute top-0 left-0 border border-black pointer-events-none"
             style={{
               width: '480px',
-              height: '550px',
+              height: '500px',
               transform: 'rotate(-5deg) translate(8px, 8px)',
               backgroundColor: 'transparent',
               zIndex: 30,
