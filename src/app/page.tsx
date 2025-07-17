@@ -189,7 +189,7 @@ export default async function Home() {
               position: 'absolute',
               top: 40,        // offset upwards
               left: 700,       // offset leftwards
-              width: 500,      // slightly bigger width than container (470 + 20 offset total)
+              width: 470,      // slightly bigger width than container (470 + 20 offset total)
               height: 540,     // slightly bigger height (300 + 20)
               border: '1px solid black',
               borderRadius: 0,
@@ -204,14 +204,14 @@ export default async function Home() {
               position: 'absolute',
               top: 60,        
               left: 725,
-              width: 460,
+              width: 450,
               height: 500,
               overflow: 'hidden',
               border: '1px solid #D1D5DB',
               boxSizing: 'border-box',
             }}
           >
-            <RotatingImages images={[machupichu, horse]} width={470} height={500} />
+            <RotatingImages images={[machupichu, horse]} width={450} height={500} />
           </div>
         </div>
 
