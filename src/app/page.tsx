@@ -185,10 +185,10 @@ export default async function Home() {
         <div
           className="absolute -translate-x-1/2 z-10"
           style={{
-            top: '45%',
+            top: '50%',
             left: '55%',
-            width: '270px',
-            height: '270px',
+            width: '300px',
+            height: '300px',
           }}
         >
           <Image
@@ -199,8 +199,8 @@ export default async function Home() {
           <div
             className="absolute top-0 left-0 border border-gray-800 pointer-events-none"
             style={{
-              width: '270px',
-              height: '270px',
+              width: '300px',
+              height: '300px',
               transform: 'translate(-8px, -8px)',
               backgroundColor: 'transparent',
             }}
@@ -280,7 +280,7 @@ export default async function Home() {
             style={{
               width: '230px',
               height: '230px',
-              transform: 'translate(1px, 1px)',
+              transform: 'translate(15px, 15px)',
               backgroundColor: 'transparent',
               border: '1px solid #FAF5EF',
             }}
