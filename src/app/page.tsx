@@ -177,7 +177,7 @@ export default async function Home() {
     <>
       <div className="mt-10" />
 
-      <div className="relative w-full h-[650px] bg-[#FAF5EF] border border-[#e0e0e0] overflow-visible">
+      <div className="relative w-full h-[600px] bg-[#FAF5EF] border border-[#e0e0e0] overflow-visible">
         {/* Right Purple Rectangle */}
         <div className="absolute top-0 left-1/2 h-full w-1/2 bg-[#7A5E8A]" />
       
@@ -215,21 +215,16 @@ export default async function Home() {
           height={32}
           className="absolute z-30 w-56"
           style={{
-            top: '-65px',
-            left: 'calc(5% + 85px)',
+            top: '-70px',
+            left: 'calc(5% + 100px)',  // moved right more
             transform: 'rotate(-15deg)',
           }}
         />
       
-        {/* Left Purple Box with Text */}
+        {/* Left Purple Box with Text (height increased to 600px) */}
         <div
-          className="absolute left-[5%] z-20"
-          style={{
-            top: '45%',
-            width: '480px',
-            height: '600px',
-            transform: 'translateY(-50%)',
-          }}
+          className="absolute top-1/2 left-[5%] -translate-y-1/2 z-20"
+          style={{ width: '480px', height: '600px' }}
         >
           <div
             className="absolute top-0 left-0 bg-[#7A5E8A] p-6"
@@ -255,7 +250,7 @@ export default async function Home() {
               </p>
             </div>
           </div>
-        
+      
           {/* Outline */}
           <div
             className="absolute top-0 left-0 border border-black pointer-events-none"
