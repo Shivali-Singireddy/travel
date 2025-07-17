@@ -185,10 +185,10 @@ export default async function Home() {
         <div
           className="absolute -translate-x-1/2 z-10"
           style={{
-            top: '58%',
+            top: '60%',
             left: '55%',
-            width: '250px',
-            height: '250px',
+            width: '270px',
+            height: '270px',
           }}
         >
           <Image
@@ -199,8 +199,8 @@ export default async function Home() {
           <div
             className="absolute top-0 left-0 border border-gray-800 pointer-events-none"
             style={{
-              width: '280px',
-              height: '280px',
+              width: '270px',
+              height: '270px',
               transform: 'translate(-8px, -8px)',
               backgroundColor: 'transparent',
             }}
@@ -265,28 +265,25 @@ export default async function Home() {
         </div>
         <div
           className="absolute top-0 left-1/2 -translate-x-1/2 z-40"
-          style={{ width: 120, height: 120 }}
+          style={{ width: 250, height: 250 }}
         >
+          <Image
+            src={avatar}
+            alt="Avatar"
+            width={250}
+            height={250}
+            className="object-cover w-full h-full"
+            style={{ display: 'block' }}
+          />
           <div
-            className="w-full h-full"
+            className="absolute top-0 left-0 border border-white-800 pointer-events-none"
             style={{
-              // inset white outline, slightly offset and thin
-              boxShadow: 'inset 0 0 0 2px white, inset 0 0 4px 0 rgba(255,255,255,0.5)',
-              overflow: 'hidden',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
+              width: '230px',
+              height: '230px',
+              transform: 'translate(-1px, -1px)',
+              backgroundColor: 'transparent',
             }}
-          >
-            <Image
-              src={avatar}
-              alt="Avatar"
-              width={250}
-              height={250}
-              className="object-cover w-full h-full"
-              style={{ display: 'block' }}
-            />
-          </div>
+          />
         </div>
       </div>
     </>
