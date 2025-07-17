@@ -188,7 +188,7 @@ export default async function Home() {
             style={{
               position: 'absolute',
               top: 40,        // offset upwards
-              left: 720,       // offset leftwards
+              left: 700,       // offset leftwards
               width: 500,      // slightly bigger width than container (470 + 20 offset total)
               height: 540,     // slightly bigger height (300 + 20)
               border: '1px solid black',
@@ -203,7 +203,7 @@ export default async function Home() {
             style={{
               position: 'absolute',
               top: 60,        
-              left: 745,
+              left: 725,
               width: 460,
               height: 500,
               overflow: 'hidden',
