@@ -176,75 +176,72 @@ export default async function Home() {
   return (
     <>
       <div className="mt-10" />
-
-      <div className="relative w-full h-[650px] bg-[#FAF5EF] border border-[#e0e0e0] overflow-visible">
+  
+      <div className="relative w-full h-[720px] bg-[#FAF5EF] border border-[#e0e0e0] overflow-visible">
         {/* Right Purple Rectangle */}
         <div className="absolute top-0 left-1/2 h-full w-1/2 bg-[#7A5E8A]" />
-      
-        {/* Amazon + Avatar Image Container */}
+  
+        {/* Amazon Image with offset dark grey border */}
         <div
-          className="absolute -translate-x-1/2 z-10"
+          className="absolute left-1/2 -translate-x-1/2"
           style={{
-            top: '40%',        // moved avatar and amazon container higher
-            left: '52%',
-            width: '250px',
-            height: '430px',   // increased height for bigger avatar + amazon + spacing
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: '20px',
+            top: '68%',
+            width: '320px',
+            height: '320px',
+            zIndex: 3, // behind the purple box
           }}
         >
-          {/* Avatar Image as bigger square */}
+          <Image
+            src={amazon}
+            alt="Amazon"
+            className="w-full h-full object-cover"
+            style={{ position: 'relative', zIndex: 3 }}
+          />
+          {/* Offset border (up and left) */}
+          <div
+            className="absolute top-0 left-0 border border-gray-800 pointer-events-none"
+            style={{
+              width: '320px',
+              height: '320px',
+              transform: 'translate(-8px, -8px)',
+              backgroundColor: 'transparent',
+              zIndex: 2,
+            }}
+          />
+        </div>
+  
+        {/* Avatar Image with white inset border */}
+        <div
+          className="absolute left-1/2 -translate-x-1/2"
+          style={{
+            top: '52%',
+            width: '200px',
+            height: '200px',
+            zIndex: 4, // above amazon but below purple box
+            overflow: 'hidden',
+          }}
+        >
+          <Image
+            src={avatar}
+            alt="Avatar"
+            className="object-cover"
+            style={{ width: '100%', height: '100%' }}
+          />
+          {/* White inset border (thinner) */}
           <div
             style={{
-              position: 'relative',
-              width: '160px',
-              height: '160px',
-              overflow: 'hidden',
+              position: 'absolute',
+              top: '8px',
+              left: '8px',
+              right: '8px',
+              bottom: '8px',
+              border: '2px solid white',
+              pointerEvents: 'none',
+              boxSizing: 'border-box',
             }}
-          >
-            <Image
-              src={avatar}
-              alt="Avatar"
-              className="object-cover"
-              style={{ width: '100%', height: '100%' }}
-            />
-            {/* White inset border */}
-            <div
-              style={{
-                position: 'absolute',
-                top: '8px',
-                left: '8px',
-                right: '8px',
-                bottom: '8px',
-                border: '4px solid white',
-                pointerEvents: 'none',
-                boxSizing: 'border-box',
-              }}
-            />
-          </div>
-      
-          {/* Amazon Image */}
-          <div style={{ position: 'relative', width: '250px', height: '250px' }}>
-            <Image
-              src={amazon}
-              alt="Amazon"
-              className="w-full h-full object-cover"
-            />
-            <div
-              className="absolute top-0 left-0 border border-gray-800 pointer-events-none"
-              style={{
-                width: '250px',
-                height: '250px',
-                transform: 'translate(-8px, -8px)',
-                backgroundColor: 'transparent',
-                zIndex: 2,
-              }}
-            />
-          </div>
+          />
         </div>
-      
+  
         {/* Tape Image */}
         <Image
           src={tape}
@@ -253,54 +250,71 @@ export default async function Home() {
           height={32}
           className="absolute z-30 w-56"
           style={{
-            top: '-70px',
-            left: 'calc(5% + 80px)',
+            top: '-60px',
+            left: 'calc(5% + 80px)', // moved more right
             transform: 'rotate(-15deg)',
           }}
         />
-      
-        {/* Left Purple Box */}
+  
+        {/* Left Tilted Purple Rectangle with Outline */}
         <div
-          className="absolute top-1/2 left-[5%] -translate-y-1/2 z-20"
-          style={{ width: '480px', height: '540px' }}
+          className="absolute top-1/2 left-[5%] -translate-y-1/2 relative"
+          style={{ width: '480px', height: '560px' }} // taller now
         >
+          {/* Purple Box */}
           <div
             className="absolute top-0 left-0 bg-[#7A5E8A] p-6"
             style={{
               width: '480px',
-              height: '540px',
+              height: '560px',
               transform: 'rotate(-5deg)',
+              zIndex: 10,
             }}
           >
+            {/* Inner content counter-rotated */}
             <div
-              className="text-white text-center h-full flex flex-col justify-center items-center mt-4" // moved text slightly up (mt-4)
+              className="text-white text-center h-full flex flex-col justify-center items-center"
               style={{
                 transform: 'rotate(5deg)',
                 fontFamily: 'Georgia, serif',
+                paddingTop: '30px', // moved text slightly down
               }}
             >
-              <h2 className="text-6xl font-extrabold mb-6">
-                Welcome to Weekends with Shivali
-              </h2>
+              <h2 className="text-6xl font-extrabold mb-6">Welcome to Weekends with Shivali</h2>
               <p className="text-2xl leading-relaxed max-w-[80%]">
-                Hi, I’m Shivali and welcome to my personal blog! With this blog I hope to
-                primarily share my experiences with travelling and other hobbies!
+                Hi, I’m Shivali and welcome to my personal blog! With this blog I hope to primarily share
+                my experiences with travelling and other hobbies!
               </p>
             </div>
           </div>
-      
+  
+          {/* Outline Box on Top */}
           <div
             className="absolute top-0 left-0 border border-black pointer-events-none"
             style={{
               width: '480px',
-              height: '540px',
+              height: '560px',
               transform: 'rotate(-5deg) translate(8px, 8px)',
               backgroundColor: 'transparent',
-              zIndex: 30,
+              zIndex: 20,
             }}
           />
         </div>
       </div>
+  
+      <Photos />
+      <Container className="mt-24 md:mt-28">
+        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
+          <div className="flex flex-col gap-16">
+            {articles.map((article) => (
+              <Article key={article.slug} article={article} />
+            ))}
+          </div>
+          <div className="space-y-10 lg:pl-16 xl:pl-24">
+            <Newsletter />
+          </div>
+        </div>
+      </Container>
     </>
   )
 }
