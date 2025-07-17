@@ -178,25 +178,27 @@ export default async function Home() {
         <div
           className="absolute z-20"
           style={{
-            top: '52%',
-            left: '85%',
+            top: '45%',     // moved up from 52% to 45%
+            left: '80%',    // moved left from 85% to 80%
             transform: 'translate(-50%, -50%)',
           }}
         >
-          {/* Outline wrapper */}
           <div
             style={{
               position: 'relative',
-              width: 420,
-              height: 420,
-              boxShadow: '0 0 0 4px black', // external outline using boxShadow
-              borderRadius: '4px', // optional, match corners of RotatingImages if any
-              transform: 'translate(-8px, -8px)', // move the outline slightly outside
+              width: 400,
+              height: 400,
+              boxShadow: '0 0 0 1px black',
+              borderRadius: 0,
+              margin: '-3px',
             }}
           >
-            <RotatingImages width={400} height={400} />
+            <div style={{ width: '100%', height: '100%' }}>
+              <RotatingImages width={400} height={400} />
+            </div>
           </div>
         </div>
+
       
         {/* Tape Image (moved slightly right and up) */}
         <Image
