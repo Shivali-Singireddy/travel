@@ -145,9 +145,9 @@ export default async function Home() {
     <>
       <div className="mt-10" />
 
-      <div className="relative w-full h-[650px] bg-[#FAF5EF] border border-[#e0e0e0] overflow-visible">
+      <div className="relative w-90% h-[650px] bg-[#FAF5EF] border border-[#e0e0e0] overflow-visible">
         {/* Right Purple Rectangle */}
-        <div className="absolute top-0 left-1/2 h-full w-1/2 bg-[#7A5E8A]" />
+        <div className="absolute top-0 left-1/2 h-full w-45% bg-[#7A5E8A]" />
       
         {/* Amazon Image (behind purple box, slightly lower and to the right) */}
         <div
@@ -188,8 +188,8 @@ export default async function Home() {
             style={{
               position: 'absolute',
               top: 40,        // offset upwards
-              left: 725,       // offset leftwards
-              width: 510,      // slightly bigger width than container (470 + 20 offset total)
+              left: 720,       // offset leftwards
+              width: 520,      // slightly bigger width than container (470 + 20 offset total)
               height: 540,     // slightly bigger height (300 + 20)
               border: '1px solid black',
               borderRadius: 0,
@@ -204,9 +204,11 @@ export default async function Home() {
               position: 'absolute',
               top: 60,        
               left: 745,
-              width: 470,
+              width: 480,
               height: 500,
               overflow: 'hidden',
+              border: '1px solid #D1D5DB',
+              boxSizing: 'border-box',
             }}
           >
             <RotatingImages images={[machupichu, horse]} width={470} height={500} />
