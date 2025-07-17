@@ -185,23 +185,22 @@ export default async function Home() {
         <div
           className="absolute -translate-x-1/2 z-10"
           style={{
-            top: '52%',
+            top: '50%',
             left: '52%',
             width: '250px',
-            height: '320px', // unchanged
+            height: '350px', // enough height for avatar + amazon image + gap
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
-            gap: '10px',
+            gap: '12px',
           }}
         >
-          {/* Avatar Image with white inset border */}
+          {/* Avatar Image as square, positioned higher */}
           <div
             style={{
               position: 'relative',
               width: '100px',
               height: '100px',
-              borderRadius: '50%',
               overflow: 'hidden',
             }}
           >
@@ -219,7 +218,6 @@ export default async function Home() {
                 left: '6px',
                 right: '6px',
                 bottom: '6px',
-                borderRadius: '50%',
                 border: '3px solid white',
                 pointerEvents: 'none',
                 boxSizing: 'border-box',
@@ -264,18 +262,18 @@ export default async function Home() {
         {/* Left Purple Box */}
         <div
           className="absolute top-1/2 left-[5%] -translate-y-1/2 z-20"
-          style={{ width: '420px', height: '540px' }}
+          style={{ width: '480px', height: '540px' }} // same width, smaller height
         >
           <div
             className="absolute top-0 left-0 bg-[#7A5E8A] p-6"
             style={{
-              width: '420px',
+              width: '480px',
               height: '540px',
               transform: 'rotate(-5deg)',
             }}
           >
             <div
-              className="text-white text-center h-full flex flex-col justify-center items-center mt-6"
+              className="text-white text-center h-full flex flex-col justify-center items-center mt-10" // moved text down slightly with mt-10
               style={{
                 transform: 'rotate(5deg)',
                 fontFamily: 'Georgia, serif',
@@ -294,7 +292,7 @@ export default async function Home() {
           <div
             className="absolute top-0 left-0 border border-black pointer-events-none"
             style={{
-              width: '420px',
+              width: '480px',
               height: '540px',
               transform: 'rotate(-5deg) translate(8px, 8px)',
               backgroundColor: 'transparent',
