@@ -182,10 +182,10 @@ export default async function Home() {
 
         
         <div
-          className="absolute top-75% left-1/2 -translate-x-1/2 -translate-y-1/2"
+          className="absolute top-40% left-1/2 -translate-x-1/2 -translate-y-1/2"
           style={{
             width: '320px',
-            height: '220px',
+            height: '320px',
             zIndex: 3,
           }}
         >
@@ -202,7 +202,7 @@ export default async function Home() {
             className="absolute top-0 left-0 border border-gray-800 pointer-events-none"
             style={{
               width: '320px',
-              height: '220px',
+              height: '320px',
               transform: 'translate(-8px, -8px)',
               backgroundColor: 'transparent',
               zIndex: 2,
@@ -218,7 +218,7 @@ export default async function Home() {
           height={32}
           className="absolute top-[70px] left-[calc(5%+10px)] z-30 w-56"
           style={{ 
-            top: '15px',
+            top: '0px',
             left: 'calc(5% + 50px)',
             transform: 'rotate(-15deg)' }}
         />
