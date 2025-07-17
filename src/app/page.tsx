@@ -192,6 +192,13 @@ export default async function Home() {
               zIndex: 10,
             }}
           />
+            <div style={{ transform: 'rotate(5deg)' }}>
+              <h2 className="text-2xl font-bold mb-4">Welcome to Weekends with Shivali</h2>
+              <p className="text-base leading-relaxed">
+                Hi, I’m Shivali and welcome to my personal blog! With this blog I hope to primarily share
+                my experiences with travelling and other hobbies!
+              </p>
+            </div>
           {/* Outline Box on Top */}
           <div
             className="absolute top-0 left-0 border border-black pointer-events-none"
