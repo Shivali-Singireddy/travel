@@ -218,7 +218,7 @@ export default async function Home() {
           height={32}
           className="absolute top-[70px] left-[calc(5%+10px)] z-30 w-56"
           style={{ 
-            top: '-50px',
+            top: '-70px',
             left: 'calc(5% + 50px)',
             transform: 'rotate(-15deg)' }}
         />
@@ -244,7 +244,7 @@ export default async function Home() {
               }}
             >
               <h2 className="text-5xl font-extrabold mb-6">Welcome to Weekends with Shivali</h2>
-              <p className="text-2xl leading-relaxed max-w-[90%]">
+              <p className="text-2xl leading-relaxed max-w-[80%]">
                 Hi, I’m Shivali and welcome to my personal blog! With this blog I hope to primarily share
                 my experiences with travelling and other hobbies!
               </p>
