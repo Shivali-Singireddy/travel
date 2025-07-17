@@ -179,6 +179,13 @@ export default async function Home() {
       <div className="relative w-full h-[600px] bg-[#FAF5EF] border border-[#e0e0e0] overflow-visible">
         {/* Right Purple Rectangle */}
         <div className="absolute top-0 left-1/2 h-full w-1/2 bg-[#7A5E8A]" />
+
+        {/* Tape Image */}
+        <img
+          src="/images/tape.png" // Update this path as needed
+          alt="Tape"
+          className="absolute left-1/2 -top-6 -translate-x-1/2 z-30 w-24"
+        />
       
         {/* Left Tilted Purple Rectangle with Outline on Top */}
         <div className="absolute top-1/2 left-[5%] -translate-y-1/2 relative" style={{ width: '400px', height: '480px' }}>
@@ -193,9 +200,9 @@ export default async function Home() {
             }}
           >
             {/* Inner content counter-rotated to appear upright */}
-            <div className="text-white" style={{ transform: 'rotate(5deg)' }}>
-              <h2 className="text-2xl font-bold mb-4">Welcome to Weekends with Shivali</h2>
-              <p className="text-base leading-relaxed">
+            <div className="text-white text-center" style={{ transform: 'rotate(5deg)' }}>
+              <h2 className="text-4xl font-extrabold mb-4">Welcome to Weekends with Shivali</h2>
+              <p className="text-xl leading-relaxed">
                 Hi, I’m Shivali and welcome to my personal blog! With this blog I hope to primarily share
                 my experiences with travelling and other hobbies!
               </p>
