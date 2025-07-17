@@ -186,7 +186,7 @@ export default async function Home() {
           className="absolute -translate-x-1/2 z-10"
           style={{
             top: '58%',
-            left: '52%',
+            left: '58%',
             width: '250px',
             height: '250px',
           }}
@@ -262,6 +262,27 @@ export default async function Home() {
               zIndex: 30,
             }}
           />
+        </div>
+        <div
+          className="absolute top-0 left-1/2 -translate-x-1/2 z-40"
+          style={{ width: 120, height: 120 }}
+        >
+          <div
+            className="w-full h-full"
+            style={{
+              boxShadow: 'inset 0 0 0 4px white', // white inside border
+              overflow: 'hidden',
+              borderRadius: '8px', // slightly rounded corners, optional
+            }}
+          >
+            <Image
+              src={avatar}
+              alt="Avatar"
+              width={120}
+              height={120}
+              className="object-cover w-full h-full"
+            />
+          </div>
         </div>
       </div>
     </>
