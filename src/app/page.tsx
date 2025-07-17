@@ -6,15 +6,15 @@ import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import {
-  GitHubIcon,
   InstagramIcon,
   LinkedInIcon,
-  XIcon,
 } from '@/components/SocialIcons'
 import logoAirbnb from '@/images/logos/airbnb.svg'
 import logoFacebook from '@/images/logos/facebook.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
 import logoStarbucks from '@/images/logos/starbucks.svg'
+import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
+import tape from '@/images/tape.jpg'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -180,11 +180,13 @@ export default async function Home() {
         {/* Right Purple Rectangle */}
         <div className="absolute top-0 left-1/2 h-full w-1/2 bg-[#7A5E8A]" />
 
-        {/* Tape Image */}
-        <img
-          src="/images/tape.jpg" // Update this path as needed
+        {/* Tape Image */}    
+        <Image
+          src={tape}
           alt="Tape"
-          className="absolute left-1/2 -top-6 -translate-x-1/2 z-30 w-24"
+          width={96}
+          height={32}
+          className="absolute left-1/2 -top-6 -translate-x-1/2 z-30"
         />
       
         {/* Left Tilted Purple Rectangle with Outline on Top */}
@@ -207,7 +209,7 @@ export default async function Home() {
                 fontFamily: 'Georgia, serif',
               }}
             >
-              <h2 className="text-6xl font-extrabold mb-6">Welcome to Weekends with Shivali</h2>
+              <h2 className="text-5xl font-extrabold mb-6">Welcome to Weekends with Shivali</h2>
               <p className="text-2xl leading-relaxed max-w-[90%]">
                 Hi, I’m Shivali and welcome to my personal blog! With this blog I hope to primarily share
                 my experiences with travelling and other hobbies!
