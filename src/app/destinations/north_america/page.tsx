@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function North_America_Page() {
   return (
     <div className="p-6 max-w-3xl mx-auto">
