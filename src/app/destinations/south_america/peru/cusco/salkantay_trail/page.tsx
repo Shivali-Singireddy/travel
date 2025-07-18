@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import salkantay_post from '@/app/destinations/south_america/peru/cusco/salkantay_post.png'
+import salkantay_post from '@/app/destinations/south_america/peru/cusco/salkantay_trail/salkantay_post.png'
 
 export default function BigIslandPostPage() {
   return (
