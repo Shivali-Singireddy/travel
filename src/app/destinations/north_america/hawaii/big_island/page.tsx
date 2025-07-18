@@ -23,5 +23,6 @@ export default function BigIslandPostPage() {
           priority
         />
       </div>
-
-      {/* Text Section */}
+    </div>
+  )
+}
