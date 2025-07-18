@@ -7,7 +7,7 @@ export default function HawaiiPage() {
       <p>Welcome to the Hawaii page. Explore the beautiful islands!</p>
 
       {/* Clickable box linking to Maui */}
-      <Link href="/destinations/north_america/hawaii/maui/page.tsx">
+      <Link href="/destinations/north_america/hawaii/maui">
         <a
           className="
             mt-8 block
