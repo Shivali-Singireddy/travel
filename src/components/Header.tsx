@@ -22,7 +22,18 @@ import headerhomeImage from '@/images/heading_home.jpg'
 import { InstagramIcon, LinkedInIcon } from '@/components/SocialIcons'
 import { useRouter } from 'next/router';
 
-
+type DropdownNavItemProps = {
+  label: string
+  href: string
+  items: {
+    label: string
+    href: string
+    subItems?: {
+      label: string
+      href: string
+    }[]
+  }[]
+}
 
 function SocialLinkIcon({
   href,
@@ -188,13 +199,28 @@ export function DropdownNavItem({ label, items }: DropdownNavItemProps) {
       >
         <ul className="absolute left-0 mt-2 w-48 rounded-md bg-white shadow-lg ring-1 ring-black/5 dark:bg-zinc-800 dark:ring-white/10 z-50">
           {items.map((item) => (
-            <li key={item.href}>
+            <li key={item.href} className="relative group">
               <Link
                 href={item.href}
                 className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-zinc-700"
               >
                 {item.label}
               </Link>
+        
+              {item.subItems && (
+                <ul className="absolute left-full top-0 ml-2 w-48 rounded-md bg-white shadow-lg ring-1 ring-black/5 dark:bg-zinc-800 dark:ring-white/10 hidden group-hover:block">
+                  {item.subItems.map((subItem) => (
+                    <li key={subItem.href}>
+                      <Link
+                        href={subItem.href}
+                        className="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-zinc-700"
+                      >
+                        {subItem.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </li>
           ))}
         </ul>
@@ -211,15 +237,23 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<'nav'>) {
         <NavItem href="/">Home</NavItem>
         <DropdownNavItem
           label="Destinations"
-          href="/continents"
+          href="/desintations"
           items={[
             { label: 'Europe', href: '/destinations/europe' },
-            { label: 'North America', href: '/destinations/north_america' },
+            {
+              label: 'North America',
+              href: '/destinations/north_america',
+              subItems: [
+                { label: 'Hawaii', href: '/destinations/north_america/hawaii' },
+                { label: 'California', href: '/destinations/north_america/california' },
+              ],
+            },
             { label: 'South America', href: '/destinations/south_america' },
             { label: 'Africa', href: '/destinations/africa' },
             { label: 'Asia', href: '/destinations/asia' },
           ]}
         />
+
         <NavItem href="/blog">Personal Blog</NavItem>
         <NavItem href="/about">About</NavItem>
       </ul>
