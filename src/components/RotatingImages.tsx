@@ -42,7 +42,7 @@ export function RotatingImages({
           }`}
           style={{
             objectPosition:
-              img.src.includes('books') ? 'center 20%' : 'center', // Move books image down
+              img.src.includes('books') ? 'center 10%' : 'center', // Move books image down
           }}
         />
       ))}
