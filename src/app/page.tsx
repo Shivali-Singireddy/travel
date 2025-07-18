@@ -14,6 +14,10 @@ import avatar from '@/images/avatar.jpg'
 import amazon from '@/images/photos/amazon.jpg'
 import machupichu from '@/images/photos/machupichu.jpg'
 import horse from '@/images/photos/horse.jpg'
+import books from '@/images/photos/books.jpg'
+import green_beach from '@/images/photos/green_beach.jpg'
+import kalalau from '@/images/photos/kalalau.jpg'
+import maui from '@/images/photos/maui.jpg'
 
 import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
@@ -211,7 +215,7 @@ export default async function Home() {
               boxSizing: 'border-box',
             }}
           >
-            <RotatingImages images={[machupichu, horse]} width={450} height={500} />
+            <RotatingImages images={[machupichu, horse, books, maui, kalalau, green_beach]} width={450} height={500} />
           </div>
         </div>
 
