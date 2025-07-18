@@ -10,7 +10,7 @@ export default function MauiPostPage() {
           src={maui_post}
           alt="Maui Post"
           width={800}
-          height={600} // adjust this to match your 3:4 ratio
+          height={300} // adjust this to match your 3:4 ratio
           style={{ objectFit: 'contain', width: '100%', height: 'auto' }}
           priority
         />
