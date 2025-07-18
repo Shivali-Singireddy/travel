@@ -164,15 +164,6 @@ function NavItem({
   )
 }
 
-type DropdownNavItemProps = {
-  label: string
-  href: string
-  items: {
-    label: string
-    href: string
-  }[]
-}
-
 export function DropdownNavItem({ label, items }: DropdownNavItemProps) {
   const [isOpen, setIsOpen] = useState(false)
 
