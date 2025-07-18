@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import kalalau_post from '@/app/destinations/north_america/hawaii/kauai/kalalau_post.png'
+import kalalau_post from '@/app/destinations/north_america/hawaii/kauai/kalalau_trail/kalalau_post.png'
 
 export default function KalalauPostPage() {
   return (
