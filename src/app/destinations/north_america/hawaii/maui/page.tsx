@@ -3,7 +3,7 @@ import maui_post from '@/app/destinations/north_america/hawaii/maui/maui_post.pn
 
 export default function MauiPostPage() {
   return (
-    <div className="relative w-full min-h-screen bg-[#FAF5EF] border border-[#e0e0e0] mx-auto flex flex-col items-center px-4 py-8 max-w-screen-xl">
+    <div className="relative w-full min-h-screen bg-white border border-[#e0e0e0] mx-auto flex flex-col items-center px-4 py-8 max-w-screen-xl">
       <div className="relative w-full" style={{ aspectRatio: '3 / 4', maxWidth: 600 }}>
         {/* Outline around image */}
         <div
@@ -18,8 +18,9 @@ export default function MauiPostPage() {
         <Image
           src={maui_post}
           alt="Maui Post"
-          fill
-          style={{ objectFit: 'cover' }}
+          width={600}
+          height={800} // adjust this to match your 3:4 ratio
+          style={{ objectFit: 'contain', width: '100%', height: 'auto' }}
           priority
         />
       </div>
