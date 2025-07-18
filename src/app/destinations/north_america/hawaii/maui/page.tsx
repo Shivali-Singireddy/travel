@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import maui_post from '@/app/destinations/north_america/hawaii/maui_post.png'
+import maui_post from '@/app/destinations/north_america/hawaii/maui/maui_post.png'
 
 export default function MauiPostPage() {
   return (
