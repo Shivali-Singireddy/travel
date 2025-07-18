@@ -23,6 +23,13 @@ import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 import { RotatingImages } from '@/components/RotatingImages' // client component
 import type { StaticImageData } from 'next/image'
+import { Spectral } from 'next/font/google'
+
+const spectral = Spectral({
+  subsets: ['latin'],
+  weight: ['400', '700', '800'], // Use any weights you need
+})
+
 
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -248,10 +255,9 @@ export default async function Home() {
             }}
           >
             <div
-              className="text-white text-center h-full flex flex-col justify-center items-center mt-6"
+              className={`text-white text-center h-full flex flex-col justify-center items-center mt-6 ${spectral.className}`}
               style={{
                 transform: 'rotate(5deg)',
-                fontFamily: 'Georgia, serif',
               }}
             >
               <h2 className="text-6xl font-extrabold mb-6">
@@ -305,6 +311,18 @@ export default async function Home() {
           />
         </div>
       </div>
+      <Container className="mt-24 md:mt-28">
+        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
+          <div className="flex flex-col gap-16">
+            {articles.map((article) => (
+              <Article key={article.slug} article={article} />
+            ))}
+          </div>
+          <div className="space-y-10 lg:pl-16 xl:pl-24">
+            <Newsletter />
+          </div>
+        </div>
+      </Container>
     </>
   )
 }
