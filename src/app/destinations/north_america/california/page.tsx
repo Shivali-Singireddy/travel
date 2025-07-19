@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import maui_post from '@/app/destinations/north_america/san_diego/san_diego_post.png'
+import san_diego_post from '@/app/destinations/north_america/san_diego/san_diego_post.png'
 
 export default function CaliforniaPage() {
   const posts = [
