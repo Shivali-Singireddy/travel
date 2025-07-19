@@ -4,7 +4,7 @@ import big_island_post from '@/app/destinations/north_america/hawaii/big_island/
 export default function BigIslandPostPage() {
   return (
     <div className="relative w-full min-h-screen bg-white border border-[#e0e0e0] mx-auto flex flex-col items-center px-4 py-8 max-w-screen-xl">
-      <div className="relative w-full max-w-[1000px]">
+      <div className="w-full max-w-[1000px] border border-gray-300 overflow-hidden">
         <Image
           src={big_island_post}
           alt="Big Island Post"
