@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import maui_post from '@/app/destinations/north_america/hawaii/maui/maui_post.png'
 import kauai_post from '@/app/destinations/north_america/hawaii/kauai/kauai_post.png'
-import kalalau_post from '@/app/destinations/north_america/hawaii/kauai/kalalau/kalalau_post.png'
+import kalalau_post from '@/app/destinations/north_america/hawaii/kauai/kalalau_trail/kalalau_post.png'
 import big_island_post from '@/app/destinations/north_america/hawaii/big_island/big_island_post.png'
 
 
