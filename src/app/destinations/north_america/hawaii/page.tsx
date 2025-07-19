@@ -22,13 +22,13 @@ export default function HawaiiPage() {
     },
     {
       title: 'Kalalau Trail',
-      slug: 'kalalau trail',
+      slug: 'kauai/kalalau_trail',
       image: kalalau_post,
       description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
     },
     {
       title: 'Big Island',
-      slug: 'big island',
+      slug: 'big_island',
       image: big_island_post,
       description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
     },
