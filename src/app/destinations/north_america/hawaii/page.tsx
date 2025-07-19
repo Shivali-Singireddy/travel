@@ -1,6 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import maui_post from '@/app/destinations/north_america/hawaii/maui/maui_post.png'
+import kauai_post from '@/app/destinations/north_america/hawaii/kauai/kauai_post.png'
+import kalalau_post from '@/app/destinations/north_america/hawaii/kauai/kalalau/kalalau_post.png'
+import big_island_post from '@/app/destinations/north_america/hawaii/big_island/big_island_post.png'
+
 
 export default function HawaiiPage() {
   const posts = [
@@ -10,7 +14,24 @@ export default function HawaiiPage() {
       image: maui_post,
       description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
     },
-    // Add more posts like Honolulu, Kauai, etc.
+    {
+      title: 'Kauai',
+      slug: 'kauai',
+      image: kauai_post,
+      description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
+    },
+    {
+      title: 'Kalalau Trail',
+      slug: 'kalalau trail',
+      image: kalalau_post,
+      description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
+    },
+    {
+      title: 'Big Island',
+      slug: 'big island',
+      image: big_island_post,
+      description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
+    },
   ]
 
   return (
@@ -32,7 +53,7 @@ export default function HawaiiPage() {
                 style={{ objectFit: 'cover' }}
               />
             </div>
-            <div className="p-4 bg-white">
+            <div className="p-4 bg-white text-center">
               <h2 className="text-xl font-semibold text-purple-800 mb-2">{post.title}</h2>
               <p className="text-gray-700 text-sm">{post.description}</p>
             </div>
