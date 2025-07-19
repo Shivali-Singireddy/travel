@@ -6,7 +6,7 @@ export default function CaliforniaPage() {
   const posts = [
     {
       title: 'San Diego',
-      slug: 'san diego',
+      slug: 'san_diego',
       image: san_diego_post,
       description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
     },
@@ -20,7 +20,7 @@ export default function CaliforniaPage() {
         {posts.map((post) => (
           <Link
             key={post.slug}
-            href={`/destinations/north_america/hawaii/${post.slug}`}
+            href={`/destinations/north_america/california/${post.slug}`}
             className="block border border-gray-300 rounded-lg overflow-hidden hover:shadow-lg transition"
           >
             <div className="relative w-full h-64">
