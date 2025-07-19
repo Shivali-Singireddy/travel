@@ -4,7 +4,7 @@ import kauai_post from '@/app/destinations/north_america/hawaii/kauai/kauai_post
 export default function KauaiPostPage() {
   return (
     <div className="relative w-full min-h-screen bg-white border border-[#e0e0e0] mx-auto flex flex-col items-center px-4 py-8 max-w-screen-xl">
-      <div className="relative w-full max-w-[1000px]">
+      <div className="w-full max-w-[1000px] border border-gray-300 overflow-hidden">
         <Image
           src={kauai_post}
           alt="Kauai Post"
