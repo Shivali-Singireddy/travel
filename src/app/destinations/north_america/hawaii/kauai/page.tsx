@@ -6,8 +6,8 @@ export default function KauaiPostPage() {
     <div className="relative w-full min-h-screen bg-white border border-[#e0e0e0] mx-auto flex flex-col items-center px-4 py-8 max-w-screen-xl">
       <div className="relative w-full max-w-[1000px]">
         <Image
-          src={maui_post}
-          alt="Maui Post"
+          src={kauai_post}
+          alt="Kauai Post"
           width={1000}           // specify natural width for optimization
           style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
           priority
