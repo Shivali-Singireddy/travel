@@ -42,7 +42,7 @@ export default function BrazilPage() {
         {posts.map((post) => (
           <Link
             key={post.slug}
-            href={`/destinations/north_america/hawaii/${post.slug}`}
+            href={`/destinations/south_america/brazil/${post.slug}`}
             className="block border border-gray-300 rounded-lg overflow-hidden hover:shadow-lg transition"
           >
             <div className="relative w-full h-64">
