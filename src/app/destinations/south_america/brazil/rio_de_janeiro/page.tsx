@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import rio_post from '@/app/destinations/south_america/brazil/rui_de_janeiro/rio_post.png'
+import rio_post from '@/app/destinations/south_america/brazil/rio_de_janeiro/rio_post.png'
 
 export default function RioPostPage() {
   return (
