@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import manaus_post from '@/app/destinations/south_america/brazil/manaus/manaus_post.png'
-import rio_post from '@/app/destinations/south_america/brazil/rio/rio_post.png'
+import rio_post from '@/app/destinations/south_america/brazil/rio_de_janeiro/rio_post.png'
 import salvador_post from '@/app/destinations/south_america/salvador/salvador_post.png'
 import sao_paolo_post from '@/app/destinations/south_america/sao_paolo/sao_paolo_post.png'
 
