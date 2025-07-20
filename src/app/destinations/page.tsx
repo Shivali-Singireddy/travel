@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import san_diego_post from '@/app/destinations/north_america/california/san_diego/san_diego_post.png'
+import hawaii from '@/app/destinations/north_america/hawaii/hawaii.png'
+
 
 export default function NorthAmericaPage() {
   const posts = [
@@ -19,7 +21,7 @@ export default function NorthAmericaPage() {
     {
       title: 'North America',
       slug: 'north_america',
-      image: san_diego_post,
+      image: hawaii,
       description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
     },
     {
