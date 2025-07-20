@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import brazil from '@/app/destinations/south_america/brazil.jpg'
+import brazil from '@/app/destinations/south_america/brazil.png'
 import peru from '@/app/destinations/south_america/peru.png'
 
 
