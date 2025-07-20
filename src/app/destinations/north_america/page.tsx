@@ -31,7 +31,7 @@ export default function NorthAmericaPage() {
             href={`/destinations/north_america/${post.slug}`}
             className="block border border-gray-300 overflow-hidden hover:shadow-lg transition"
           >
-            <div className="relative w-full h-64">
+            <div className="relative w-full h-80">
               <Image
                 src={post.image}
                 alt={post.title}
