@@ -4,6 +4,8 @@ import san_diego_post from '@/app/destinations/north_america/california/san_dieg
 import north_america from '@/app/destinations/north_america.png'
 import south_america from '@/app/destinations/south_america.png'
 import europe from '@/app/destinations/europe.png'
+import asia from '@/app/destinations/asia.png'
+
 
 export default function NorthAmericaPage() {
   const posts = [
@@ -30,7 +32,7 @@ export default function NorthAmericaPage() {
     {
       title: 'Asia',
       slug: 'asia',
-      image: san_diego_post,
+      image: asia,
     },
   ]
 
