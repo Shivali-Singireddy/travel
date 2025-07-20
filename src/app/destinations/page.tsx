@@ -2,39 +2,35 @@ import Image from 'next/image'
 import Link from 'next/link'
 import san_diego_post from '@/app/destinations/north_america/california/san_diego/san_diego_post.png'
 import north_america from '@/app/destinations/north_america.png'
-
+import south_america from '@/app/destinations/south_america.png'
+import south_america from '@/app/destinations/europe.png'
 
 export default function NorthAmericaPage() {
   const posts = [
     {
       title: 'Europe',
       slug: 'europe',
-      image: san_diego_post,
-      description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
+      image: europe,
     },
     {
       title: 'South America',
       slug: 'south_america',
-      image: san_diego_post,
-      description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
+      image: south_america,
     },
     {
       title: 'North America',
       slug: 'north_america',
       image: north_america,
-      description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
     },
     {
       title: 'Africa',
       slug: 'africa',
       image: san_diego_post,
-      description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
     },
     {
       title: 'Asia',
       slug: 'asia',
       image: san_diego_post,
-      description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
     },
   ]
 
