@@ -1,34 +1,45 @@
+import Image from 'next/image'
 import Link from 'next/link'
+import brazil from '@/app/destinations/south_america/brazil.jpg'
+import peru from '@/app/destinations/south_america/peru.png'
 
-export default function South_America_Page() {
+
+export default function SouthAmericaPage() {
+  const posts = [
+    {
+      title: 'Brazil',
+      slug: 'brazil',
+      image: brazil,
+    },
+    {
+      title: 'Peru',
+      slug: 'peru',
+      image: peru,
+    },
+  ]
+
   return (
-    <div className="p-6 max-w-3xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6">Hawaii</h1>
-      <p>Welcome to the South America page. Explore the beautiful islands!</p>
+    <div className="w-full min-h-screen bg-white px-6 py-10 max-w-screen-xl mx-auto">
+      <h1 className="text-3xl font-bold mb-8 text-center text-purple-900">Explore North America</h1>
 
-      {/* Clickable box linking to Maui */}
-      <Link href="/destinations/south_america/peru/cusco">
-        <a
-          className="
-            mt-8 block
-            border-2 border-teal-500 rounded-lg
-            p-6
-            text-center
-            bg-teal-50 hover:bg-teal-100
-            text-teal-700
-            font-semibold
-            cursor-pointer
-            transition
-            shadow-md
-            hover:shadow-lg
-            max-w-sm
-            mx-auto
-          "
-          aria-label="Go to Maui page"
-        >
-          Explore Maui →
-        </a>
-      </Link>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {posts.map((post) => (
+          <Link
+            key={post.slug}
+            href={`/destinations/south_america/${post.slug}`}
+            className="block border border-gray-300 overflow-hidden hover:shadow-lg transition"
+          >
+            <div className="relative w-full h-75">
+              <Image
+                src={post.image}
+                alt={post.title}
+                fill
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   )
 }
