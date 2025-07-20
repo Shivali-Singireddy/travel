@@ -29,7 +29,7 @@ export default function NorthAmericaPage() {
           <Link
             key={post.slug}
             href={`/destinations/north_america/${post.slug}`}
-            className="block border border-gray-300 rounded-lg overflow-hidden hover:shadow-lg transition"
+            className="block border border-gray-300 overflow-hidden hover:shadow-lg transition"
           >
             <div className="relative w-full h-64">
               <Image
@@ -38,10 +38,6 @@ export default function NorthAmericaPage() {
                 fill
                 style={{ objectFit: 'cover' }}
               />
-            </div>
-            <div className="p-4 bg-white text-center">
-              <h2 className="text-xl font-semibold text-purple-800 mb-2">{post.title}</h2>
-              <p className="text-gray-700 text-sm">{post.description}</p>
             </div>
           </Link>
         ))}
