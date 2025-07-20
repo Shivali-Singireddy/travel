@@ -10,13 +10,11 @@ export default function NorthAmericaPage() {
       title: 'Hawaii',
       slug: 'hawaii',
       image: hawaii,
-      description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
     },
     {
       title: 'California',
       slug: 'california',
       image: california,
-      description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
     },
   ]
 
