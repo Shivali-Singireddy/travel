@@ -3,7 +3,7 @@ import Link from 'next/link'
 import san_diego_post from '@/app/destinations/north_america/california/san_diego/san_diego_post.png'
 import north_america from '@/app/destinations/north_america.png'
 import south_america from '@/app/destinations/south_america.png'
-import south_america from '@/app/destinations/europe.png'
+import europe from '@/app/destinations/europe.png'
 
 export default function NorthAmericaPage() {
   const posts = [
