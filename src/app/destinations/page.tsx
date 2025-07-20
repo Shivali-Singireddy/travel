@@ -46,7 +46,7 @@ export default function NorthAmericaPage() {
         {posts.map((post) => (
           <Link
             key={post.slug}
-            href={`/destinations/north_america/${post.slug}`}
+            href={`/destinations/${post.slug}`}
             className="block border border-gray-300 overflow-hidden hover:shadow-lg transition"
           >
             <div className="relative w-full h-75">
