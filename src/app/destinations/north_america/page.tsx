@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import california from '@/app/destinations/north_america/california.png'
+import california from '@/app/destinations/north_america/california.jpg'
 import hawaii from '@/app/destinations/north_america/hawaii.png'
 
 
