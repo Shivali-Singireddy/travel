@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import cappadocia_post from '@/app/destinations/asia/turkey/cappadocia/cappadocia_post.png'
+import istanbul_post from '@/app/destinations/asia/turkey/istanbul/istanbul_post.png'
+
 
 export default function TurkeyPage() {
   const posts = [
@@ -8,6 +10,12 @@ export default function TurkeyPage() {
       title: 'Cappadocia',
       slug: 'cappadocia',
       image: cappadocia_post,
+      description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
+    },
+    {
+      title: 'Istanbul',
+      slug: 'istanbul',
+      image: istanbul_post,
       description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
     },
   ]
