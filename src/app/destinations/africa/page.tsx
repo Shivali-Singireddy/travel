@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import chefchaouen_post from '@/app/destinations/africa/morocco/chefchaouen/chefchaouen_post.png'
+import chefchaouen_post from '@/app/destinations/africa/morocco/chefchaouen/chef_post.png'
 
 
 export default function AfricaPage() {
