@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import cusco_post from '@/app/destinations/south_america/peru/cusco/cusco_post.png'
-import salkaantay_post from '@/app/destinations/south_america/peru/cusco/salkantay_trail/salkantay_post.png'
+import salkantay_post from '@/app/destinations/south_america/peru/cusco/salkantay_trail/salkantay_post.png'
 import peru_post from '@/app/destinations/south_america/brazil/salvador/salvador_post.png'
 
 export default function BrazilPage() {
