@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import chefchaoen_post from '@/app/destinations/africa/morocco/chefchaoen/chefchaoen_post.png'
+import chefchaoen_post from '@/app/destinations/africa/morocco/chefchaoen/chef_post.png'
 
 export default function BrazilPage() {
   const posts = [
