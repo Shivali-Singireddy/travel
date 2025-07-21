@@ -1,13 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import chefchaoen_post from '@/app/destinations/africa/morocco/chefchaoen/chef_post.png'
+import chefchaouen_post from '@/app/destinations/africa/morocco/chefchaouen/chef_post.png'
 
 export default function BrazilPage() {
   const posts = [
     {
-      title: 'Chefchaoen',
-      slug: 'chefchaoen',
-      image: chefchaoen_post,
+      title: 'Chefchaouen',
+      slug: 'Chefchaouen',
+      image: chefchaouen_post,
       description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
     },
   ]
