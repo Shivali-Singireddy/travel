@@ -11,7 +11,7 @@ export default function BrazilPage() {
   const posts = [
     {
       title: 'Rio',
-      slug: 'rio',
+      slug: 'rio_de_janeiro',
       image: rio_post,
       description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
     },
