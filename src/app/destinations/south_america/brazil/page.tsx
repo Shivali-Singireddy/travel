@@ -4,6 +4,7 @@ import manaus_post from '@/app/destinations/south_america/brazil/manaus/manaus_p
 import rio_post from '@/app/destinations/south_america/brazil/rio_de_janeiro/rio_post.png'
 import salvador_post from '@/app/destinations/south_america/brazil/salvador/salvador_post.png'
 import sao_paolo_post from '@/app/destinations/south_america/brazil/sao_paolo/sao_paolo_post.png'
+import iguazu_post from '@/app/destinations/south_america/brazil/iguazu_falls/iguazu_post.png'
 
 
 export default function BrazilPage() {
@@ -30,6 +31,12 @@ export default function BrazilPage() {
       title: 'Sao Paolo',
       slug: 'sao_paolo',
       image: sao_paolo_post,
+      description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
+    },
+    {
+      title: 'Iguazu Falls',
+      slug: 'iguazu_falls',
+      image: iguazu_post,
       description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
     },
   ]
