@@ -14,7 +14,7 @@ export default function BrazilPage() {
     },
     {
       title: 'Salkantay Trail',
-      slug: 'salkantay_trail',
+      slug: 'cusco/salkantay_trail',
       image: salkantay_post,
       description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
     },
