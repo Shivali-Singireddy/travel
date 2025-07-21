@@ -1,6 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import paris_post from '@/app/destinations/europe/paris/paris_post.png'
+import london_post from '@/app/destinations/europe/london/london_post.png'
+import switzerland_post from '@/app/destinations/europe/switzerland/switzerland_post.png'
+
+
 
 export default function EuropePage() {
   const posts = [
@@ -8,6 +12,18 @@ export default function EuropePage() {
       title: 'Paris',
       slug: 'paris',
       image: paris_post,
+      description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
+    },
+    {
+      title: 'London',
+      slug: 'london',
+      image: london_post,
+      description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
+    },
+    {
+      title: 'Switzerland',
+      slug: 'switzerland',
+      image: switzerland_post,
       description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
     },
   ]
