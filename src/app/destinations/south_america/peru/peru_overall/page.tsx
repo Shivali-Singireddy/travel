@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import salvador_post from '@/app/destinations/south_america/peru/peru_overall/peru_post.png'
+import peru_post from '@/app/destinations/south_america/peru/peru_overall/peru_post.png'
 
 export default function PeruPostPage() {
   return (
