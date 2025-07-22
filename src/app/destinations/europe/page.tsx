@@ -50,7 +50,7 @@ export default function EuropePage() {
             href={`/destinations/europe/${region.slug}`}
             className="block border border-gray-300 overflow-hidden hover:shadow-lg transition"
           >
-            <div className="relative w-full h-64">
+            <div className="relative w-full h-75">
               <Image
                 src={region.image}
                 alt={region.title}
