@@ -7,7 +7,7 @@ import barcelona_post from '@/app/destinations/europe/barcelona/barcelona_post.p
 import italy from '@/app/destinations/europe/italy.png'
 
 
-export default function NorthAmericaPage() {
+export default function EuropePage() {
   const regions = [
     {
       title: 'Italy',
@@ -39,7 +39,7 @@ export default function NorthAmericaPage() {
 
   return (
     <div className="w-full min-h-screen bg-white px-6 py-10 max-w-screen-xl mx-auto">
-      <h1 className="text-3xl font-bold mb-8 text-center text-purple-900">Explore North America</h1>
+      <h1 className="text-3xl font-bold mb-8 text-center text-purple-900">Explore Europe</h1>
 
       {/* Region-Level Buttons (Simple Style) */}
       <h2 className="text-2xl font-semibold mb-4 text-purple-800">Top Regions</h2>
@@ -47,7 +47,7 @@ export default function NorthAmericaPage() {
         {regions.map((region) => (
           <Link
             key={region.slug}
-            href={`/destinations/north_america/${region.slug}`}
+            href={`/destinations/europe/${region.slug}`}
             className="block border border-gray-300 overflow-hidden hover:shadow-lg transition"
           >
             <div className="relative w-full h-64">
@@ -57,9 +57,6 @@ export default function NorthAmericaPage() {
                 fill
                 style={{ objectFit: 'cover' }}
               />
-            </div>
-            <div className="p-4 text-center bg-white">
-              <h2 className="text-lg font-semibold text-purple-800">{region.title}</h2>
             </div>
           </Link>
         ))}
@@ -71,7 +68,7 @@ export default function NorthAmericaPage() {
         {destinations.map((dest) => (
           <Link
             key={dest.slug}
-            href={`/destinations/north_america/${dest.slug}`}
+            href={`/destinations/europe/${dest.slug}`}
             className="block border border-gray-300 rounded-lg overflow-hidden hover:shadow-lg transition"
           >
             <div className="relative w-full h-64">
