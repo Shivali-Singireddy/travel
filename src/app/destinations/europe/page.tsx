@@ -4,6 +4,13 @@ import paris_post from '@/app/destinations/europe/paris/paris_post.png'
 import london_post from '@/app/destinations/europe/london/london_post.png'
 import switzerland_post from '@/app/destinations/europe/switzerland/switzerland_post.png'
 import barcelona_post from '@/app/destinations/europe/barcelona/barcelona_post.png'
+import algarve_post from '@/app/destinations/europe/algarve/algarve_post.png'
+import amsterdam_post from '@/app/destinations/europe/amsterdam/amsterdam_post.png'
+import czech_post from '@/app/destinations/europe/czech_republic/czech_post.png'
+import brussels_post from '@/app/destinations/europe/brussels/brussels_post.png'
+
+
+
 import italy from '@/app/destinations/europe/italy.png'
 import united_kingdom from '@/app/destinations/europe/united_kingdom.png'
 
@@ -36,9 +43,33 @@ export default function EuropePage() {
       description: 'Hike lush valleys and scenic coastal trails.',
     },
     {
+      title: 'Algarve',
+      slug: 'algarve',
+      image: algarve_post,
+      description: 'Hike lush valleys and scenic coastal trails.',
+    },
+    {
+      title: 'Amsterdam',
+      slug: 'amsterdam',
+      image: amsterdam_post,
+      description: 'Hike lush valleys and scenic coastal trails.',
+    },
+    {
+      title: 'Czech Republic',
+      slug: 'czech_republic',
+      image: czech_post,
+      description: 'Hike lush valleys and scenic coastal trails.',
+    },
+    {
       title: 'Switzerland',
       slug: 'switzerland',
       image: switzerland_post,
+      description: 'Hike lush valleys and scenic coastal trails.',
+    },
+    {
+      title: 'Brussels',
+      slug: 'brussels',
+      image: brussels_post,
       description: 'Hike lush valleys and scenic coastal trails.',
     },
   ]
