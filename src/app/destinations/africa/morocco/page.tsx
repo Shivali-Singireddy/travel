@@ -6,7 +6,7 @@ export default function BrazilPage() {
   const posts = [
     {
       title: 'Chefchaouen',
-      slug: 'Chefchaouen',
+      slug: 'chefchaouen',
       image: chefchaouen_post,
       description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
     },
