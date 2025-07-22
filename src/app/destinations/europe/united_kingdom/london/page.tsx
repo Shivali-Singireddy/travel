@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import london_post from '@/app/destinations/europe/london/london_post.png'
+import london_post from '@/app/destinations/europe/united_kingdom/london/london_post.png'
 
 export default function LondonPostPage() {
   return (
