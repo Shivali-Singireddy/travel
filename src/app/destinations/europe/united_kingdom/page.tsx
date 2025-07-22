@@ -5,7 +5,7 @@ import ireland_post from '@/app/destinations/europe/united_kingdom/ireland/irela
 import scotland_post from '@/app/destinations/europe/united_kingdom/scotland/scotland_post.png'
 
 
-export default function BrazilPage() {
+export default function United_States_Page() {
   const posts = [
     {
       title: 'London',
