@@ -5,6 +5,7 @@ import london_post from '@/app/destinations/europe/london/london_post.png'
 import switzerland_post from '@/app/destinations/europe/switzerland/switzerland_post.png'
 import barcelona_post from '@/app/destinations/europe/barcelona/barcelona_post.png'
 import italy from '@/app/destinations/europe/italy.png'
+import united_kingdom from '@/app/destinations/europe/united_kingdom.png'
 
 
 export default function EuropePage() {
@@ -13,6 +14,11 @@ export default function EuropePage() {
       title: 'Italy',
       slug: 'italy',
       image: italy,
+    },
+    {
+      title: 'United Kingdom',
+      slug: 'united_kingdom',
+      image: united_kingdom,
     },
   ]
 
