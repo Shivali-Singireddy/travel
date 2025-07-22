@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import california from '@/app/destinations/north_america/california.jpg'
 import hawaii from '@/app/destinations/north_america/hawaii.png'
+import mexico from '@/app/destinations/north_america/mexico.png'
 
 
 export default function NorthAmericaPage() {
@@ -10,6 +11,11 @@ export default function NorthAmericaPage() {
       title: 'Hawaii',
       slug: 'hawaii',
       image: hawaii,
+    },
+    {
+      title: 'Mexico',
+      slug: 'mexico',
+      image: mexico,
     },
     {
       title: 'California',
