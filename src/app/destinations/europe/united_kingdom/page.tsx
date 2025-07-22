@@ -2,6 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import london_post from '@/app/destinations/europe/united_kingdom/london/london_post.png'
 import ireland_post from '@/app/destinations/europe/united_kingdom/ireland/ireland_post.png'
+import scotland_post from '@/app/destinations/europe/united_kingdom/scotland/scotland_post.png'
+
 
 export default function BrazilPage() {
   const posts = [
@@ -15,6 +17,12 @@ export default function BrazilPage() {
       title: 'Ireland',
       slug: 'ireland',
       image: ireland_post,
+      description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
+    },
+    {
+      title: 'Scotland',
+      slug: 'scotland',
+      image: scotland_post,
       description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
     },
   ]
