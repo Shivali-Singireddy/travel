@@ -28,9 +28,8 @@ import { Spectral } from 'next/font/google'
 
 const spectral = Spectral({
   subsets: ['latin'],
-  weight: ['400', '700', '800'], // Use any weights you need
+  weight: ['400', '700', '800'],
 })
-
 
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -155,180 +154,76 @@ export default async function Home() {
 
   return (
     <>
-      <div className="mt-10" />
+      {/* Wrapper with Spectral font and constrained width for most content */}
+      <div className={`${spectral.className} w-[95%] mx-auto`}>
+        <div className="mt-10" />
 
-      <div className="relative w-[95%] h-[650px] bg-[#FAF5EF] border border-[#e0e0e0] overflow-visible mx-auto">
-        {/* Right Purple Rectangle */}
-        <div className="absolute top-0 right-0 h-full w-[50%] bg-[#7A5E8A]" />
-      
-        {/* Amazon Image (behind purple box, slightly lower and to the right) */}
-        <div
-          className="absolute -translate-x-1/2 z-10"
-          style={{
-            top: '50%',
-            left: '55%',
-            width: '300px',
-            height: '300px',
-          }}
-        >
-          <Image
-            src={amazon}
-            alt="Amazon"
-            className="w-full h-full object-cover"
-          />
+        <div className="relative w-full h-[650px] bg-[#FAF5EF] border border-[#e0e0e0] overflow-visible">
+          {/* Right Purple Rectangle */}
+          <div className="absolute top-0 right-0 h-full w-[50%] bg-[#7A5E8A]" />
+        
+          {/* Amazon Image (behind purple box, slightly lower and to the right) */}
           <div
-            className="absolute top-0 left-0 border-2 border-gray-800 pointer-events-none"
+            className="absolute -translate-x-1/2 z-10"
             style={{
+              top: '50%',
+              left: '55%',
               width: '300px',
               height: '300px',
-              transform: 'translate(-8px, -8px)',
-              backgroundColor: 'transparent',
-            }}
-          />
-        </div>
-
-        <div
-          style={{
-            position: 'relative',
-            width: 470,       // outline container bigger than image container
-            height: 550,
-            zIndex: 20,
-          }}
-        >
-          {/* Outline */}
-          <div
-            style={{
-              position: 'absolute',
-              top: 40,        // offset upwards
-              left: 690,       // offset leftwards
-              width: 490,      // slightly bigger width than container (470 + 20 offset total)
-              height: 540,     // slightly bigger height (300 + 20)
-              border: '1px solid black',
-              borderRadius: 0,
-              pointerEvents: 'none',  // don't block mouse events
-              boxSizing: 'border-box',
-            }}
-          />
-        
-          {/* Image container */}
-          <div
-            style={{
-              position: 'absolute',
-              top: 60,        
-              left: 710,
-              width: 450,
-              height: 500,
-              overflow: 'hidden',
-              border: '1px solid #D1D5DB',
-              boxSizing: 'border-box',
             }}
           >
-            <RotatingImages images={[machupichu, horse, books, maui, kalalau, green_beach]} width={450} height={500} />
-          </div>
-        </div>
-
-      
-        {/* Tape Image (moved slightly right and up) */}
-        <Image
-          src={tape}
-          alt="Tape"
-          width={96}
-          height={32}
-          className="absolute z-30 w-56"
-          style={{
-            top: '-65px',
-            left: 'calc(5% + 90px)',
-            transform: 'rotate(-15deg)',
-          }}
-        />
-      
-        {/* Left Purple Box with Text */}
-        <div
-          className="absolute top-1/2 left-[5%] z-20"
-          style={{ width: '480px', height: '500px', transform: 'translateY(-55%)' }}
-        >
-          <div
-            className="absolute top-0 left-0 bg-[#7A5E8A] p-6"
-            style={{
-              width: '480px',
-              height: '500px',
-              transform: 'rotate(-5deg)',
-            }}
-          >
+            <Image
+              src={amazon}
+              alt="Amazon"
+              className="w-full h-full object-cover"
+            />
             <div
-              className={`text-white text-center h-full flex flex-col justify-center items-center mt-6 ${spectral.className}`}
+              className="absolute top-0 left-0 border-2 border-gray-800 pointer-events-none"
               style={{
-                transform: 'rotate(5deg)',
+                width: '300px',
+                height: '300px',
+                transform: 'translate(-8px, -8px)',
+                backgroundColor: 'transparent',
+              }}
+            />
+          </div>
+
+          <div
+            style={{
+              position: 'relative',
+              width: 470,
+              height: 550,
+              zIndex: 20,
+            }}
+          >
+            {/* Outline */}
+            <div
+              style={{
+                position: 'absolute',
+                top: 40,
+                left: 690,
+                width: 490,
+                height: 540,
+                border: '1px solid black',
+                borderRadius: 0,
+                pointerEvents: 'none',
+                boxSizing: 'border-box',
+              }}
+            />
+          
+            {/* Image container */}
+            <div
+              style={{
+                position: 'absolute',
+                top: 60,
+                left: 710,
+                width: 450,
+                height: 500,
+                overflow: 'hidden',
+                border: '1px solid #D1D5DB',
+                boxSizing: 'border-box',
               }}
             >
-              <h2 className="text-6xl font-extrabold mb-6">
-                Welcome to Weekends with Shivali
-              </h2>
-              <p className="text-2xl leading-relaxed max-w-[80%]">
-                Hi, I’m Shivali and welcome to my personal blog! With this blog I hope to
-                primarily share my experiences with travelling and other hobbies!
-              </p>
+              <RotatingImages images={[machupichu, horse, books, maui, kalalau, green_beach]} width={450} height={500} />
             </div>
           </div>
-      
-          {/* Outline */}
-          <div
-            className="absolute top-0 left-0 border border-black pointer-events-none"
-            style={{
-              width: '480px',
-              height: '500px',
-              transform: 'rotate(-5deg) translate(8px, 8px)',
-              backgroundColor: 'transparent',
-              zIndex: 30,
-            }}
-          />
-        </div>
-        <div
-          className="absolute z-40"
-          style={{
-            top: '-20px',     // move up
-            left: '48%',      // move right
-            width: 250,
-            height: 250,
-          }}
-        >
-          <Image
-            src={avatar}
-            alt="Avatar"
-            width={250}
-            height={250}
-            className="object-cover w-full h-full"
-            style={{ display: 'block' }}
-          />
-          <div
-            className="absolute top-0 left-0 pointer-events-none"
-            style={{
-              width: '220px',
-              height: '220px',
-              transform: 'translate(15px, 15px)',
-              backgroundColor: 'transparent',
-              border: '1px solid #FAF5EF',
-            }}
-          />
-        </div>
-      </div>
-
-      <div className="mt-28 mb-16 w-full px-4">
-        <ContinentCarousel />
-      </div>
-      
-      <Container className="mt-24 md:mt-28">
-        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          <div className="flex flex-col gap-16">
-            {articles.map((article) => (
-              <Article key={article.slug} article={article} />
-            ))}
-          </div>
-          <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Newsletter />
-          </div>
-        </div>
-      </Container>
-    </>
-  )
-}
