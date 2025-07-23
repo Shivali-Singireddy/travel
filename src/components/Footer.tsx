@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import favicon from '@/images/favicon.ico'
 
 import { ContainerInner, ContainerOuter } from '@/components/Container'
 
@@ -27,10 +28,12 @@ export function Footer() {
           <ContainerInner>
             <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
               {/* Favicon Image */}
-              <img 
-                src="images/favicon.ico" 
-                alt="Favicon" 
-                className="mb-4 w-6 h-6 md:mb-0 md:mr-6" 
+              <Image
+                src={favicon}
+                alt="Favicon"
+                width={24}
+                height={24}
+                className="mb-4 md:mb-0 md:mr-6"
               />
 
               <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-800 dark:text-zinc-200">
