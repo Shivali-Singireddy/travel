@@ -261,19 +261,22 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<'nav'>) {
               href: '/destinations/south_america',
               subItems: [
                 { label: 'Brazil', href: '/destinations/south_america/brazil' },
-                { label: 'Peru', href: '/destinations/south_america/peru' },              ],
+                { label: 'Peru', href: '/destinations/south_america/peru' },              
+              ],
             },
             {
               label: 'Africa',
               href: '/destinations/africa',
               subItems: [
                 { label: 'Morocco', href: '/destinations/africa/morocco' },
+              ],
             },
             {
               label: 'Asia',
               href: '/destinations/asia',
               subItems: [
                 { label: 'Turkey', href: '/destinations/asia/turkey' },
+              ],
             },
           ]}
         />
