@@ -23,7 +23,6 @@ function ContinentCarousel() {
   const [startIndex, setStartIndex] = useState(0)
   const visibleCount = 3
 
-  // Returns visible continents with wrap-around using modulo
   function getVisibleContinents() {
     const result = []
     for (let i = 0; i < visibleCount; i++) {
@@ -33,43 +32,42 @@ function ContinentCarousel() {
     return result
   }
 
-  // Looping previous
   function prev() {
     setStartIndex((startIndex - 1 + continents.length) % continents.length)
   }
 
-  // Looping next
   function next() {
     setStartIndex((startIndex + 1) % continents.length)
   }
 
   return (
-    <div className="relative w-full max-w-full mx-auto flex items-center gap-6 px-4">
+    <div className="w-full max-w-7xl mx-auto px-6 flex items-center justify-center gap-8">
       {/* Left Arrow */}
       <button
         onClick={prev}
         aria-label="Previous continents"
-        className="p-3 text-3xl text-[#7A5E8A] hover:text-[#5e4568] transition"
+        className="p-4 text-[#7A5E8A] hover:text-[#5e4568] transition"
       >
-        <ChevronLeftIcon className="h-8 w-8" />
+        <ChevronLeftIcon className="h-12 w-12" />
       </button>
 
       {/* Continent Cards */}
-      <div className="flex overflow-hidden flex-grow gap-6">
+      <div className="flex gap-8 overflow-hidden">
         {getVisibleContinents().map(({ name, href, image }) => (
           <Link
             key={name}
             href={href}
-            className="flex flex-col items-center border border-[#7A5E8A] rounded-md p-4 cursor-pointer hover:shadow-lg transition-shadow bg-[#FAF5EF]"
+            className="block cursor-pointer rounded-md border border-[#7A5E8A] shadow-md hover:shadow-lg transition-shadow"
+            style={{ width: 220, height: 220 }}
           >
             <Image
               src={image}
               alt={name}
-              width={150}
-              height={150}
-              className="object-cover rounded"
+              width={220}
+              height={220}
+              className="object-cover rounded-md"
+              priority
             />
-            <span className="mt-3 text-center font-semibold text-[#7A5E8A]">{name}</span>
           </Link>
         ))}
       </div>
@@ -78,9 +76,9 @@ function ContinentCarousel() {
       <button
         onClick={next}
         aria-label="Next continents"
-        className="p-3 text-3xl text-[#7A5E8A] hover:text-[#5e4568] transition"
+        className="p-4 text-[#7A5E8A] hover:text-[#5e4568] transition"
       >
-        <ChevronRightIcon className="h-8 w-8" />
+        <ChevronRightIcon className="h-12 w-12" />
       </button>
     </div>
   )
