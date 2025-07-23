@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
@@ -20,133 +20,151 @@ const continents = [
 ]
 
 const VISIBLE_COUNT = 2
-const SLIDE_COUNT = 1
+const TRANSITION_DURATION_MS = 400
 
 function ContinentCarousel() {
-  const [startIndex, setStartIndex] = useState(0)
-  const [isAnimating, setIsAnimating] = useState(false)
+  const [currentIndex, setCurrentIndex] = useState(0)
   const containerRef = useRef<HTMLDivElement>(null)
+  const isTransitioning = useRef(false)
 
-  // Prepare extended list for seamless loop by adding clones at the start and end
-  // Clone last VISIBLE_COUNT items at the front, and first VISIBLE_COUNT at the end
-  const extendedContinents = [
-    ...continents.slice(-VISIBLE_COUNT),
-    ...continents,
-    ...continents.slice(0, VISIBLE_COUNT),
-  ]
+  // Duplicate items for seamless looping
+  const extendedContinents = [...continents, ...continents.slice(0, VISIBLE_COUNT)]
 
-  // Position index relative to extendedContinents
-  const [position, setPosition] = useState(VISIBLE_COUNT) // start at first real continent
+  const slideWidthPercent = 100 / VISIBLE_COUNT
 
-  // Width per item (calculated dynamically)
-  const [itemWidth, setItemWidth] = useState(0)
-
-  // Calculate item width on mount and resize
   useEffect(() => {
-    function updateWidth() {
-      if (containerRef.current) {
-        setItemWidth(containerRef.current.clientWidth / VISIBLE_COUNT)
-      }
-    }
-    updateWidth()
-    window.addEventListener('resize', updateWidth)
-    return () => window.removeEventListener('resize', updateWidth)
-  }, [])
-
-  // Animate slide by changing translateX based on position
-  useEffect(() => {
-    if (!containerRef.current) return
     const container = containerRef.current
-    container.style.transition = isAnimating ? 'transform 0.5s ease' : 'none'
-    container.style.transform = `translateX(-${position * itemWidth}px)`
-  }, [position, itemWidth, isAnimating])
+    if (!container) return
 
-  // After animation ends, if we've moved into clones, jump instantly without animation
-  function handleTransitionEnd() {
-    setIsAnimating(false)
-    if (position === 0) {
-      // Jump to real last item
-      setPosition(continents.length)
-      if (containerRef.current) {
-        containerRef.current.style.transition = 'none'
-        containerRef.current.style.transform = `translateX(-${continents.length * itemWidth}px)`
-      }
-    } else if (position === continents.length + VISIBLE_COUNT) {
-      // Jump to real first item
-      setPosition(VISIBLE_COUNT)
-      if (containerRef.current) {
-        containerRef.current.style.transition = 'none'
-        containerRef.current.style.transform = `translateX(-${VISIBLE_COUNT * itemWidth}px)`
+    function handleTransitionEnd() {
+      isTransitioning.current = false
+      // If we've reached the duplicated last slide, reset to start instantly without transition
+      if (currentIndex >= continents.length) {
+        container.style.transition = 'none'
+        setCurrentIndex(0)
+        container.style.transform = `translateX(0%)`
+
+        // Force reflow to apply styles immediately
+        void container.offsetWidth
+        container.style.transition = `transform ${TRANSITION_DURATION_MS}ms ease`
       }
     }
-  }
+
+    container.addEventListener('transitionend', handleTransitionEnd)
+    return () => container.removeEventListener('transitionend', handleTransitionEnd)
+  }, [currentIndex])
 
   function next() {
-    if (isAnimating) return
-    setIsAnimating(true)
-    setPosition((pos) => pos + SLIDE_COUNT)
+    if (isTransitioning.current) return
+    isTransitioning.current = true
+    setCurrentIndex((prev) => prev + 1)
+    if (containerRef.current) {
+      containerRef.current.style.transform = `translateX(-${(currentIndex + 1) * slideWidthPercent}%)`
+    }
   }
 
   function prev() {
-    if (isAnimating) return
-    setIsAnimating(true)
-    setPosition((pos) => pos - SLIDE_COUNT)
+    if (isTransitioning.current) return
+    isTransitioning.current = true
+
+    const container = containerRef.current
+    if (!container) return
+
+    if (currentIndex === 0) {
+      // Jump to duplicated slides at the end instantly without transition
+      container.style.transition = 'none'
+      setCurrentIndex(continents.length)
+      container.style.transform = `translateX(-${continents.length * slideWidthPercent}%)`
+      // Force reflow
+      void container.offsetWidth
+      container.style.transition = `transform ${TRANSITION_DURATION_MS}ms ease`
+
+      // Now move back one slide after reflow
+      setTimeout(() => {
+        setCurrentIndex(continents.length - 1)
+        container.style.transform = `translateX(-${(continents.length - 1) * slideWidthPercent}%)`
+      }, 20)
+    } else {
+      setCurrentIndex((prev) => prev - 1)
+      container.style.transform = `translateX(-${(currentIndex - 1) * slideWidthPercent}%)`
+    }
   }
 
+  // Sync transform whenever currentIndex changes (for initial render or setIndex calls)
+  useEffect(() => {
+    const container = containerRef.current
+    if (container) {
+      container.style.transition = `transform ${TRANSITION_DURATION_MS}ms ease`
+      container.style.transform = `translateX(-${currentIndex * slideWidthPercent}%)`
+    }
+  }, [currentIndex])
+
   return (
-    <div className="flex items-center justify-center w-full max-w-screen-xl mx-auto px-4 select-none">
-      {/* Prev Button */}
+    <div
+      className="relative max-w-screen-xl mx-auto select-none px-4 py-8"
+      style={{
+        backgroundColor: '#d2b48c', // tan color
+        backgroundImage: `repeating-linear-gradient(
+          45deg,
+          rgba(255 255 255 / 0.1) 0,
+          rgba(255 255 255 / 0.1) 10px,
+          transparent 10px,
+          transparent 20px
+        )`,
+        backgroundSize: '20px 20px',
+        borderRadius: '12px',
+      }}
+    >
+      {/* Left Arrow */}
       <button
         onClick={prev}
         aria-label="Previous continents"
-        disabled={isAnimating}
-        className="flex items-center justify-center p-4 mx-2 bg-[#7A5E8A] text-white rounded-lg hover:bg-[#6a4f76] transition disabled:opacity-50 disabled:cursor-not-allowed"
-        style={{ minWidth: 64, minHeight: 64 }}
+        className="absolute left-2 top-1/2 -translate-y-1/2 rounded bg-[#7A5E8A] p-3 text-white shadow-lg hover:bg-[#6a4e75] focus:outline-none focus:ring-2 focus:ring-[#7A5E8A]"
+        style={{ width: 60, height: 60 }}
       >
-        <ChevronLeftIcon className="w-8 h-8" />
+        <ChevronLeftIcon className="h-8 w-8" />
       </button>
 
-      {/* Carousel viewport */}
-      <div
-        className="overflow-hidden flex-grow"
-        style={{ width: '70%' }}
-      >
-        {/* Sliding container */}
+      {/* Carousel Container */}
+      <div className="overflow-hidden">
         <div
           ref={containerRef}
           className="flex"
-          onTransitionEnd={handleTransitionEnd}
-          style={{ willChange: 'transform' }}
+          style={{
+            width: `${(extendedContinents.length * 100) / VISIBLE_COUNT}%`,
+          }}
         >
           {extendedContinents.map(({ name, href, image }, idx) => (
             <Link
               key={`${name}-${idx}`}
               href={href}
-              className="flex-shrink-0 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition cursor-pointer"
-              style={{ width: itemWidth || '50vw', minWidth: 0 }} // fallback width
+              className="flex-shrink-0 rounded-md shadow-md overflow-hidden mx-2 cursor-pointer"
+              style={{
+                width: `${100 / extendedContinents.length}%`,
+                maxWidth: '50%', // ensures two items visible
+              }}
             >
               <Image
                 src={image}
                 alt={name}
-                width={400}
-                height={250}
-                className="object-cover w-full h-full"
-                priority={idx >= VISIBLE_COUNT && idx < continents.length + VISIBLE_COUNT}
+                width={600}
+                height={400}
+                className="object-cover rounded-md"
+                draggable={false}
               />
             </Link>
           ))}
         </div>
       </div>
 
-      {/* Next Button */}
+      {/* Right Arrow */}
       <button
         onClick={next}
         aria-label="Next continents"
-        disabled={isAnimating}
-        className="flex items-center justify-center p-4 mx-2 bg-[#7A5E8A] text-white rounded-lg hover:bg-[#6a4f76] transition disabled:opacity-50 disabled:cursor-not-allowed"
-        style={{ minWidth: 64, minHeight: 64 }}
+        className="absolute right-2 top-1/2 -translate-y-1/2 rounded bg-[#7A5E8A] p-3 text-white shadow-lg hover:bg-[#6a4e75] focus:outline-none focus:ring-2 focus:ring-[#7A5E8A]"
+        style={{ width: 60, height: 60 }}
       >
-        <ChevronRightIcon className="w-8 h-8" />
+        <ChevronRightIcon className="h-8 w-8" />
       </button>
     </div>
   )
