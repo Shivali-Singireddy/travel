@@ -313,7 +313,9 @@ export default async function Home() {
         </div>
       </div>
 
-      <ContinentCarousel />
+      <div className="mt-28 mb-16 w-full px-4">
+        <ContinentCarousel />
+      </div>
       
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
