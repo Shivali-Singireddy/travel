@@ -28,7 +28,6 @@ function ContinentCarousel() {
   const containerRef = useRef<HTMLDivElement>(null)
 
   // Prepare extended list for seamless loop by adding clones at the start and end
-  // Clone last VISIBLE_COUNT items at the front, and first VISIBLE_COUNT at the end
   const extendedContinents = [
     ...continents.slice(-VISIBLE_COUNT),
     ...continents,
@@ -41,7 +40,6 @@ function ContinentCarousel() {
   // Width per item (calculated dynamically)
   const [itemWidth, setItemWidth] = useState(0)
 
-  // Calculate item width on mount and resize
   useEffect(() => {
     function updateWidth() {
       if (containerRef.current) {
@@ -53,7 +51,6 @@ function ContinentCarousel() {
     return () => window.removeEventListener('resize', updateWidth)
   }, [])
 
-  // Animate slide by changing translateX based on position
   useEffect(() => {
     if (!containerRef.current) return
     const container = containerRef.current
@@ -61,18 +58,15 @@ function ContinentCarousel() {
     container.style.transform = `translateX(-${position * itemWidth}px)`
   }, [position, itemWidth, isAnimating])
 
-  // After animation ends, if we've moved into clones, jump instantly without animation
   function handleTransitionEnd() {
     setIsAnimating(false)
     if (position === 0) {
-      // Jump to real last item
       setPosition(continents.length)
       if (containerRef.current) {
         containerRef.current.style.transition = 'none'
         containerRef.current.style.transform = `translateX(-${continents.length * itemWidth}px)`
       }
     } else if (position === continents.length + VISIBLE_COUNT) {
-      // Jump to real first item
       setPosition(VISIBLE_COUNT)
       if (containerRef.current) {
         containerRef.current.style.transition = 'none'
@@ -94,61 +88,82 @@ function ContinentCarousel() {
   }
 
   return (
-    <div className="flex items-center justify-center w-full max-w-screen-xl mx-auto px-4 select-none">
-      {/* Prev Button */}
-      <button
-        onClick={prev}
-        aria-label="Previous continents"
-        disabled={isAnimating}
-        className="flex items-center justify-center p-4 mx-2 bg-[#7A5E8A] text-white rounded-lg hover:bg-[#6a4f76] transition disabled:opacity-50 disabled:cursor-not-allowed"
-        style={{ minWidth: 64, minHeight: 64 }}
+    <section
+      aria-label="Destinations"
+      className="max-w-screen-xl mx-auto px-6 py-8 select-none rounded-lg border-4 border-[#7A5E8A] relative"
+      style={{
+        backgroundColor: '#d2b48c', // tan background
+        backgroundImage: `repeating-linear-gradient(
+          45deg,
+          rgba(255 255 255 / 0.1) 0,
+          rgba(255 255 255 / 0.1) 10px,
+          transparent 10px,
+          transparent 20px
+        )`,
+      }}
+    >
+      {/* Label */}
+      <h2
+        className="text-3xl font-semibold text-[#7A5E8A] mb-6 text-center tracking-wide select-text"
+        style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.1)' }}
       >
-        <ChevronLeftIcon className="w-8 h-8" />
-      </button>
+        Destinations
+      </h2>
 
-      {/* Carousel viewport */}
-      <div
-        className="overflow-hidden flex-grow"
-        style={{ width: '70%' }}
-      >
-        {/* Sliding container */}
-        <div
-          ref={containerRef}
-          className="flex"
-          onTransitionEnd={handleTransitionEnd}
-          style={{ willChange: 'transform' }}
+      <div className="flex items-center justify-center w-full">
+        {/* Prev Button */}
+        <button
+          onClick={prev}
+          aria-label="Previous continents"
+          disabled={isAnimating}
+          className="flex items-center justify-center p-4 mx-2 bg-[#7A5E8A] text-white rounded-lg hover:bg-[#6a4f76] transition disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
+          style={{ minWidth: 64, minHeight: 64 }}
         >
-          {extendedContinents.map(({ name, href, image }, idx) => (
-            <Link
-              key={`${name}-${idx}`}
-              href={href}
-              className="flex-shrink-0 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition cursor-pointer"
-              style={{ width: itemWidth || '50vw', minWidth: 0 }} // fallback width
-            >
-              <Image
-                src={image}
-                alt={name}
-                width={400}
-                height={250}
-                className="object-cover w-full h-full"
-                priority={idx >= VISIBLE_COUNT && idx < continents.length + VISIBLE_COUNT}
-              />
-            </Link>
-          ))}
-        </div>
-      </div>
+          <ChevronLeftIcon className="w-8 h-8" />
+        </button>
 
-      {/* Next Button */}
-      <button
-        onClick={next}
-        aria-label="Next continents"
-        disabled={isAnimating}
-        className="flex items-center justify-center p-4 mx-2 bg-[#7A5E8A] text-white rounded-lg hover:bg-[#6a4f76] transition disabled:opacity-50 disabled:cursor-not-allowed"
-        style={{ minWidth: 64, minHeight: 64 }}
-      >
-        <ChevronRightIcon className="w-8 h-8" />
-      </button>
-    </div>
+        {/* Carousel viewport */}
+        <div className="overflow-hidden flex-grow" style={{ width: '70%' }}>
+          {/* Sliding container */}
+          <div
+            ref={containerRef}
+            className="flex"
+            onTransitionEnd={handleTransitionEnd}
+            style={{ willChange: 'transform' }}
+          >
+            {extendedContinents.map(({ name, href, image }, idx) => (
+              <Link
+                key={`${name}-${idx}`}
+                href={href}
+                className="flex-shrink-0 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition cursor-pointer mx-2"
+                style={{ width: itemWidth || '50vw', minWidth: 0 }}
+              >
+                <Image
+                  src={image}
+                  alt={name}
+                  width={400}
+                  height={250}
+                  className="object-cover w-full h-full"
+                  priority={idx >= VISIBLE_COUNT && idx < continents.length + VISIBLE_COUNT}
+                  draggable={false}
+                />
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Next Button */}
+        <button
+          onClick={next}
+          aria-label="Next continents"
+          disabled={isAnimating}
+          className="flex items-center justify-center p-4 mx-2 bg-[#7A5E8A] text-white rounded-lg hover:bg-[#6a4f76] transition disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
+          style={{ minWidth: 64, minHeight: 64 }}
+        >
+          <ChevronRightIcon className="w-8 h-8" />
+        </button>
+      </div>
+    </section>
   )
 }
 
