@@ -1,11 +1,11 @@
 'use client'
 import { useRef } from 'react'
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
-import africaImg from '@/images/destinations/africa.png'
-import asiaImg from '@/images/destinations/asia.png'
-import europeImg from '@/images/destinations/europe.png'
-import northAmericaImg from '@/images/destinations/north-america.png'
-import southAmericaImg from '@/images/destinations/south-america.png'
+import africaImg from '@/app/destinations/africa/morocco/chefchaoen/chef_post.png'
+import asiaImg from '@/app/destinations/asia.png'
+import europeImg from '@/app/destinations/europe.png'
+import northAmericaImg from '@/app/destinations/north-america.png'
+import southAmericaImg from '@/app/destinations/south-america.png'
 
 
 const continents = [
