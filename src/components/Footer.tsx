@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import favicon from '@/images/favicon.ico'
+import favicon from '@/images/favicon.jpg'
 
 import { ContainerInner, ContainerOuter } from '@/components/Container'
 
