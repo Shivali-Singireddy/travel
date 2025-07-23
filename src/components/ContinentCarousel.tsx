@@ -92,7 +92,7 @@ function ContinentCarousel() {
       aria-label="Destinations"
       className="max-w-screen-xl mx-auto px-6 py-8 select-none rounded-lg border-4 border-[#7A5E8A] relative"
       style={{
-        backgroundColor: '#fbe8d3', // lighter sandy peach background
+        backgroundColor: '#f3e8f9', // light purple background
         backgroundImage: `repeating-linear-gradient(
           45deg,
           rgba(255 255 255 / 0.1) 0,
