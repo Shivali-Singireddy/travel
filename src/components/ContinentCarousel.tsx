@@ -38,8 +38,8 @@ function ContinentCarousel() {
 
     function handleTransitionEnd() {
       isTransitioning.current = false
-      // If we've reached the duplicated last slide, reset to start instantly without transition
       if (currentIndex >= continents.length) {
+        if (!container) return
         container.style.transition = 'none'
         setCurrentIndex(0)
         container.style.transform = `translateX(0%)`
@@ -57,10 +57,12 @@ function ContinentCarousel() {
   function next() {
     if (isTransitioning.current) return
     isTransitioning.current = true
-    setCurrentIndex((prev) => prev + 1)
-    if (containerRef.current) {
-      containerRef.current.style.transform = `translateX(-${(currentIndex + 1) * slideWidthPercent}%)`
+    const container = containerRef.current
+    if (container) {
+      container.style.transform = `translateX(-${(currentIndex + 1) * slideWidthPercent}%)`
+      container.style.transition = `transform ${TRANSITION_DURATION_MS}ms ease`
     }
+    setCurrentIndex((prev) => prev + 1)
   }
 
   function prev() {
@@ -81,12 +83,16 @@ function ContinentCarousel() {
 
       // Now move back one slide after reflow
       setTimeout(() => {
+        if (!container) return
         setCurrentIndex(continents.length - 1)
         container.style.transform = `translateX(-${(continents.length - 1) * slideWidthPercent}%)`
       }, 20)
     } else {
+      if (container) {
+        container.style.transform = `translateX(-${(currentIndex - 1) * slideWidthPercent}%)`
+        container.style.transition = `transform ${TRANSITION_DURATION_MS}ms ease`
+      }
       setCurrentIndex((prev) => prev - 1)
-      container.style.transform = `translateX(-${(currentIndex - 1) * slideWidthPercent}%)`
     }
   }
 
