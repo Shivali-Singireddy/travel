@@ -38,27 +38,37 @@ function ContinentCarousel() {
   }
 
   return (
-    <div className="relative w-full max-w-xl mx-auto flex items-center">
+    <div className="relative w-full mx-auto max-w-7xl flex items-center">
       {/* Left Arrow */}
       <button
         onClick={prev}
         disabled={!canGoPrev}
         aria-label="Previous continents"
-        className={`p-2 ${canGoPrev ? 'text-teal-600' : 'text-gray-300 cursor-not-allowed'}`}
+        className={`p-3 text-2xl font-bold transition ${
+          canGoPrev ? 'text-[#7A5E8A]' : 'text-gray-300 cursor-not-allowed'
+        }`}
       >
         ‹
       </button>
 
       {/* Continent Cards */}
-      <div className="flex overflow-hidden flex-grow gap-4">
+      <div className="flex overflow-hidden flex-grow gap-6 px-4">
         {continents.slice(startIndex, endIndex).map(({ name, href, image }) => (
           <Link
             key={name}
             href={href}
-            className="flex flex-col items-center border rounded-md p-2 cursor-pointer hover:shadow-lg transition-shadow"
+            className="flex flex-col items-center border border-zinc-300 dark:border-zinc-600 rounded-lg bg-[#FAF5EF] dark:bg-zinc-800 p-4 cursor-pointer hover:shadow-lg hover:border-[#7A5E8A] transition-all"
           >
-            <Image src={image} alt={name} width={100} height={100} className="object-cover rounded" />
-            <span className="mt-2 text-center font-medium">{name}</span>
+            <Image
+              src={image}
+              alt={name}
+              width={140}
+              height={140}
+              className="object-cover rounded-md"
+            />
+            <span className="mt-3 text-lg font-semibold text-zinc-800 dark:text-zinc-200">
+              {name}
+            </span>
           </Link>
         ))}
       </div>
@@ -68,7 +78,9 @@ function ContinentCarousel() {
         onClick={next}
         disabled={!canGoNext}
         aria-label="Next continents"
-        className={`p-2 ${canGoNext ? 'text-teal-600' : 'text-gray-300 cursor-not-allowed'}`}
+        className={`p-3 text-2xl font-bold transition ${
+          canGoNext ? 'text-[#7A5E8A]' : 'text-gray-300 cursor-not-allowed'
+        }`}
       >
         ›
       </button>
