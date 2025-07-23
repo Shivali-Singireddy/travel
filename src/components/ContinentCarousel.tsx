@@ -23,22 +23,22 @@ export default function ContinentCarousel() {
   const [startIndex, setStartIndex] = useState(0)
   const visibleCount = 3
 
-  // Loop-around logic
+  const next = () => {
+    setStartIndex((prev) => (prev + 1) % continents.length)
+  }
+
+  const prev = () => {
+    setStartIndex((prev) => (prev - 1 + continents.length) % continents.length)
+  }
+
+  // Combine visible continents with looping logic
   const getVisibleContinents = () => {
     const result = []
-    for (let i = 0; i < visibleCount; i++) {
+    for (let i = 0; i < continents.length + visibleCount; i++) {
       const index = (startIndex + i) % continents.length
       result.push(continents[index])
     }
     return result
-  }
-
-  const prev = () => {
-    setStartIndex((startIndex - 1 + continents.length) % continents.length)
-  }
-
-  const next = () => {
-    setStartIndex((startIndex + 1) % continents.length)
   }
 
   return (
@@ -52,24 +52,32 @@ export default function ContinentCarousel() {
         <ChevronLeftIcon className="h-10 w-10" />
       </button>
 
-      {/* Continent Cards */}
-      <div className="flex gap-8 flex-grow justify-center overflow-hidden">
-        {getVisibleContinents().map(({ name, href, image }) => (
-          <Link
-            key={name}
-            href={href}
-            className="flex flex-col items-center rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 shadow-md border border-zinc-200"
-          >
-            <Image
-              src={image}
-              alt={name}
-              width={320}
-              height={220}
-              className="object-cover w-[320px] h-[220px]"
-              priority
-            />
-          </Link>
-        ))}
+      {/* Carousel Window */}
+      <div className="relative w-full max-w-[1100px] overflow-hidden">
+        <div
+          className="flex transition-transform duration-500 ease-in-out gap-8"
+          style={{
+            transform: `translateX(-${startIndex * (320 + 32)}px)`,
+            width: `${continents.length * (320 + 32)}px`,
+          }}
+        >
+          {getVisibleContinents().map(({ name, href, image }, i) => (
+            <Link
+              key={`${name}-${i}`}
+              href={href}
+              className="flex-shrink-0 border border-zinc-200 rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 shadow-md"
+              style={{ width: '320px', height: '220px' }}
+            >
+              <Image
+                src={image}
+                alt={name}
+                width={320}
+                height={220}
+                className="object-cover w-full h-full"
+              />
+            </Link>
+          ))}
+        </div>
       </div>
 
       {/* Right Arrow */}
