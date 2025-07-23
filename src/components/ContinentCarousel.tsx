@@ -1,17 +1,17 @@
 'use client'
 import { useRef } from 'react'
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
-import africaImg from '@/app/destinations/africa/morocco/chefchaoen/chef_post.png'
+import africaImg from '@/app/destinations/africa/morocco/chefchaouen/chef_post.png'
 import asiaImg from '@/app/destinations/asia.png'
 import europeImg from '@/app/destinations/europe.png'
-import northAmericaImg from '@/app/destinations/north-america.png'
-import southAmericaImg from '@/app/destinations/south-america.png'
+import northAmericaImg from '@/app/destinations/north_america.png'
+import southAmericaImg from '@/app/destinations/south_america.png'
 
 
 const continents = [
   { name: 'Europe', href: '/destinations/europe', image: europeImg },
-  { name: 'North America', href: '/destinations/north-america', image: northAmericaImg },
-  { name: 'South America', href: '/destinations/south-america', image: southAmericaImg },
+  { name: 'North America', href: '/destinations/north_america', image: northAmericaImg },
+  { name: 'South America', href: '/destinations/south_america', image: southAmericaImg },
   { name: 'Africa', href: '/destinations/africa', image: africaImg },
   { name: 'Asia', href: '/destinations/asia', image: asiaImg },
 
