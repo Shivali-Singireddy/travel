@@ -1,14 +1,15 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
+
 import africaImg from '@/app/destinations/africa/morocco/chefchaouen/chef_post.png'
 import asiaImg from '@/app/destinations/asia.png'
 import europeImg from '@/app/destinations/europe.png'
 import northAmericaImg from '@/app/destinations/north_america.png'
 import southAmericaImg from '@/app/destinations/south_america.png'
-import Image from 'next/image'
-import Link from 'next/link'
 
 const continents = [
   { name: 'Europe', href: '/destinations/europe', image: europeImg },
@@ -18,111 +19,124 @@ const continents = [
   { name: 'Asia', href: '/destinations/asia', image: asiaImg },
 ]
 
-const visibleCount = 3
-const itemWidth = 280 // width in px for each item including margin
+const VISIBLE_COUNT = 3
+const SLIDE_COUNT = 2
 
 function ContinentCarousel() {
   const [startIndex, setStartIndex] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
 
-  // We create an extended array with duplicates of the first items at the end for smooth looping
-  // For example: [...continents, first 3 continents again]
-  const extendedContinents = [...continents, ...continents.slice(0, visibleCount)]
-
-  // Move carousel forward by 1 item with animation
-  function next() {
-    if (isAnimating) return // prevent rapid clicks
-
-    setIsAnimating(true)
-    setStartIndex((prev) => prev + 1)
+  // Calculate visible continents including extra clones for looping
+  function getVisibleContinents() {
+    const result = []
+    // Show VISIBLE_COUNT + SLIDE_COUNT items to handle looping seamlessly
+    for (let i = 0; i < VISIBLE_COUNT + SLIDE_COUNT; i++) {
+      const index = (startIndex + i) % continents.length
+      result.push(continents[index])
+    }
+    return result
   }
 
-  // Handle the transition end to reset startIndex for seamless loop
-  useEffect(() => {
+  // Move carousel forward by SLIDE_COUNT with animation
+  function next() {
+    if (isAnimating) return
+    setIsAnimating(true)
+
     const container = containerRef.current
     if (!container) return
 
-    function handleTransitionEnd() {
+    const width = container.clientWidth / (VISIBLE_COUNT + SLIDE_COUNT)
+
+    container.style.transition = 'transform 0.5s ease'
+    container.style.transform = `translateX(-${width * SLIDE_COUNT}px)`
+
+    setTimeout(() => {
+      container.style.transition = 'none'
+      container.style.transform = `translateX(0)`
+      setStartIndex((prev) => (prev + SLIDE_COUNT) % continents.length)
       setIsAnimating(false)
-      // If we've moved past the original array length, reset without animation
-      if (startIndex >= continents.length) {
-        setStartIndex(0)
-        container.style.transition = 'none'
-        container.style.transform = `translateX(0px)`
-        // Force reflow to apply the style immediately
-        void container.offsetWidth
-        container.style.transition = 'transform 0.5s ease'
-      }
-    }
+    }, 500)
+  }
 
-    container.addEventListener('transitionend', handleTransitionEnd)
-    return () => container.removeEventListener('transitionend', handleTransitionEnd)
-  }, [startIndex])
+  // Move carousel backward by SLIDE_COUNT with animation
+  function prev() {
+    if (isAnimating) return
+    setIsAnimating(true)
 
-  // Calculate transform X
-  const translateX = -startIndex * itemWidth
+    const container = containerRef.current
+    if (!container) return
+
+    const width = container.clientWidth / (VISIBLE_COUNT + SLIDE_COUNT)
+
+    // Set initial transform to left by SLIDE_COUNT items without animation
+    container.style.transition = 'none'
+    container.style.transform = `translateX(-${width * SLIDE_COUNT}px)`
+
+    // Trigger reflow
+    void container.offsetWidth
+
+    // Animate back to 0
+    container.style.transition = 'transform 0.5s ease'
+    container.style.transform = 'translateX(0)'
+
+    setTimeout(() => {
+      setStartIndex((prev) =>
+        (prev - SLIDE_COUNT + continents.length) % continents.length
+      )
+      setIsAnimating(false)
+    }, 500)
+  }
+
+  const visibleContinents = getVisibleContinents()
 
   return (
-    <div className="flex items-center justify-center w-full max-w-[1000px] mx-auto px-4">
-      {/* Left Button */}
+    <div className="flex items-center justify-center w-full max-w-screen-xl mx-auto px-4">
+      {/* Prev Button */}
       <button
+        onClick={prev}
         aria-label="Previous continents"
-        onClick={() => {
-          if (isAnimating) return
-          setIsAnimating(true)
-          setStartIndex((prev) => (prev - 1 + continents.length) % continents.length)
-        }}
-        className="p-4 rounded bg-[#7A5E8A] text-white hover:bg-[#5a4365] transition"
-        style={{ minWidth: 64 }}
+        disabled={isAnimating}
+        className={`flex items-center justify-center p-4 mx-2 bg-[#7A5E8A] text-white rounded-lg hover:bg-[#6a4f76] transition disabled:opacity-50 disabled:cursor-not-allowed`}
+        style={{ minWidth: '64px', minHeight: '64px' }}
       >
-        <ChevronLeftIcon className="w-6 h-6" />
+        <ChevronLeftIcon className="w-8 h-8" />
       </button>
 
       {/* Carousel container */}
       <div
-        className="overflow-hidden mx-6"
-        style={{ width: visibleCount * itemWidth, borderRadius: 8 }}
+        ref={containerRef}
+        className="flex overflow-hidden flex-grow gap-6"
+        style={{ width: '80%' }}
       >
-        <div
-          ref={containerRef}
-          className="flex"
-          style={{
-            transform: `translateX(${translateX}px)`,
-            transition: isAnimating ? 'transform 0.5s ease' : 'none',
-            gap: '16px',
-          }}
-        >
-          {extendedContinents.map(({ name, href, image }, idx) => (
-            <Link
-              key={`${name}-${idx}`}
-              href={href}
-              className="flex-shrink-0 cursor-pointer rounded-md overflow-hidden shadow-lg"
-              style={{ width: itemWidth - 16 }} // minus gap for clean fit
-            >
-              <Image
-                src={image}
-                alt={name}
-                width={itemWidth - 16}
-                height={180}
-                className="object-cover w-full h-[180px]"
-                unoptimized
-                priority={idx < visibleCount} // priority for visible images
-              />
-              {/* No label here, clean design */}
-            </Link>
-          ))}
-        </div>
+        {visibleContinents.map(({ name, href, image }, idx) => (
+          <Link
+            key={`${name}-${idx}`} // idx needed because duplicates in visibleContinents for looping
+            href={href}
+            className="flex-shrink-0 cursor-pointer rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition"
+            style={{ width: `calc(100% / ${VISIBLE_COUNT + SLIDE_COUNT})` }}
+          >
+            <Image
+              src={image}
+              alt={name}
+              width={400}
+              height={250}
+              className="object-cover w-full h-full"
+              priority={idx < VISIBLE_COUNT} // prioritize visible images
+            />
+          </Link>
+        ))}
       </div>
 
-      {/* Right Button */}
+      {/* Next Button */}
       <button
-        aria-label="Next continents"
         onClick={next}
-        className="p-4 rounded bg-[#7A5E8A] text-white hover:bg-[#5a4365] transition"
-        style={{ minWidth: 64 }}
+        aria-label="Next continents"
+        disabled={isAnimating}
+        className={`flex items-center justify-center p-4 mx-2 bg-[#7A5E8A] text-white rounded-lg hover:bg-[#6a4f76] transition disabled:opacity-50 disabled:cursor-not-allowed`}
+        style={{ minWidth: '64px', minHeight: '64px' }}
       >
-        <ChevronRightIcon className="w-6 h-6" />
+        <ChevronRightIcon className="w-8 h-8" />
       </button>
     </div>
   )
