@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import favicon from '@/images/favicon.jpg'
+import Image from 'next/image'
+
 
 import { ContainerInner, ContainerOuter } from '@/components/Container'
 
