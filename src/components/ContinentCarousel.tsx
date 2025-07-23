@@ -58,13 +58,13 @@ function ContinentCarousel() {
             key={name}
             href={href}
             className="block cursor-pointer rounded-lg border border-[#7A5E8A] shadow-lg hover:shadow-xl transition-shadow"
-            style={{ width: 300, height: 300 }}
+            style={{ width: 400, height: 250 }}
           >
             <Image
               src={image}
               alt={name}
-              width={300}
-              height={300}
+              width={400}
+              height={250}
               className="object-cover rounded-lg"
               priority
             />
