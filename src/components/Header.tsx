@@ -230,18 +230,51 @@ function DesktopNavigation(props: React.ComponentPropsWithoutRef<'nav'>) {
           label="Destinations"
           href="/desintations"
           items={[
-            { label: 'Europe', href: '/destinations/europe' },
+            {
+              label: 'Europe',
+              href: '/destinations/europe',
+              subItems: [
+                { label: 'Italy', href: '/destinations/europe/italy' },
+                { label: 'United Kingdom', href: '/destinations/europe/united_kingdom' },
+                { label: 'Madeira', href: '/destinations/europe/madeira' },
+                { label: 'Czech Republic', href: '/destinations/europe/czech_republic' },
+                { label: 'Santorini', href: '/destinations/europe/santorini' },
+                { label: 'Barcelona', href: '/destinations/europe/barcelona' },
+                { label: 'Paris', href: '/destinations/europe/paris' },
+                { label: 'Algarve', href: '/destinations/europe/algarve' },
+                { label: 'Amsterdam', href: '/destinations/europe/amsterdam' },
+                { label: 'Switzerland', href: '/destinations/europe/switzerland' },
+                { label: 'Brussels', href: '/destinations/europe/brussels' },
+              ],
+            },
             {
               label: 'North America',
               href: '/destinations/north_america',
               subItems: [
                 { label: 'Hawaii', href: '/destinations/north_america/hawaii' },
+                { label: 'Mexico', href: '/destinations/north_america/mexico' },
                 { label: 'California', href: '/destinations/north_america/california' },
               ],
             },
-            { label: 'South America', href: '/destinations/south_america' },
-            { label: 'Africa', href: '/destinations/africa' },
-            { label: 'Asia', href: '/destinations/asia' },
+            {
+              label: 'South America',
+              href: '/destinations/south_america',
+              subItems: [
+                { label: 'Brazil', href: '/destinations/south_america/brazil' },
+                { label: 'Peru', href: '/destinations/south_america/peru' },              ],
+            },
+            {
+              label: 'Africa',
+              href: '/destinations/africa',
+              subItems: [
+                { label: 'Morocco', href: '/destinations/africa/morocco' },
+            },
+            {
+              label: 'Asia',
+              href: '/destinations/asia',
+              subItems: [
+                { label: 'Turkey', href: '/destinations/asia/turkey' },
+            },
           ]}
         />
 
