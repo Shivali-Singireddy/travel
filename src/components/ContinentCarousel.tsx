@@ -20,6 +20,16 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
+function getVisibleContinents() {
+  const result = [];
+  for (let i = 0; i < visibleCount; i++) {
+    // Use modulo to wrap around
+    const index = (startIndex + i) % continents.length;
+    result.push(continents[index]);
+  }
+  return result;
+}
+
 function ContinentCarousel() {
   const [startIndex, setStartIndex] = useState(0)
 
@@ -30,13 +40,13 @@ function ContinentCarousel() {
   const canGoNext = endIndex < continents.length
 
   function prev() {
-    if (canGoPrev) setStartIndex(startIndex - 1)
+    setStartIndex((startIndex - 1 + continents.length) % continents.length);
   }
+
 
   function next() {
-    if (canGoNext) setStartIndex(startIndex + 1)
+    setStartIndex((startIndex + 1) % continents.length);
   }
-
   return (
     <div className="relative w-full mx-auto max-w-7xl flex items-center">
       {/* Left Arrow */}
@@ -52,23 +62,15 @@ function ContinentCarousel() {
       </button>
 
       {/* Continent Cards */}
-      <div className="flex overflow-hidden flex-grow gap-6 px-4">
-        {continents.slice(startIndex, endIndex).map(({ name, href, image }) => (
+      <div className="flex overflow-hidden flex-grow gap-4">
+        {getVisibleContinents().map(({ name, href, image }) => (
           <Link
             key={name}
             href={href}
-            className="flex flex-col items-center border border-zinc-300 dark:border-zinc-600 rounded-lg bg-[#FAF5EF] dark:bg-zinc-800 p-4 cursor-pointer hover:shadow-lg hover:border-[#7A5E8A] transition-all"
+            className="flex flex-col items-center border rounded-md p-2 cursor-pointer hover:shadow-lg transition-shadow"
           >
-            <Image
-              src={image}
-              alt={name}
-              width={140}
-              height={140}
-              className="object-cover rounded-md"
-            />
-            <span className="mt-3 text-lg font-semibold text-zinc-800 dark:text-zinc-200">
-              {name}
-            </span>
+            <Image src={image} alt={name} width={100} height={100} className="object-cover rounded" />
+            <span className="mt-2 text-center font-medium">{name}</span>
           </Link>
         ))}
       </div>
