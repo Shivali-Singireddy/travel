@@ -15,7 +15,7 @@ export default function Italy_Page() {
       description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
     },
     {
-      title: 'Ireland',
+      title: 'Rome',
       slug: 'rome',
       image: rome_post,
       description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
@@ -27,7 +27,7 @@ export default function Italy_Page() {
       description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
     },
     {
-      title: 'Italy: Milan, Lake Como, Verona, and Bologna',
+      title: 'Italy: Milan, Lake Como, Verona, Bologna',
       slug: 'northern_italy',
       image: italy_post,
       description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
