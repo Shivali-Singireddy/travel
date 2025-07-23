@@ -41,31 +41,31 @@ function ContinentCarousel() {
   }
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-6 flex items-center justify-center gap-8">
+    <div className="w-full max-w-screen-xl mx-auto px-4 md:px-12 py-12 flex items-center justify-center gap-12">
       {/* Left Arrow */}
       <button
         onClick={prev}
         aria-label="Previous continents"
         className="p-4 text-[#7A5E8A] hover:text-[#5e4568] transition"
       >
-        <ChevronLeftIcon className="h-12 w-12" />
+        <ChevronLeftIcon className="h-16 w-16" />
       </button>
 
       {/* Continent Cards */}
-      <div className="flex gap-8 overflow-hidden">
+      <div className="flex gap-12 overflow-hidden">
         {getVisibleContinents().map(({ name, href, image }) => (
           <Link
             key={name}
             href={href}
-            className="block cursor-pointer rounded-md border border-[#7A5E8A] shadow-md hover:shadow-lg transition-shadow"
-            style={{ width: 220, height: 220 }}
+            className="block cursor-pointer rounded-lg border border-[#7A5E8A] shadow-lg hover:shadow-xl transition-shadow"
+            style={{ width: 300, height: 300 }}
           >
             <Image
               src={image}
               alt={name}
-              width={220}
-              height={220}
-              className="object-cover rounded-md"
+              width={300}
+              height={300}
+              className="object-cover rounded-lg"
               priority
             />
           </Link>
@@ -78,7 +78,7 @@ function ContinentCarousel() {
         aria-label="Next continents"
         className="p-4 text-[#7A5E8A] hover:text-[#5e4568] transition"
       >
-        <ChevronRightIcon className="h-12 w-12" />
+        <ChevronRightIcon className="h-16 w-16" />
       </button>
     </div>
   )
