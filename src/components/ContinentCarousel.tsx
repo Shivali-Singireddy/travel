@@ -75,3 +75,7 @@ function ContinentCarousel() {
     </div>
   )
 }
+
+export default ContinentCarousel
+
+
