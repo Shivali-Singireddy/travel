@@ -41,7 +41,7 @@ export default function EuropePage() {
     {
       title: 'Santorini with Athens pitstop',
       slug: 'santorini',
-      image: santoniti_post,
+      image: santorini_post,
       description: 'Hike lush valleys and scenic coastal trails.',
     },
     {
