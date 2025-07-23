@@ -1,12 +1,14 @@
-import Image from 'next/image'
+import Image, { type ImageProps } from 'next/image'
 import Link from 'next/link'
+import clsx from 'clsx'
 
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
-import { RotatingImages } from '@/components/RotatingImages'
-import ContinentCarousel from '@/components/ContinentCarousel'
-
+import {
+  InstagramIcon,
+  LinkedInIcon,
+} from '@/components/SocialIcons'
 import tape from '@/images/tape.jpg'
 import avatar from '@/images/avatar.jpg'
 import amazon from '@/images/photos/amazon.jpg'
@@ -19,12 +21,16 @@ import maui from '@/images/photos/maui.jpg'
 
 import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
+import { RotatingImages } from '@/components/RotatingImages' 
+import ContinentCarousel from '@/components/ContinentCarousel'
+import type { StaticImageData } from 'next/image'
 import { Spectral } from 'next/font/google'
 
 const spectral = Spectral({
   subsets: ['latin'],
-  weight: ['400', '700', '800'],
+  weight: ['400', '700', '800'], // Use any weights you need
 })
+
 
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -49,6 +55,42 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
+function BriefcaseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      {...props}
+    >
+      <path
+        d="M2.75 9.75a3 3 0 0 1 3-3h12.5a3 3 0 0 1 3 3v8.5a3 3 0 0 1-3 3H5.75a3 3 0 0 1-3-3v-8.5Z"
+        className="fill-zinc-100 stroke-zinc-400 dark:fill-zinc-100/10 dark:stroke-zinc-500"
+      />
+      <path
+        d="M3 14.25h6.249c.484 0 .952-.002 1.316.319l.777.682a.996.996 0 0 0 1.316 0l.777-.682c.364-.32.832-.319 1.316-.319H21M8.75 6.5V4.75a2 2 0 0 1 2-2h2.5a2 2 0 0 1 2 2V6.5"
+        className="stroke-zinc-400 dark:stroke-zinc-500"
+      />
+    </svg>
+  )
+}
+
+function ArrowDownIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
+      <path
+        d="M4.75 8.75 8 12.25m0 0 3.25-3.5M8 12.25v-8.5"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
 function Article({ article }: { article: ArticleWithSlug }) {
   return (
     <Card as="article">
@@ -61,6 +103,19 @@ function Article({ article }: { article: ArticleWithSlug }) {
       <Card.Description>{article.description}</Card.Description>
       <Card.Cta>Read article</Card.Cta>
     </Card>
+  )
+}
+
+function SocialLink({
+  icon: Icon,
+  ...props
+}: React.ComponentPropsWithoutRef<typeof Link> & {
+  icon: React.ComponentType<{ className?: string }>
+}) {
+  return (
+    <Link className="group -m-1 p-1" {...props}>
+      <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
+    </Link>
   )
 }
 
@@ -84,7 +139,7 @@ function Newsletter() {
             placeholder="Email address"
             aria-label="Email address"
             required
-            className="w-full appearance-none rounded-[calc(var(--radius-md)-1px)] bg-white px-3 py-[calc(var(--spacing-2)-1px)] shadow-md shadow-zinc-800/5 outline outline-zinc-900/10 placeholder:text-zinc-400 focus:ring-4 focus:ring-teal-500/10 focus:outline-teal-500 sm:text-sm dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:outline-zinc-700 dark:placeholder:text-zinc-500 dark:focus:ring-teal-400/10 dark:focus:outline-teal-400"
+            className="w-full appearance-none rounded-[calc(var(--radius-md)-1px)] bg-white px-3 py-[calc(--spacing(2)-1px)] shadow-md shadow-zinc-800/5 outline outline-zinc-900/10 placeholder:text-zinc-400 focus:ring-4 focus:ring-teal-500/10 focus:outline-teal-500 sm:text-sm dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:outline-zinc-700 dark:placeholder:text-zinc-500 dark:focus:ring-teal-400/10 dark:focus:outline-teal-400"
           />
         </span>
         <Button type="submit" className="ml-4 flex-none">
@@ -100,169 +155,180 @@ export default async function Home() {
 
   return (
     <>
-      {/* Most content constrained to 95% width and centered, with Spectral font */}
-      <div className={`${spectral.className} w-[95%] mx-auto`}>
-        <div className="mt-10" />
+      <div className="mt-10" />
 
-        <div className="relative w-full h-[650px] bg-[#FAF5EF] border border-[#e0e0e0] overflow-visible">
-          {/* Right Purple Rectangle */}
-          <div className="absolute top-0 right-0 h-full w-[50%] bg-[#7A5E8A]" />
-
-          {/* Amazon Image */}
-          <div
-            className="absolute -translate-x-1/2 z-10"
-            style={{ top: '50%', left: '55%', width: '300px', height: '300px' }}
-          >
-            <Image src={amazon} alt="Amazon" className="w-full h-full object-cover" />
-            <div
-              className="absolute top-0 left-0 border-2 border-gray-800 pointer-events-none"
-              style={{
-                width: '300px',
-                height: '300px',
-                transform: 'translate(-8px, -8px)',
-                backgroundColor: 'transparent',
-              }}
-            />
-          </div>
-
-          <div
-            style={{
-              position: 'relative',
-              width: 470,
-              height: 550,
-              zIndex: 20,
-            }}
-          >
-            {/* Outline */}
-            <div
-              style={{
-                position: 'absolute',
-                top: 40,
-                left: 690,
-                width: 490,
-                height: 540,
-                border: '1px solid black',
-                pointerEvents: 'none',
-                boxSizing: 'border-box',
-              }}
-            />
-            {/* Rotating Images container */}
-            <div
-              style={{
-                position: 'absolute',
-                top: 60,
-                left: 710,
-                width: 450,
-                height: 500,
-                overflow: 'hidden',
-                border: '1px solid #D1D5DB',
-                boxSizing: 'border-box',
-              }}
-            >
-              <RotatingImages
-                images={[machupichu, horse, books, maui, kalalau, green_beach]}
-                width={450}
-                height={500}
-              />
-            </div>
-          </div>
-
-          {/* Tape Image */}
+      <div className="relative w-[95%] h-[650px] bg-[#FAF5EF] border border-[#e0e0e0] overflow-visible mx-auto">
+        {/* Right Purple Rectangle */}
+        <div className="absolute top-0 right-0 h-full w-[50%] bg-[#7A5E8A]" />
+      
+        {/* Amazon Image (behind purple box, slightly lower and to the right) */}
+        <div
+          className="absolute -translate-x-1/2 z-10"
+          style={{
+            top: '50%',
+            left: '55%',
+            width: '300px',
+            height: '300px',
+          }}
+        >
           <Image
-            src={tape}
-            alt="Tape"
-            width={96}
-            height={32}
-            className="absolute z-30 w-56"
+            src={amazon}
+            alt="Amazon"
+            className="w-full h-full object-cover"
+          />
+          <div
+            className="absolute top-0 left-0 border-2 border-gray-800 pointer-events-none"
             style={{
-              top: '-65px',
-              left: 'calc(5% + 90px)',
-              transform: 'rotate(-15deg)',
+              width: '300px',
+              height: '300px',
+              transform: 'translate(-8px, -8px)',
+              backgroundColor: 'transparent',
             }}
           />
+        </div>
 
-          {/* Left Purple Box with Text */}
+        <div
+          style={{
+            position: 'relative',
+            width: 470,       // outline container bigger than image container
+            height: 550,
+            zIndex: 20,
+          }}
+        >
+          {/* Outline */}
           <div
-            className="absolute top-1/2 left-[5%] z-20"
-            style={{ width: '480px', height: '500px', transform: 'translateY(-55%)' }}
-          >
-            <div
-              className="absolute top-0 left-0 bg-[#7A5E8A] p-6"
-              style={{
-                width: '480px',
-                height: '500px',
-                transform: 'rotate(-5deg)',
-              }}
-            >
-              <div
-                className="text-white text-center h-full flex flex-col justify-center items-center mt-6"
-                style={{ transform: 'rotate(5deg)' }}
-              >
-                <h2 className="text-6xl font-extrabold mb-6">
-                  Welcome to Weekends with Shivali
-                </h2>
-                <p className="text-2xl leading-relaxed max-w-[80%]">
-                  Hi, I’m Shivali and welcome to my personal blog! With this blog I hope to
-                  primarily share my experiences with travelling and other hobbies!
-                </p>
-              </div>
-            </div>
-
-            {/* Outline */}
-            <div
-              className="absolute top-0 left-0 border border-black pointer-events-none"
-              style={{
-                width: '480px',
-                height: '500px',
-                transform: 'rotate(-5deg) translate(8px, 8px)',
-                backgroundColor: 'transparent',
-                zIndex: 30,
-              }}
-            />
-          </div>
-
-          {/* Avatar Image */}
-          <div
-            className="absolute z-40"
             style={{
-              top: '-20px',
-              left: '48%',
-              width: 250,
-              height: 250,
+              position: 'absolute',
+              top: 40,        // offset upwards
+              left: 690,       // offset leftwards
+              width: 490,      // slightly bigger width than container (470 + 20 offset total)
+              height: 540,     // slightly bigger height (300 + 20)
+              border: '1px solid black',
+              borderRadius: 0,
+              pointerEvents: 'none',  // don't block mouse events
+              boxSizing: 'border-box',
+            }}
+          />
+        
+          {/* Image container */}
+          <div
+            style={{
+              position: 'absolute',
+              top: 60,        
+              left: 710,
+              width: 450,
+              height: 500,
+              overflow: 'hidden',
+              border: '1px solid #D1D5DB',
+              boxSizing: 'border-box',
             }}
           >
-            <Image
-              src={avatar}
-              alt="Avatar"
-              width={250}
-              height={250}
-              className="rounded-full object-cover"
-            />
+            <RotatingImages images={[machupichu, horse, books, maui, kalalau, green_beach]} width={450} height={500} />
           </div>
         </div>
 
-        {/* Articles Section */}
-        <section className="mt-20">
-          <h2 className="text-4xl font-bold mb-8">Latest Articles</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {articles.map(article => (
+      
+        {/* Tape Image (moved slightly right and up) */}
+        <Image
+          src={tape}
+          alt="Tape"
+          width={96}
+          height={32}
+          className="absolute z-30 w-56"
+          style={{
+            top: '-65px',
+            left: 'calc(5% + 90px)',
+            transform: 'rotate(-15deg)',
+          }}
+        />
+      
+        {/* Left Purple Box with Text */}
+        <div
+          className="absolute top-1/2 left-[5%] z-20"
+          style={{ width: '480px', height: '500px', transform: 'translateY(-55%)' }}
+        >
+          <div
+            className="absolute top-0 left-0 bg-[#7A5E8A] p-6"
+            style={{
+              width: '480px',
+              height: '500px',
+              transform: 'rotate(-5deg)',
+            }}
+          >
+            <div
+              className={`text-white text-center h-full flex flex-col justify-center items-center mt-6 ${spectral.className}`}
+              style={{
+                transform: 'rotate(5deg)',
+              }}
+            >
+              <h2 className="text-6xl font-extrabold mb-6">
+                Welcome to Weekends with Shivali
+              </h2>
+              <p className="text-2xl leading-relaxed max-w-[80%]">
+                Hi, I’m Shivali and welcome to my personal blog! With this blog I hope to
+                primarily share my experiences with travelling and other hobbies!
+              </p>
+            </div>
+          </div>
+      
+          {/* Outline */}
+          <div
+            className="absolute top-0 left-0 border border-black pointer-events-none"
+            style={{
+              width: '480px',
+              height: '500px',
+              transform: 'rotate(-5deg) translate(8px, 8px)',
+              backgroundColor: 'transparent',
+              zIndex: 30,
+            }}
+          />
+        </div>
+        <div
+          className="absolute z-40"
+          style={{
+            top: '-20px',     // move up
+            left: '48%',      // move right
+            width: 250,
+            height: 250,
+          }}
+        >
+          <Image
+            src={avatar}
+            alt="Avatar"
+            width={250}
+            height={250}
+            className="object-cover w-full h-full"
+            style={{ display: 'block' }}
+          />
+          <div
+            className="absolute top-0 left-0 pointer-events-none"
+            style={{
+              width: '220px',
+              height: '220px',
+              transform: 'translate(15px, 15px)',
+              backgroundColor: 'transparent',
+              border: '1px solid #FAF5EF',
+            }}
+          />
+        </div>
+      </div>
+
+      <div className="mt-28 mb-16 w-full px-4">
+        <ContinentCarousel />
+      </div>
+      
+      <Container className="mt-24 md:mt-28">
+        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
+          <div className="flex flex-col gap-16">
+            {articles.map((article) => (
               <Article key={article.slug} article={article} />
             ))}
           </div>
-        </section>
-
-        {/* Newsletter */}
-        <section className="mt-20">
-          <Newsletter />
-        </section>
-      </div>
-
-      {/* Carousel Full width - Outside of constrained wrapper */}
-      <div className="w-screen bg-[#7A5E8A] border-t border-b border-gray-300">
-        <div className="max-w-full">
-          <ContinentCarousel />
+          <div className="space-y-10 lg:pl-16 xl:pl-24">
+            <Newsletter />
+          </div>
         </div>
-      </div>
+      </Container>
     </>
   )
 }
