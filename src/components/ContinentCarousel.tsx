@@ -3,59 +3,77 @@
 import Link from 'next/link'
 import { useRef } from 'react'
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
+import africaImg from '@/images/destinations/africa.png'
+import asiaImg from '@/images/destinations/asia.png'
+import europeImg from '@/images/destinations/europe.png'
+import northAmericaImg from '@/images/destinations/north-america.png'
+import southAmericaImg from '@/images/destinations/south-america.png'
+
 
 const continents = [
-  { name: 'Europe', href: '/destinations/europe' },
-  { name: 'North America', href: '/destinations/north-america' },
-  { name: 'South America', href: '/destinations/south-america' },
-   { name: 'Africa', href: '/destinations/africa' },
-  { name: 'Asia', href: '/destinations/asia' },
+  { name: 'Europe', href: '/destinations/europe', image: europeImg },
+  { name: 'North America', href: '/destinations/north-america', image: northAmericaImg },
+  { name: 'South America', href: '/destinations/south-america', image: southAmericaImg },
+  { name: 'Africa', href: '/destinations/africa', image: africaImg },
+  { name: 'Asia', href: '/destinations/asia', image: asiaImg },
+
 ]
+import React, { useState } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 
-export function ContinentCarousel() {
-  const scrollRef = useRef<HTMLDivElement>(null)
+function ContinentCarousel() {
+  const [startIndex, setStartIndex] = useState(0)
 
-  const scroll = (direction: 'left' | 'right') => {
-    if (scrollRef.current) {
-      const amount = 180
-      scrollRef.current.scrollBy({
-        left: direction === 'left' ? -amount : amount,
-        behavior: 'smooth',
-      })
-    }
+  const visibleCount = 3
+  const endIndex = startIndex + visibleCount
+
+  const canGoPrev = startIndex > 0
+  const canGoNext = endIndex < continents.length
+
+  function prev() {
+    if (canGoPrev) setStartIndex(startIndex - 1)
+  }
+
+  function next() {
+    if (canGoNext) setStartIndex(startIndex + 1)
   }
 
   return (
-    <div className="relative mt-12">
-      {/* Arrows */}
+    <div className="relative w-full max-w-xl mx-auto flex items-center">
+      {/* Left Arrow */}
       <button
-        onClick={() => scroll('left')}
-        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-white dark:bg-zinc-800 rounded-full shadow-md hover:bg-gray-100 dark:hover:bg-zinc-700"
+        onClick={prev}
+        disabled={!canGoPrev}
+        aria-label="Previous continents"
+        className={`p-2 ${canGoPrev ? 'text-teal-600' : 'text-gray-300 cursor-not-allowed'}`}
       >
-        <ChevronLeftIcon className="w-5 h-5 text-zinc-600 dark:text-zinc-200" />
-      </button>
-      <button
-        onClick={() => scroll('right')}
-        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-white dark:bg-zinc-800 rounded-full shadow-md hover:bg-gray-100 dark:hover:bg-zinc-700"
-      >
-        <ChevronRightIcon className="w-5 h-5 text-zinc-600 dark:text-zinc-200" />
+        ‹
       </button>
 
-      {/* Scrollable bar */}
-      <div
-        ref={scrollRef}
-        className="flex overflow-x-auto no-scrollbar gap-4 px-12 py-4"
-      >
-        {continents.map((continent) => (
+      {/* Continent Cards */}
+      <div className="flex overflow-hidden flex-grow gap-4">
+        {continents.slice(startIndex, endIndex).map(({ name, href, image }) => (
           <Link
-            key={continent.name}
-            href={continent.href}
-            className="flex-shrink-0 bg-[#7A5E8A] text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-[#674d74] transition whitespace-nowrap"
+            key={name}
+            href={href}
+            className="flex flex-col items-center border rounded-md p-2 cursor-pointer hover:shadow-lg transition-shadow"
           >
-            {continent.name}
+            <Image src={image} alt={name} width={100} height={100} className="object-cover rounded" />
+            <span className="mt-2 text-center font-medium">{name}</span>
           </Link>
         ))}
       </div>
+
+      {/* Right Arrow */}
+      <button
+        onClick={next}
+        disabled={!canGoNext}
+        aria-label="Next continents"
+        className={`p-2 ${canGoNext ? 'text-teal-600' : 'text-gray-300 cursor-not-allowed'}`}
+      >
+        ›
+      </button>
     </div>
   )
 }
