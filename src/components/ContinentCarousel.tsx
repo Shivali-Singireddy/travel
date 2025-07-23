@@ -1,10 +1,8 @@
 'use client'
 
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
-
 import africaImg from '@/app/destinations/africa/morocco/chefchaouen/chef_post.png'
 import asiaImg from '@/app/destinations/asia.png'
 import europeImg from '@/app/destinations/europe.png'
@@ -20,97 +18,56 @@ const continents = [
 ]
 
 const visibleCount = 3
-const cardWidth = 340  // card width + gap
 
 export default function ContinentCarousel() {
-  const [index, setIndex] = useState(0)
-  const [isTransitioning, setIsTransitioning] = useState(false)
-  const wrapperRef = useRef<HTMLDivElement>(null)
+  const [startIndex, setStartIndex] = useState(0)
 
-  // Clone first few for seamless loop
-  const extendedContinents = [...continents, ...continents.slice(0, visibleCount)]
+  const getVisibleContinents = () => {
+    return Array.from({ length: visibleCount }, (_, i) => {
+      const index = (startIndex + i) % continents.length
+      return continents[index]
+    })
+  }
 
   const handleNext = () => {
-    if (isTransitioning) return
-    setIsTransitioning(true)
-    setIndex((prev) => prev + 1)
+    setStartIndex((prev) => (prev + 1) % continents.length)
   }
 
   const handlePrev = () => {
-    if (isTransitioning) return
-    setIsTransitioning(true)
-    setIndex((prev) => prev - 1)
+    setStartIndex((prev) => (prev - 1 + continents.length) % continents.length)
   }
 
-  // Reset index seamlessly after final slide
-  useEffect(() => {
-    if (index === continents.length) {
-      const timeout = setTimeout(() => {
-        setIsTransitioning(false)
-        setIndex(0)
-        if (wrapperRef.current) {
-          wrapperRef.current.style.transition = 'none'
-          wrapperRef.current.style.transform = `translateX(0px)`
-        }
-      }, 500) // Wait for animation
-      return () => clearTimeout(timeout)
-    }
-
-    if (index === -1) {
-      const timeout = setTimeout(() => {
-        setIsTransitioning(false)
-        setIndex(continents.length - 1)
-        if (wrapperRef.current) {
-          wrapperRef.current.style.transition = 'none'
-          wrapperRef.current.style.transform = `translateX(-${(continents.length - 1) * cardWidth}px)`
-        }
-      }, 500)
-      return () => clearTimeout(timeout)
-    }
-
-    if (wrapperRef.current) {
-      wrapperRef.current.style.transition = 'transform 0.5s ease-in-out'
-      wrapperRef.current.style.transform = `translateX(-${index * cardWidth}px)`
-    }
-
-    const cleanup = setTimeout(() => setIsTransitioning(false), 500)
-    return () => clearTimeout(cleanup)
-  }, [index])
-
   return (
-    <div className="w-full max-w-[1800px] mx-auto mt-20 flex items-center justify-center gap-8 px-4">
+    <div className="relative w-full flex items-center justify-center my-20">
       {/* Left Arrow */}
       <button
         onClick={handlePrev}
-        className="w-24 h-24 flex items-center justify-center text-[#7A5E8A] hover:text-[#5e4568] transition rounded-full bg-white shadow-md"
+        aria-label="Previous continents"
+        className="p-4 text-4xl font-bold text-[#7A5E8A] hover:text-[#5d446a] transition"
       >
-        <ChevronLeftIcon className="h-10 w-10" />
+        ‹
       </button>
 
-      {/* Carousel Window */}
-      <div className="relative w-full max-w-[1100px] overflow-hidden">
+      {/* Carousel */}
+      <div className="overflow-hidden w-[90%] max-w-[1600px]">
         <div
-          ref={wrapperRef}
-          className="flex gap-8"
+          className="flex transition-transform duration-500 ease-in-out gap-6"
           style={{
-            transform: `translateX(-${index * cardWidth}px)`,
-            transition: 'transform 0.5s ease-in-out',
-            width: `${extendedContinents.length * cardWidth}px`,
+            transform: `translateX(-${(100 / visibleCount) * (startIndex % continents.length)}%)`,
           }}
         >
-          {extendedContinents.map(({ name, href, image }, i) => (
+          {getVisibleContinents().map(({ name, href, image }, i) => (
             <Link
               key={`${name}-${i}`}
               href={href}
-              className="flex-shrink-0 border border-zinc-200 rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 shadow-md"
-              style={{ width: '320px', height: '240px' }}
+              className="flex-shrink-0 w-[28vw] max-w-[500px] transition-shadow duration-300 rounded-md hover:shadow-xl border-2 border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800"
             >
               <Image
                 src={image}
                 alt={name}
-                width={320}
-                height={240}
-                className="object-cover w-full h-full"
+                width={800}
+                height={600}
+                className="w-full h-[300px] object-cover rounded-t-md"
               />
             </Link>
           ))}
@@ -120,9 +77,10 @@ export default function ContinentCarousel() {
       {/* Right Arrow */}
       <button
         onClick={handleNext}
-        className="w-24 h-24 flex items-center justify-center text-[#7A5E8A] hover:text-[#5e4568] transition rounded-full bg-white shadow-md"
+        aria-label="Next continents"
+        className="p-4 text-4xl font-bold text-[#7A5E8A] hover:text-[#5d446a] transition"
       >
-        <ChevronRightIcon className="h-10 w-10" />
+        ›
       </button>
     </div>
   )
