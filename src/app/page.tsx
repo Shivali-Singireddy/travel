@@ -21,7 +21,8 @@ import maui from '@/images/photos/maui.jpg'
 
 import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
-import { RotatingImages } from '@/components/RotatingImages' // client component
+import { RotatingImages } from '@/components/RotatingImages' 
+import { ContinentCarousel } from '@/components/ContinentCarousel'
 import type { StaticImageData } from 'next/image'
 import { Spectral } from 'next/font/google'
 
