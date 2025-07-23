@@ -1,6 +1,4 @@
 'use client'
-
-import Link from 'next/link'
 import { useRef } from 'react'
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
 import africaImg from '@/images/destinations/africa.png'
