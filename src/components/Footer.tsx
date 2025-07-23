@@ -33,8 +33,8 @@ export function Footer() {
               <Image
                 src={favicon}
                 alt="Favicon"
-                width={24}
-                height={24}
+                width={40}
+                height={40}
                 className="mb-4 md:mb-0 md:mr-6"
               />
               <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 text-sm font-medium text-zinc-800 dark:text-zinc-200">
