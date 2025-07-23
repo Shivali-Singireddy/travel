@@ -9,6 +9,8 @@ import amsterdam_post from '@/app/destinations/europe/amsterdam/amsterdam_post.p
 import czech_post from '@/app/destinations/europe/czech_republic/czech_post.png'
 import brussels_post from '@/app/destinations/europe/brussels/brussels_post.png'
 import madeira_post from '@/app/destinations/europe/madeira/madeira_post.png'
+import santorini_post from '@/app/destinations/europe/santorini/santorini_post.png'
+
 
 
 import italy from '@/app/destinations/europe/italy.png'
@@ -35,6 +37,12 @@ export default function EuropePage() {
       slug: 'madeira',
       image: madeira_post,
       description: 'Explore the Road to Hana and Haleakalā.',
+    },
+    {
+      title: 'Santorini with Athens pitstop',
+      slug: 'santorini',
+      image: santoniti_post,
+      description: 'Hike lush valleys and scenic coastal trails.',
     },
     {
       title: 'Czech Republic',
