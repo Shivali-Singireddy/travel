@@ -10,6 +10,13 @@ import asiaImg from '@/app/destinations/asia.png'
 import europeImg from '@/app/destinations/europe.png'
 import northAmericaImg from '@/app/destinations/north_america.png'
 import southAmericaImg from '@/app/destinations/south_america.png'
+import { Spectral } from 'next/font/google'
+
+const spectral = Spectral({
+  subsets: ['latin'],
+  weight: ['400', '600', '700'],
+  display: 'swap',
+})
 
 const continents = [
   { name: 'Europe', href: '/destinations/europe', image: europeImg },
@@ -104,7 +111,7 @@ function ContinentCarousel() {
     >
       {/* Label */}
       <h2
-        className="text-3xl font-semibold text-[#7A5E8A] mb-6 text-center tracking-wide select-text"
+        className={`text-3xl font-semibold text-[#7A5E8A] mb-6 text-center tracking-wide select-text ${spectral.className}`}
         style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.1)' }}
       >
         Destinations
