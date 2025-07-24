@@ -97,7 +97,7 @@ function ContinentCarousel() {
   return (
     <section
       aria-label="Destinations"
-      className="w-full px-6 py-8 select-none rounded-lg border-[1px] border-gray-300 relative"
+      className="w-full px-6 py-8 select-none rounded-lg border-[1px] border-gray-300 relative font-spectral"
       style={{
         backgroundColor: '#f3e8f9', // light purple background
         backgroundImage: `repeating-linear-gradient(
