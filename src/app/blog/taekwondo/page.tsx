@@ -1,7 +1,7 @@
 import { ArticleLayout } from '@/components/ArticleLayout'
 import Image from 'next/image'
-import tkd_test from '@/app/blog/taekwondo'tkd_test.jpg'
-import tkd_group from '@/app/blog/taekwondo'tkd_group.jpg'
+import tkd_test from '@/app/blog/taekwondo/tkd_test.jpg'
+import tkd_group from '@/app/blog/taekwondo/tkd_group.jpg'
 export default (props) => <ArticleLayout article={article} {...props} />
 
 export const article = {
