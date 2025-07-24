@@ -111,11 +111,12 @@ function ContinentCarousel() {
     >
       {/* Label */}
       <h2
-        className={`text-3xl font-semibold text-[#7A5E8A] mb-6 text-center tracking-wide select-text ${spectral.className}`}
+        className="text-5xl font-extrabold text-[#7A5E8A] mb-6 text-center tracking-wide select-text font-spectral"
         style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.1)' }}
       >
         Destinations
       </h2>
+
 
       <div className="flex items-center justify-center w-full">
         {/* Prev Button */}
