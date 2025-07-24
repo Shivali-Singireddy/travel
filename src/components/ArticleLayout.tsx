@@ -48,9 +48,10 @@ export function ArticleLayout({
           )}
           <article>
             <header className="flex flex-col">
-              <h1 className="mt-6 text-4xl sm:text-4xl font-bold tracking-tight text-[#4B2E5D] dark:text-[#d9cbe4]">
+              <h1 className="mt-6 text-4xl sm:text-4xl font-bold tracking-tight text-center text-[#4B2E5D] dark:text-[#d9cbe4]">
                 {article.title}
               </h1>
+
               <time
                 dateTime={article.date}
                 className="order-first flex items-center text-base text-zinc-400 dark:text-zinc-500"
