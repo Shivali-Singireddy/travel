@@ -1,4 +1,8 @@
 import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import tkd_test from '@/app/blog/taekwondo'tkd_test.jpg'
+import tkd_group from '@/app/blog/taekwondo'tkd_group.jpg'
+export default (props) => <ArticleLayout article={article} {...props} />
 
 export const article = {
   author: 'Shivali Singireddy',
@@ -14,6 +18,14 @@ export const metadata = {
 }
 
 export default (props) => <ArticleLayout article={article} {...props} />
+
+<Image
+  src={tkd_test}
+  alt="Taekwondo journey"
+  width={800}
+  height={450}
+  className="rounded-lg shadow-lg mx-auto mt-8"
+/>
 
 I first joined taekwondo as a middle schooler in my hometown. My parents wanted me to have a way to protect myself in case I was in a situation which required me to use these skills. They also wanted me to engage in physical activity since I had gained a lot of weight and only seemed interested in academics. As a middle schooler, I was extremely scarred of sparring and gravitated towards poomsae, which felt like the safer option at the time. I loved learning the techniques and the precision required behind the forms. It almost felt like there was a correct mathematical formula where if I followed all the steps correctly, I would crack the form.
 
