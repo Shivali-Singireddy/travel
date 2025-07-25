@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import paris_post from '@/app/destinations/europe/paris/paris_post.png'
