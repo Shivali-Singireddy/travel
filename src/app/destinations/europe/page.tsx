@@ -104,17 +104,20 @@ export default function EuropePage() {
   ]
 
   return (
-    <div className="w-full min-h-screen bg-white px-6 py-10 max-w-screen-xl mx-auto">
+   <div className="w-full min-h-screen bg-white px-6 py-10 max-w-screen-xl mx-auto">
+    <div className="flex items-center justify-center mb-8">
       <button
         type="button"
         onClick={() => router.back()}
         aria-label="Go back"
-        className="group mb-6 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 transition dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 dark:ring-white/10 dark:hover:border-zinc-700 dark:hover:ring-white/20"
+        className="group mr-4 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 transition dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 dark:ring-white/10 dark:hover:border-zinc-700 dark:hover:ring-white/20"
       >
-        <ArrowLeftIcon className="h-4 w-4 stroke-zinc-500 transition group-hover:stroke-zinc-700 dark:stroke-zinc-500 dark:group-hover:stroke-zinc-400" />
+        <ArrowLeftIcon className="h-5 w-5 stroke-purple-700 transition group-hover:stroke-purple-900 dark:stroke-purple-300 dark:group-hover:stroke-purple-100" />
       </button>
-
-      <h1 className="text-3xl font-bold mb-8 text-center text-purple-900">Explore Europe</h1>
+      <h1 className="text-3xl font-bold text-purple-900 dark:text-purple-200">
+        Explore Europe
+      </h1>
+    </div>
 
       {/* Region-Level Buttons (Simple Style) */}
       <h2 className="text-2xl font-semibold mb-4 text-purple-800">Top Regions</h2>
