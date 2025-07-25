@@ -265,8 +265,7 @@ export default async function Home() {
                 Welcome to Weekends with Shivali
               </h2>
               <p className="text-2xl leading-relaxed max-w-[80%]">
-                Hi, I’m Shivali and welcome to my personal blog! With this blog I hope to
-                primarily share how I spend my weekends whether it's through travelling or other hobbies :)
+                Hi, I’m Shivali and welcome to my website! With this website I will be sharing my weekend adventures whether it's through travelling or other hobbies :)
               </p>
             </div>
           </div>
