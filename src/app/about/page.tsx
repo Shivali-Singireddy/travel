@@ -94,7 +94,7 @@ export default function About() {
             </p>
 
             <p>
-              This diversity in my academic course load has helped me obtain the internships I have been able to get these past summers.
+              This diversity in my academic course load has helped me obtain the internships I these past summers.
               A question I often get asked is how I have the budget for my travels. 
               At MIT, we have an international office called MISTI, 
               and they have programs for multiple different countries where your program coordinator helps you find research opportunities and internships. 
@@ -106,7 +106,7 @@ export default function About() {
               The most expensive part about travelling is the flight and accomodation, and if that is covered for most of your trip, it becomes financially easier.
               The way I travel is by participating in these programs and doing weekend trips to visit nearby places. 
               I also worked a job on campus during the school year to help sponsor my side trips.
-              I have spent the past three summer abroad at different internships and universities.
+              I have spent the past three summers and the month of January abroad at different internships and universities.
               By living among locals and working with them on a daily basis, not only have I been able to see the most famous parts of a country, but I have also
               learned about the local cultures in these different areas, and made life long friends.
             </p>
