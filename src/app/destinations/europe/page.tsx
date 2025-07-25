@@ -10,6 +10,8 @@ import czech_post from '@/app/destinations/europe/czech_republic/czech_post.png'
 import brussels_post from '@/app/destinations/europe/brussels/brussels_post.png'
 import madeira_post from '@/app/destinations/europe/madeira/madeira_post.png'
 import santorini_post from '@/app/destinations/europe/santorini/santorini_post.png'
+import { FaArrowLeft } from 'react-icons/fa' // Optional if using react-icons
+
 
 
 
@@ -90,6 +92,11 @@ export default function EuropePage() {
 
   return (
     <div className="w-full min-h-screen bg-white px-6 py-10 max-w-screen-xl mx-auto">
+      {/* Back Arrow */}
+      <Link href="/destinations" className="flex items-center text-purple-700 hover:text-purple-900 mb-6 w-max">
+        <span className="mr-2 text-lg">←</span>
+        <span className="underline font-medium">Back to Destinations</span>
+      </Link>
       <h1 className="text-3xl font-bold mb-8 text-center text-purple-900">Explore Europe</h1>
 
       {/* Region-Level Buttons (Simple Style) */}
