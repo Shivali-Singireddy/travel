@@ -12,7 +12,7 @@ export default function HawaiiPage() {
       title: 'Maui',
       slug: 'maui',
       image: maui_post,
-      description: '4 day itinerary covering Road to Hana, Haleakala, and Waihee Ridge.',
+      description: '4 Day Itinerary in Maui: Hostels, Hikes & Haleakalā Sunsets',
     },
     {
       title: 'Kauai',
