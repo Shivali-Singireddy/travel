@@ -266,7 +266,7 @@ export default async function Home() {
               </h2>
               <p className="text-2xl leading-relaxed max-w-[80%]">
                 Hi, I’m Shivali and welcome to my personal blog! With this blog I hope to
-                primarily share my experiences with travelling and other hobbies!
+                primarily share how I spend my weekends whether it's through travelling or other hobbies :)
               </p>
             </div>
           </div>
