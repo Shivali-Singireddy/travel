@@ -4,11 +4,18 @@ import maui_post from '@/app/destinations/north_america/hawaii/maui/maui_post.pn
 export default function MauiPostPage() {
   return (
     <div className="relative w-full min-h-screen bg-white border border-[#e0e0e0] mx-auto flex flex-col items-center px-4 py-8 max-w-screen-xl">
+
+      {/* Title Section (moved above the image) */}
+      <div className="mt-2 max-w-3xl text-center">
+        <h2 className="text-2xl font-semibold text-purple-900 mb-6">4 Day Itinerary in Maui: Hostels, Hikes & Haleakalā Sunsets</h2>
+      </div>
+
+      {/* Image */}
       <div className="w-full max-w-[1000px] border border-gray-300 overflow-hidden">
         <Image
           src={maui_post}
           alt="Maui Post"
-          width={1000}           // specify natural width for optimization
+          width={1000}
           style={{ width: '100%', height: 'auto', objectFit: 'contain' }}
           priority
         />
@@ -16,8 +23,6 @@ export default function MauiPostPage() {
 
       {/* Text Section */}
       <div className="mt-8 max-w-3xl text-left">
-        <h2 className="text-2xl font-semibold text-purple-900 mb-6 text-center">4 day itinerary in Maui</h2>
-
         <section className="mb-6">
           <h3 className="text-xl font-semibold mb-2">Hostel Stay & Tours</h3>
           <p className="text-base text-gray-800 dark:text-gray-200 leading-relaxed">
