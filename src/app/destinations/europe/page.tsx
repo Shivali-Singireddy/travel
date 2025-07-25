@@ -32,6 +32,7 @@ import united_kingdom from '@/app/destinations/europe/united_kingdom.png'
 
 
 export default function EuropePage() {
+  const router = useRouter()
   const regions = [
     {
       title: 'Italy',
@@ -103,8 +104,6 @@ export default function EuropePage() {
   ]
 
   return (
-    const router = useRouter()
-
     <div className="w-full min-h-screen bg-white px-6 py-10 max-w-screen-xl mx-auto">
       <button
         type="button"
