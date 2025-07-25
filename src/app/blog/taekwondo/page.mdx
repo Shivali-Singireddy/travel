@@ -1,9 +1,7 @@
 import { ArticleLayout } from '@/components/ArticleLayout'
 import Image from 'next/image'
-import tkd_test from '@/app/blog/taekwondo/tkd_test.png' 
-import tkd_team from '@/app/blog/taekwondo/tkd_team.png' 
-
-
+import tkd_test from '@/app/blog/taekwondo/tkd_test.jpg'
+import tape from '@/images/tape.jpg'
 
 export const article = { author: 'Shivali Singireddy', date: '2025-05-12', title: 'My Journey towards becoming a less fake Taekwondo Black Belt', description: 'I first joined taekwondo as a middle schooler in my hometown. My parents wanted me to have a way to protect myself in case I was in a situation which required me to use these skills.', }
 
@@ -12,29 +10,44 @@ export const metadata = { title: article.title, description: article.description
 export default (props) => (
    <ArticleLayout article={article} {...props}>
 
-    <div className="relative w-full max-w-3xl mx-auto h-[340px] my-10">
-      <div className="absolute top-0 left-0 w-[60%] rotate-[-3deg] shadow-lg">
-        <Image
-          src={tkd_test}
-          alt="Taekwondo practice 1"
-          className="rounded-lg border-4 border-white dark:border-[#1f1f1f]"
-          width={600}
-          height={400}
-          priority
-        />
-      </div>
-
-      <div className="absolute bottom-0 right-0 w-[60%] rotate-[5deg] shadow-lg">
-        <Image
-          src={tkd_team}
-          alt="Taekwondo practice 2"
-          className="rounded-lg border-4 border-white dark:border-[#1f1f1f]"
-          width={600}
-          height={400}
-          priority
-        />
-      </div>
+    <div className="relative my-6 mx-auto w-fit">
+      {/* Main image */}
+      <Image
+        src={tkd_test}
+        alt="Taekwondo practice session"
+        width={800}
+        height={500}
+        className="rounded-md"
+      />
+      {/* Top-left tape */}
+      <Image
+        src={tape}
+        alt="Tape top left"
+        width={96}
+        height={32}
+        className="absolute z-30"
+        style={{
+          top: '-20px',
+          left: '-20px',
+          transform: 'rotate(-15deg)',
+        }}
+      />
+      {/* Bottom-right tape */}
+      <Image
+        src={tape}
+        alt="Tape bottom right"
+        width={96}
+        height={32}
+        className="absolute z-30"
+        style={{
+          bottom: '-20px',
+          right: '-20px',
+          transform: 'rotate(15deg)',
+        }}
+      />
     </div>
+
+
     <p>I first joined taekwondo as a middle schooler in my hometown. My parents wanted me to have a way to protect myself in case I was in a situation which required me to use these skills. They also wanted me to engage in physical activity since I had gained a lot of weight and only seemed interested in academics. As a middle schooler, I was extremely scarred of sparring and gravitated towards poomsae, which felt like the safer option at the time. I loved learning the techniques and the precision required behind the forms. It almost felt like there was a correct mathematical formula where if I followed all the steps correctly, I would crack the form.</p>
     
     <p>I practiced Taekwondo for 2.5 years until I made it to high school and earned my black belt. When I first earned my black belt, to say I knew sparring would have been laughable. And as a black belt I felt I could no longer attend the sparring practices as a novice, so I didn’t. Coming to MIT Sport Taekwondo felt like the fresh start I needed.</p>
