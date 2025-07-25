@@ -21,30 +21,31 @@ export default (props) => (
       />
       {/* Top-left tape */}
       <Image
-        src={tape}
-        alt="Tape top left"
-        width={96}
-        height={32}
-        className="absolute z-30"
-        style={{
-          top: '-20px',
-          left: '-20px',
-          transform: 'rotate(-15deg)',
-        }}
-      />
-      {/* Bottom-right tape */}
-      <Image
-        src={tape}
-        alt="Tape bottom right"
-        width={96}
-        height={32}
-        className="absolute z-30"
-        style={{
-          bottom: '-20px',
-          right: '-20px',
-          transform: 'rotate(15deg)',
-        }}
-      />
+       src={tape}
+       alt="Tape top left"
+       width={150}
+       height={50}
+       className="absolute z-30"
+       style={{
+         top: '-40px',
+         left: '-40px',
+         transform: 'rotate(-30deg)',
+       }}
+     />
+     
+     {/* Bottom-right tape (same tilt direction) */}
+     <Image
+       src={tape}
+       alt="Tape bottom right"
+       width={150}
+       height={50}
+       className="absolute z-30"
+       style={{
+         bottom: '-40px',
+         right: '-40px',
+         transform: 'rotate(-30deg)',
+       }}
+     />
     </div>
 
 
