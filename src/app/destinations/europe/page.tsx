@@ -10,10 +10,20 @@ import czech_post from '@/app/destinations/europe/czech_republic/czech_post.png'
 import brussels_post from '@/app/destinations/europe/brussels/brussels_post.png'
 import madeira_post from '@/app/destinations/europe/madeira/madeira_post.png'
 import santorini_post from '@/app/destinations/europe/santorini/santorini_post.png'
-import { FaArrowLeft } from 'react-icons/fa' // Optional if using react-icons
+import { useRouter } from 'next/navigation'
 
-
-
+function ArrowLeftIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+  return (
+    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true" {...props}>
+      <path
+        d="M7.25 11.25 3.75 8m0 0 3.5-3.25M3.75 8h8.5"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
 
 import italy from '@/app/destinations/europe/italy.png'
 import united_kingdom from '@/app/destinations/europe/united_kingdom.png'
@@ -91,12 +101,18 @@ export default function EuropePage() {
   ]
 
   return (
+    const router = useRouter()
+
     <div className="w-full min-h-screen bg-white px-6 py-10 max-w-screen-xl mx-auto">
-      {/* Back Arrow */}
-      <Link href="/destinations" className="flex items-center text-purple-700 hover:text-purple-900 mb-6 w-max">
-        <span className="mr-2 text-lg">←</span>
-        <span className="underline font-medium">Back to Destinations</span>
-      </Link>
+      <button
+        type="button"
+        onClick={() => router.back()}
+        aria-label="Go back"
+        className="group mb-6 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md ring-1 shadow-zinc-800/5 ring-zinc-900/5 transition dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0 dark:ring-white/10 dark:hover:border-zinc-700 dark:hover:ring-white/20"
+      >
+        <ArrowLeftIcon className="h-4 w-4 stroke-zinc-500 transition group-hover:stroke-zinc-700 dark:stroke-zinc-500 dark:group-hover:stroke-zinc-400" />
+      </button>
+
       <h1 className="text-3xl font-bold mb-8 text-center text-purple-900">Explore Europe</h1>
 
       {/* Region-Level Buttons (Simple Style) */}
