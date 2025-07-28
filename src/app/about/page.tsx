@@ -2,6 +2,8 @@ import { type Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
+import aboutBoardImage from '@/app/about/about_board.png' 
+
 
 import { Container } from '@/components/Container'
 import {
@@ -138,6 +140,13 @@ export default function About() {
               Follow on LinkedIn
             </SocialLink>
           </ul>
+        <div className="mt-10 max-w-xs px-2.5 lg:px-0">
+          <Image
+            src={aboutBoardImage}
+            alt="Travel board"
+            sizes="(min-width: 1024px) 32rem, 20rem"
+            className="w-full h-auto rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+          />
         </div>
       </div>
     </Container>
