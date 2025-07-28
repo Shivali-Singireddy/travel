@@ -2,7 +2,7 @@ import { type Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
-import aboutBoardImage from '@/app/about/about_board.png' 
+import aboutBoardImage from '@/images/about_board.png'
 
 
 import { Container } from '@/components/Container'
@@ -140,6 +140,7 @@ export default function About() {
               Follow on LinkedIn
             </SocialLink>
           </ul>
+        </div>
         <div className="mt-10 max-w-xs px-2.5 lg:px-0">
           <Image
             src={aboutBoardImage}
