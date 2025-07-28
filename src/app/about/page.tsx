@@ -150,7 +150,6 @@
 //     </Container>
 //   )
 // }
-
 import { type Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -196,11 +195,11 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <Container className="mt-6 sm:mt-10">
-      <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] lg:gap-x-12 gap-y-16">
-        {/* Left column: all text content */}
+      <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] lg:gap-x-12 gap-y-16">
+        {/* Left side: all text */}
         <div className="lg:pr-8">
           <h1 className="text-4xl font-bold tracking-tight text-purple-900 sm:text-5xl dark:text-purple-200 mb-6">
-            A little about my story ...
+            A little about my story …
           </h1>
           <div className="space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
@@ -259,7 +258,7 @@ export default function About() {
           </div>
         </div>
 
-        {/* Right column: portrait + social + board image */}
+        {/* Right side: images and social links */}
         <div className="flex flex-col items-start lg:pl-8">
           <div className="max-w-xs px-2.5 lg:px-0">
             <Image
@@ -292,4 +291,3 @@ export default function About() {
     </Container>
   )
 }
-
