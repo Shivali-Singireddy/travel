@@ -51,7 +51,7 @@ export default function About() {
           </h1>
           <div className="space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              Hi I'm Shivali and this website is a way for me to share some of my adventures with you guys!
+              Hi I'm Shivali, and this website is a way for me to share some of my adventures with you guys!
             </p>
             
             <p>
@@ -73,7 +73,7 @@ export default function About() {
             </p>
 
             <p>
-              This diversity in my academic course load has helped me obtain the internships I these past summers.
+              This diversity in my academic course load has helped me obtain the multiple diverse internships these past summers.
               A question I often get asked is how I have the budget for my travels. 
               At MIT, we have an international office called MISTI, 
               and they have programs for multiple different countries where your program coordinator helps you find research opportunities and internships. 
@@ -84,8 +84,9 @@ export default function About() {
             <p>
               The most expensive part about travelling is the flight and accomodation, and if that is covered for most of your trip, it becomes financially easier.
               The way I travel is by participating in these programs and doing weekend trips to visit nearby places. 
+              (This is where I got the inspiration for the name of my website Weekends with Shivali)
               I also worked a job on campus during the school year to help sponsor my side trips.
-              I have spent the past three summers and the month of January abroad at different internships and universities.
+              I have spent the past three summers and Januaries abroad at different internships and universities.
               By living among locals and working with them on a daily basis, not only have I been able to see the most famous parts of a country, but I have also
               learned about the local cultures in these different areas, and made life long friends.
             </p>
@@ -101,7 +102,7 @@ export default function About() {
               As I look towards my future, I will be working full time in San Francisco as a business analyst at McKinsey.
               My hope is to continue doing what I enjoy, and I feel that SF is the perfect place for me to continue growing.
               I hope to keep this website updated with the hikes I plan to do while I am there along with the travels I embark on with my job.
-              Thank you all for joining me in my journey, and I hope the content I provide is helpful to you in your adventures as well!
+              Thank you all for joining me in my journey, and I hope the content I provide is helpful to you in your adventures!
             </p>
           </div>
         </div>
