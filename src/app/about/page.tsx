@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <Container className="mt-6 sm:mt-10">
-      <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] lg:gap-x-6 gap-y-16">
+      <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] lg:gap-x-2 gap-y-16">
         {/* Left side: all text */}
         <div className="lg:pr-8">
           <h1 className="text-4xl font-bold tracking-tight text-purple-900 sm:text-5xl dark:text-purple-200 mb-6">
