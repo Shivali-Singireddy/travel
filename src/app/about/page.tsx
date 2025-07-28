@@ -278,11 +278,11 @@ export default function About() {
             </SocialLink>
           </ul>
 
-          <div className="mt-10 max-w-xs px-2.5 lg:px-0">
+          <div className="mt-10 max-w-xl px-2.5 lg:px-0">
             <Image
               src={aboutBoardImage}
               alt="Travel board"
-              sizes="(min-width: 1024px) 32rem, 20rem"
+              sizes="(min-width: 1024px) 44rem, 36rem"
               className="w-full h-auto bg-zinc-100 object-cover dark:bg-zinc-800"
             />
           </div>
