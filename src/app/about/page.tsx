@@ -58,7 +58,7 @@ export default function About() {
               I grew up in a small town in Indiana where a key part of my childhood was spent outdoors.
               I remember as children there wasn't much to do in the town, so we would use our imagination 
               whether it be running around pretending to be fairies with our handmade flower necklaces 
-              or using grass wands to perform a magic show for our parents. 
+              or using tree branches and sticks as wands to perform a magic show for our parents. 
               Growing up in this environment was a blessing and has given me so many fond memories I reflect upon to this day.
               However, as I entered college, it fueled my desire to explore more of the world outside this little bubble that I had grown up in.
             </p>
