@@ -83,8 +83,8 @@ export default function About() {
             
             <p>
               The most expensive part about travelling is the flight and accomodation, and if that is covered for most of your trip, it becomes financially easier.
-              The way I travel is by participating in these programs and doing weekend trips to visit nearby places. 
-              (This is where I got the inspiration for the name of my website Weekends with Shivali)
+              The way I travel is by participating in these programs and doing weekend trips to visit nearby places 
+              (This is where I got the inspiration for the name of my website Weekends with Shivali).
               I also worked a job on campus during the school year to help sponsor my side trips.
               I have spent the past three summers and Januaries abroad at different internships and universities.
               By living among locals and working with them on a daily basis, not only have I been able to see the most famous parts of a country, but I have also
