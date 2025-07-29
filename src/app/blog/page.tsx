@@ -5,7 +5,7 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 import Image from 'next/image'
-import california from '@/app/blog/blog_top.png'
+import blog from '@/app/blog/blog_top.png'
 
 function Article({ article }: { article: ArticleWithSlug }) {
   return (
