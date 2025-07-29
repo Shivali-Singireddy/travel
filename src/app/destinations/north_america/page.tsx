@@ -4,6 +4,7 @@ import california from '@/app/destinations/north_america/california.jpg'
 import hawaii from '@/app/destinations/north_america/hawaii.png'
 import mexico from '@/app/destinations/north_america/mexico.png'
 import north_america from '@/app/destinations/north_america/north_america_top.png'
+import top_regions from '@/app/destinations/top_regions.png'
 
 
 
@@ -38,6 +39,22 @@ export default function NorthAmericaPage() {
           style={{ objectFit: 'cover' }}
         />
       </div>
+
+      <div className="relative w-full flex justify-center">
+          <div className="mb-20"></div>
+          <div className="w-full">
+            <div className="mb-10"></div>
+            <hr className="border-t-[2px] border-purple-800 opacity-90" />
+          </div>
+          <Image
+            src={top_regions}
+            alt="Top Regions"
+            width={500}
+            height={120}
+            className="absolute top-1/2 transform -translate-y-1/2 z-10"
+          />
+        </div>      
+        <div className="h-4" />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {posts.map((post) => (
