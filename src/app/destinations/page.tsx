@@ -95,9 +95,9 @@ export default function DestinationsPage() {
           Enjoy exploring!
         </p>
         <div className="relative w-full flex justify-center">
-          <div className="mb-40"></div>
+          <div className="mb-50"></div>
           <div className="w-full">
-            <div className="mb-20"></div>
+            <div className="mb-25"></div>
             <hr className="border-t-[2px] border-purple-800 opacity-90" />
           </div>
           <Image
@@ -108,7 +108,7 @@ export default function DestinationsPage() {
             className="absolute top-1/2 transform -translate-y-1/2 z-10"
           />
         </div>      
-        <div className="h-8" />
+        <div className="h-4" />
       </div>
 
       <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
