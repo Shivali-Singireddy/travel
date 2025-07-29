@@ -95,6 +95,7 @@ export default function DestinationsPage() {
           Enjoy exploring!
         </p>
         <div className="relative w-full flex justify-center">
+          <div className="mb-4"></div>
           <div className="w-full">
             <hr className="border-t-[2px] border-purple-800 opacity-90" />
           </div>
@@ -129,19 +130,21 @@ export default function DestinationsPage() {
       </div>
 
       <div className="w-full flex flex-col items-center mt-0 mb-6">
-       <div className="relative w-full">
-          {/* Thinner, darker horizontal line */}
-          <hr className="border-t border-purple-800 opacity-90" />
-      
-          {/* Continents label image, centered on the line */}
+        <div className="mb-4"></div>
+       <div className="relative w-full flex justify-center">
+          <div className="mb-4"></div>
+          <div className="w-full">
+            <hr className="border-t-[2px] border-purple-800 opacity-90" />
+          </div>
           <Image
-            src={continents_label}
-            alt="Continents"
+            src={feat_dest}
+            alt="Featured Destinations"
             width={700}
             height={200}
-            className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+            className="absolute top-1/2 transform -translate-y-1/2 z-10"
           />
-        </div>
+        </div>      
+        <div className="h-8" />
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {destinations.map((dest) => (
