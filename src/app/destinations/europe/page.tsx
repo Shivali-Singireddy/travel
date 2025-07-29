@@ -124,7 +124,6 @@ export default function EuropePage() {
           Welcome to Europe!
           I spent three months in England completing a company internship, along with a month in Italy teaching final-year high school students. 
           Both experiences gave me the chance to explore many parts of Europe, thanks to the affordability of flights across the continent.
-          During both of these experiences, I had multiple opportunities to visit different parts of Europe, given how cheap flights here are.
           Europe is full of stunning destinations, making it difficult to choose favorites. 
           However, Madeira, Italy, the Czech Republic, Barcelona, and Iceland each hold a special place in my heart.
           You can learn more about these unique places in my blog posts!
