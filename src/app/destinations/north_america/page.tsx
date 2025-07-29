@@ -86,7 +86,15 @@ export default function NorthAmericaPage() {
         />
       </div>
 
-      <div className="w-full flex flex-col items-center mt-10 mb-2">
+      <div className="w-full flex flex-col items-center mt10 mb-0">
+        <p className="w-1/2 mt-2 text-center text-[#4B0082] text-base font-spectrum">
+          Welcome to North America! This has been my home for the past 22 years.
+          I would say most of my exploring of the North American continent occured when I was younger and travelling with my parents.
+          Many of those are not included here yet, but hopefully once I dig through some older pictures I will be able to add more content.
+          I would say my absolute favorite place I've travelled to in North America is Hawaii. 
+          Hawaii has it all with the beautiful hikes, waterfalls, mountains, and beaches.
+          Cancun is also pretty high up there along with Alaska!
+        </p>
         <div className="relative w-full flex justify-center my-20">
           <div className="w-full">
             <hr className="border-t-2 border-[#7A5E8A] opacity-90" />
