@@ -66,9 +66,6 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] lg:gap-x-2 gap-y-16">
           {/* Left side: all text */}
           <div className="lg:pr-8">
-{/*             <h1 className={`${spectral.className} text-4xl font-extrabold tracking-tight text-purple-900 sm:text-5xl dark:text-purple-200 mb-6`}>
-              A little about my story …
-            </h1> */}
             <div className="space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
                 Hi I'm Shivali, and this website is a way for me to share some of my adventures with you guys!
@@ -128,7 +125,7 @@ export default function About() {
           </div>
   
           {/* Right side: images and social links */}
-          <div className="flex flex-col items-start lg:pl-8">
+         <div className="flex flex-col items-start lg:pl-8 mt-10">
             <div className="max-w-xs px-2.5 lg:px-0">
               <Image
                 src={portraitImage}
