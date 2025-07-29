@@ -41,7 +41,7 @@ export default function NorthAmericaPage() {
     <div className="w-full min-h-screen bg-white px-6 pt-0 pb-10 max-w-screen-xl mx-auto">
       
       {/* Top Banner Image */}
-      <div className="relative w-full h-120">
+      <div className="relative w-full h-80">
         <Image
           src={destinations_banner}
           alt="Destinations Banner"
@@ -50,7 +50,7 @@ export default function NorthAmericaPage() {
         />
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {posts.map((post) => (
           <Link
             key={post.slug}
