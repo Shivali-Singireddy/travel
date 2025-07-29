@@ -94,17 +94,19 @@ export default function DestinationsPage() {
           You'll then be directed to subregions within that continent, where you can browse all related city posts.
           Enjoy exploring!
         </p>
-        <div className="relative mt-4 w-full">
+        <div className="w-full flex flex-col items-center mt-0 mb-6">
           {/* Underline */}
-          <span className="absolute inset-x-0 top-1/2 h-[1px] bg-purple-200 opacity-70 transform -translate-y-1/2"></span>
-          {/* Label Image */}
-          <Image
-            src={continents_label}
-            alt="Continents"
-            width={500} // Adjust width as needed
-            height={150} // Adjust height as needed
-            className="relative z-10"
-          />
+          <div className="relative w-full">
+            <hr className="border-t-4 border-purple-500 my-4" />
+            {/* Label Image */}
+            <Image
+              src={continents_label}
+              alt="Continents"
+              width={500}
+              height={150} 
+              className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            />
+          </div>
         </div>
       </div>
 
@@ -128,18 +130,20 @@ export default function DestinationsPage() {
       </div>
 
       <div className="w-full flex flex-col items-center mt-0 mb-6">
-       <div className="relative mt-4 w-full">
+       <div className="w-full flex flex-col items-center mt-0 mb-6">
           {/* Underline */}
-          <span className="absolute inset-x-0 top-1/2 h-[1px] bg-purple-200 opacity-70 transform -translate-y-1/2"></span>
-          {/* Label Image */}
-          <Image
-            src={feat_dest}
-            alt="Featured Destinations"
-            width={500} // Adjust width as needed
-            height={150} // Adjust height as needed
-            className="relative z-10"
-          />
-        </div>   
+          <div className="relative w-full">
+            <hr className="border-t-4 border-purple-500 my-4" />
+            {/* Label Image */}
+            <Image
+              src={feat_dest}
+              alt="feat_dest"
+              width={500} // Adjust width as needed
+              height={150} // Adjust height as needed
+              className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+            />
+          </div>
+        </div>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {destinations.map((dest) => (
