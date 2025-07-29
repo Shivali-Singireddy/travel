@@ -8,7 +8,7 @@ import asia from '@/app/destinations/asia.png'
 import destinations_banner from '@/app/destinations/destinations.png' // <-- Assuming this is your top image
 
 
-export default function NorthAmericaPage() {
+export default function DestinationsPage() {
   const posts = [
     {
       title: 'Europe',
@@ -48,6 +48,18 @@ export default function NorthAmericaPage() {
           fill
           style={{ objectFit: 'cover' }}
         />
+      </div>
+
+      {/* Centered Text Section */}
+      <div className="w-full flex justify-center mt-12 mb-6">
+        <div className="w-1/2 text-center text-[#4B0082] text-xl font-spectrum">
+          Welcome to my destinations homepage! Here you can find my thoughts on all of my travels.
+          This page is organized first by continents followed by some of my favorite featured destinations.
+          If you are looking for an article regarding a specific city, you can find it by clicking on the continent which it belongs to.
+          This will then redirect you to different subareas within the continent.
+          You can then choose the subregion which will lead you to all of my posts for cities within that area.
+          Have fun browsing!
+        </div>
       </div>
 
       <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
