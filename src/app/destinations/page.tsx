@@ -93,7 +93,6 @@ export default function DestinationsPage() {
           You'll then be directed to subregions within that continent, where you can browse all related city posts.
           Enjoy exploring!
         </p>
-        </p>
         <div className="relative mt-4">
           {/* Underline */}
           <span className="absolute inset-x-0 top-1/2 h-1 bg-purple-200 opacity-70 transform -translate-y-1/2"></span>
