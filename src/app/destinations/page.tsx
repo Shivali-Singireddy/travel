@@ -7,6 +7,7 @@ import europe from '@/app/destinations/europe.png'
 import asia from '@/app/destinations/asia.png'
 import destinations_banner from '@/app/destinations/destinations.png'
 import continents_label from '@/app/destinations/continents_label.png'
+import feat_dest from '@/app/destinations/fest_dest.png'
 
 import madeira_post from '@/app/destinations/europe/madeira/madeira_post.png'
 import rio_post from '@/app/destinations/south_america/brazil/rio_de_janeiro/rio_post.png'
@@ -93,15 +94,15 @@ export default function DestinationsPage() {
           You'll then be directed to subregions within that continent, where you can browse all related city posts.
           Enjoy exploring!
         </p>
-        <div className="relative mt-4">
+        <div className="relative mt-4 w-full">
           {/* Underline */}
-          <span className="absolute inset-x-0 top-1/2 h-1 bg-purple-200 opacity-70 transform -translate-y-1/2"></span>
+          <span className="absolute inset-x-0 top-1/2 h-[1px] bg-purple-200 opacity-70 transform -translate-y-1/2"></span>
           {/* Label Image */}
           <Image
             src={continents_label}
             alt="Continents"
-            width={400} 
-            height={120}
+            width={500} // Adjust width as needed
+            height={150} // Adjust height as needed
             className="relative z-10"
           />
         </div>
@@ -127,7 +128,18 @@ export default function DestinationsPage() {
       </div>
 
       <div className="w-full flex flex-col items-center mt-0 mb-6">
-       <h2 className="mt-4 text-4xl font-bold text-[#4B0082] font-spectrum text-center">Featured Destinations</h2>    
+       <div className="relative mt-4 w-full">
+          {/* Underline */}
+          <span className="absolute inset-x-0 top-1/2 h-[1px] bg-purple-200 opacity-70 transform -translate-y-1/2"></span>
+          {/* Label Image */}
+          <Image
+            src={feat_dest}
+            alt="Featured Destinations"
+            width={500} // Adjust width as needed
+            height={150} // Adjust height as needed
+            className="relative z-10"
+          />
+        </div>   
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {destinations.map((dest) => (
