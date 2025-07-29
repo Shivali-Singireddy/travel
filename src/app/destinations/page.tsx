@@ -100,8 +100,8 @@ export default function DestinationsPage() {
           <Image
             src={continents_label}
             alt="Continents"
-            width={300}
-            height={80}
+            width={400} 
+            height={120}
             className="relative z-10"
           />
         </div>
