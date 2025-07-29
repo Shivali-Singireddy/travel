@@ -36,7 +36,7 @@ import united_kingdom from '@/app/destinations/europe/united_kingdom.png'
 
 export default function EuropePage() {
   const router = useRouter()
-  const regions = [
+  const posts = [
     {
       title: 'Italy',
       slug: 'italy',
