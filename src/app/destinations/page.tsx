@@ -94,7 +94,7 @@ export default function DestinationsPage() {
           You'll then be directed to subregions within that continent, where you can browse all related city posts.
           Enjoy exploring!
         </p>
-        <div className="relative w-full flex justify-center my-10">
+        <div className="relative w-full flex justify-center my-20">
           <div className="w-full">
             <hr className="border-t-2 border-[#7A5E8A] opacity-90" />
           </div>
@@ -128,9 +128,9 @@ export default function DestinationsPage() {
       </div>
 
       <div className="w-full flex flex-col items-center mt-16 mb-6">
-        <div className="relative w-full flex justify-center my-3">
+        <div className="relative w-full flex justify-center my-20">
           <div className="w-full">
-            <hr className="border-t-2 bg-[#7A5E8A] opacity-90" />
+            <hr className="border-t-2 border-[#7A5E8A] opacity-90" />
           </div>
           <Image
             src={feat_dest}
