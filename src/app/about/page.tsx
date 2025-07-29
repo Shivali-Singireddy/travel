@@ -52,8 +52,8 @@ export default function About() {
     <Container className="mt-6 sm:mt-10">
       <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] lg:gap-x-2 gap-y-16">
         {/* Left side: all text */}
-        <div className={spectral.className + " lg:pr-8"}>
-          <h1 className="text-4xl font-bold tracking-tight text-purple-900 sm:text-5xl dark:text-purple-200 mb-6">
+        <div className="lg:pr-8">
+          <h1 className={spectral.className + "text-4xl font-bold tracking-tight text-purple-900 sm:text-5xl dark:text-purple-200 mb-6"}>
             A little about my story …
           </h1>
           <div className="space-y-7 text-base text-zinc-600 dark:text-zinc-400">
