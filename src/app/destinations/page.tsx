@@ -7,7 +7,7 @@ import europe from '@/app/destinations/europe.png'
 import asia from '@/app/destinations/asia.png'
 import destinations_banner from '@/app/destinations/destinations.png'
 import continents_label from '@/app/destinations/continents_label.png'
-import feat_dest from '@/app/destinations/fest_dest.png'
+import feat_dest from '@/app/destinations/feat_dest.png'
 
 import madeira_post from '@/app/destinations/europe/madeira/madeira_post.png'
 import rio_post from '@/app/destinations/south_america/brazil/rio_de_janeiro/rio_post.png'
