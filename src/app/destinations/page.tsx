@@ -5,7 +5,8 @@ import north_america from '@/app/destinations/north_america.png'
 import south_america from '@/app/destinations/south_america.png'
 import europe from '@/app/destinations/europe.png'
 import asia from '@/app/destinations/asia.png'
-import destinations_banner from '@/app/destinations/destinations.png' // <-- Assuming this is your top image
+import destinations_banner from '@/app/destinations/destinations.png' //
+import madeira_post from '@/app/destinations/europe/madeira/madeira_post.png'
 
 
 export default function DestinationsPage() {
@@ -37,6 +38,15 @@ export default function DestinationsPage() {
     },
   ]
 
+  const destinations = [
+    {
+      title: 'Madeira',
+      slug: 'europe/madeira',
+      image: madeira_post,
+      description: 'Explore the Road to Hana and Haleakalā.',
+    },
+  ]
+
   return (
     <div className="w-full min-h-screen bg-white px-6 pt-0 pb-10 max-w-screen-xl mx-auto">
       
@@ -59,7 +69,7 @@ export default function DestinationsPage() {
           This will then redirect you to different subareas within the continent.
           You can then choose the subregion which will lead you to all of my posts for cities within that area.
           Have fun browsing!
-        </div>
+        </p>
         <h2 className="text-4xl font-bold text-[#4B0082] font-spectrum text-center">Continents</h2>     
       </div>
 
