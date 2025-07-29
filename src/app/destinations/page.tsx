@@ -85,7 +85,7 @@ export default function DestinationsPage() {
       </div>
 
       {/* Centered Text Section */}
-      <div className="w-full flex flex-col items-center mt10 mb-6">
+      <div className="w-full flex flex-col items-center mt10 mb-3">
         <p className="w-1/2 mt-2 text-center text-[#4B0082] text-base font-spectrum">
           Welcome to the homepage for my travels!
           Here you can explore my travel experiences and insights from around the world. 
@@ -98,7 +98,7 @@ export default function DestinationsPage() {
           <div className="mb-50"></div>
           <div className="w-full">
             <div className="mb-25"></div>
-            <hr className="border-t-[2px] border-purple-800 opacity-90" />
+            <hr className="border-t-[2px] border-bg-[#7A5E8A] opacity-90" />
           </div>
           <Image
             src={continents_label}
@@ -130,12 +130,12 @@ export default function DestinationsPage() {
         ))}
       </div>
 
-      <div className="w-full flex flex-col items-center mt-20 mb-6">
+      <div className="w-full flex flex-col items-center mt-20 mb-10">
         <div className="mb-4"></div>
        <div className="relative w-full flex justify-center">
-          <div className="mb-4"></div>
+          <div className="mb-2"></div>
           <div className="w-full">
-            <hr className="border-t-[2px] border-purple-800 opacity-90" />
+            <hr className="border-t-[2px] border-bg-[#7A5E8A] opacity-90" />
           </div>
           <Image
             src={feat_dest}
