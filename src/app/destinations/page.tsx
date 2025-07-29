@@ -108,7 +108,7 @@ export default function DestinationsPage() {
         </div>    
       </div>
 
-      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {posts.map((post) => (
           <Link
             key={post.slug}
@@ -127,7 +127,7 @@ export default function DestinationsPage() {
         ))}
       </div>
 
-      <div className="w-full flex flex-col items-center mt-16 mb-6">
+      <div className="w-full flex flex-col items-center mt-12 mb-6">
         <div className="relative w-full flex justify-center my-20">
           <div className="w-full">
             <hr className="border-t-2 border-[#7A5E8A] opacity-90" />
