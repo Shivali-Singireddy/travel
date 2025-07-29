@@ -41,9 +41,9 @@ export default function NorthAmericaPage() {
       </div>
 
       <div className="w-full flex flex-col items-center mt-10 mb-2">
-        <div className="relative w-full flex justify-center my-4">
+        <div className="relative w-full flex justify-center my-20">
           <div className="w-full">
-            <hr className="border-t-2 bg-[#7A5E8A] opacity-90" />
+            <hr className="border-t-2 border-[#7A5E8A] opacity-90" />
           </div>
           <Image
             src={top_regions}
