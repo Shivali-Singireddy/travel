@@ -54,7 +54,7 @@ export default function About() {
     <div className="w-full min-h-screen bg-white px-6 pt-0 pb-10 max-w-screen-xl mx-auto">
       
       {/* Top Banner Image */}
-      <div className="relative w-full h-70">
+      <div className="relative w-full h-90">
         <Image
           src={about_me}
           alt="About Me"
