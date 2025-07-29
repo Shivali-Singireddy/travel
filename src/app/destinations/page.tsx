@@ -94,19 +94,19 @@ export default function DestinationsPage() {
           You'll then be directed to subregions within that continent, where you can browse all related city posts.
           Enjoy exploring!
         </p>
-        <div className="relative w-full">
-          {/* Thinner, darker horizontal line */}
-          <hr className="border-t border-purple-800 opacity-90" />
-      
-          {/* Continents label image, centered on the line */}
+        <div className="relative w-full flex justify-center">
+          <div className="w-full">
+            <hr className="border-t-[2px] border-purple-800 opacity-90" />
+          </div>
           <Image
             src={continents_label}
             alt="Continents"
             width={500}
-            height={150}
-            className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+            height={120}
+            className="absolute top-1/2 transform -translate-y-1/2 z-10"
           />
-        </div>
+        </div>      
+        <div className="h-8" />
       </div>
 
       <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
