@@ -104,7 +104,8 @@ export default function DestinationsPage() {
             width={300}
             height={80}
             className="relative z-10"
-          />   
+          />
+        </div>
       </div>
 
       <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
