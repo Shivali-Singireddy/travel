@@ -41,7 +41,7 @@ export default function NorthAmericaPage() {
     <div className="w-full min-h-screen bg-white px-6 pt-0 pb-10 max-w-screen-xl mx-auto">
       
       {/* Top Banner Image */}
-      <div className="relative w-full h-80">
+      <div className="relative w-full h-90">
         <Image
           src={destinations_banner}
           alt="Destinations Banner"
