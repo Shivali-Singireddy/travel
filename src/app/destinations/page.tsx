@@ -16,7 +16,7 @@ import cappadocia_post from '@/app/destinations/asia/turkey/cappadocia/cappadoci
 import venice_post from '@/app/destinations/europe/italy/venice/venice_post.png'
 import czech_post from '@/app/destinations/europe/czech_republic/czech_post.png'
 import sao_paolo_post from '@/app/destinations/south_america/brazil/sao_paolo/sao_paolo_post.png'
-import barcelona_post from '@/app/destinations/europe/barcelona/barcelona_post.png
+import barcelona_post from '@/app/destinations/europe/barcelona/barcelona_post.png'
 
 
 export default function DestinationsPage() {
