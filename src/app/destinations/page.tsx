@@ -5,8 +5,11 @@ import north_america from '@/app/destinations/north_america.png'
 import south_america from '@/app/destinations/south_america.png'
 import europe from '@/app/destinations/europe.png'
 import asia from '@/app/destinations/asia.png'
-import destinations_banner from '@/app/destinations/destinations.png' //
+import destinations_banner from '@/app/destinations/destinations.png'
 import madeira_post from '@/app/destinations/europe/madeira/madeira_post.png'
+import rio_post from '@/app/destinations/south_america/brazil/rio_de_janeiro/rio_post.png'
+import kalalau_post from '@/app/destinations/north_america/hawaii/kauai/kalalau_trail/kalalau_post.png'
+import cappadocia_post from '@/app/destinations/asia/turkey/cappadocia/cappadocia_post.png'
 
 
 export default function DestinationsPage() {
@@ -45,6 +48,24 @@ export default function DestinationsPage() {
       image: madeira_post,
       description: 'Explore the Road to Hana and Haleakalā.',
     },
+    {
+      title: 'Kalalau Trail',
+      slug: 'north_america/hawaii/kauai/kalalau_trail',
+      image: kalalau_post,
+      description: 'Explore the Road to Hana and Haleakalā.',
+    },
+    {
+      title: 'Rio de Janeiro',
+      slug: 'south_america/brazil/rio_de_janeiro',
+      image: rio_post,
+      description: 'Explore the Road to Hana and Haleakalā.',
+    },
+    {
+      title: 'Cappadocia',
+      slug: 'asia/turkey/cappadocia',
+      image: cappadocia_post,
+      description: 'Explore the Road to Hana and Haleakalā.',
+    },
   ]
 
   return (
@@ -63,12 +84,12 @@ export default function DestinationsPage() {
       {/* Centered Text Section */}
       <div className="w-full flex flex-col items-center mt-0 mb-6">
         <p className="w-1/2 mt-2 text-center text-[#4B0082] text-base font-spectrum">
-          Welcome to my destinations homepage! Here you can find my thoughts on all of my travels.
-          This page is organized first by continents followed by some of my favorite featured destinations.
-          If you are looking for an article regarding a specific city, you can find it by clicking on the continent which it belongs to.
-          This will then redirect you to different subareas within the continent.
-          You can then choose the subregion which will lead you to all of my posts for cities within that area.
-          Have fun browsing!
+          Welcome to the homepage for my travels!
+          Here you can explore my travel experiences and insights from around the world. 
+          This page is organized by continent, followed by a selection of my favorite featured destinations.
+          To find articles on specific cities, you can select the relevant continent. 
+          You'll then be directed to subregions within that continent, where you can browse all related city posts.
+          Enjoy exploring!
         </p>
         <h2 className="mt-4 text-4xl font-bold text-[#4B0082] font-spectrum text-center">Continents</h2>     
       </div>
@@ -92,7 +113,9 @@ export default function DestinationsPage() {
         ))}
       </div>
 
-      <h2 className="text-2xl font-semibold mb-4 text-purple-800">Featured Destinations</h2>
+      <div className="w-full flex flex-col items-center mt-0 mb-6">
+       <h2 className="mt-4 text-4xl font-bold text-[#4B0082] font-spectrum text-center">Featured Destinations</h2>    
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {destinations.map((dest) => (
           <Link
