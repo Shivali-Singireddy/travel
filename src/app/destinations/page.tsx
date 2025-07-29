@@ -85,7 +85,7 @@ export default function DestinationsPage() {
       </div>
 
       {/* Centered Text Section */}
-      <div className="w-full flex flex-col items-center mt10 mb-2">
+      <div className="w-full flex flex-col items-center mt10 mb-0">
         <p className="w-1/2 mt-2 text-center text-[#4B0082] text-base font-spectrum">
           Welcome to the homepage for my travels!
           Here you can explore my travel experiences and insights from around the world. 
