@@ -40,11 +40,10 @@ export default function NorthAmericaPage() {
         />
       </div>
 
-      <div className="relative w-full flex justify-center">
-          <div className="mb-20"></div>
+      <div className="w-full flex flex-col items-center mt-10 mb-2">
+        <div className="relative w-full flex justify-center my-4">
           <div className="w-full">
-            <div className="mb-10"></div>
-            <hr className="border-t-[2px] border-purple-800 opacity-90" />
+            <hr className="border-t-2 bg-[#7A5E8A] opacity-90" />
           </div>
           <Image
             src={top_regions}
@@ -54,7 +53,7 @@ export default function NorthAmericaPage() {
             className="absolute top-1/2 transform -translate-y-1/2 z-10"
           />
         </div>      
-        <div className="h-4" />
+      </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {posts.map((post) => (
