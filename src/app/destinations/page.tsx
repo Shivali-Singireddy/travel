@@ -61,7 +61,7 @@ export default function DestinationsPage() {
       </div>
 
       {/* Centered Text Section */}
-      <div className="w-full flex flex-col items-center mt-6 mb-6">
+      <div className="w-full flex flex-col items-center mt-0 mb-6">
         <p className="w-1/2 mt-2 text-center text-[#4B0082] text-base font-spectrum">
           Welcome to my destinations homepage! Here you can find my thoughts on all of my travels.
           This page is organized first by continents followed by some of my favorite featured destinations.
@@ -70,7 +70,7 @@ export default function DestinationsPage() {
           You can then choose the subregion which will lead you to all of my posts for cities within that area.
           Have fun browsing!
         </p>
-        <h2 className="text-4xl font-bold text-[#4B0082] font-spectrum text-center">Continents</h2>     
+        <h2 className="mt-4 text-4xl font-bold text-[#4B0082] font-spectrum text-center">Continents</h2>     
       </div>
 
       <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -87,6 +87,30 @@ export default function DestinationsPage() {
                 fill
                 style={{ objectFit: 'cover' }}
               />
+            </div>
+          </Link>
+        ))}
+      </div>
+
+      <h2 className="text-2xl font-semibold mb-4 text-purple-800">Featured Destinations</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {destinations.map((dest) => (
+          <Link
+            key={dest.slug}
+            href={`/destinations/europe/${dest.slug}`}
+            className="block border border-gray-300 rounded-lg overflow-hidden hover:shadow-lg transition"
+          >
+            <div className="relative w-full h-64">
+              <Image
+                src={dest.image}
+                alt={dest.title}
+                fill
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
+            <div className="p-4 bg-white text-center">
+              <h2 className="text-xl font-semibold text-purple-800 mb-2">{dest.title}</h2>
+              <p className="text-gray-700 text-sm">{dest.description}</p>
             </div>
           </Link>
         ))}
