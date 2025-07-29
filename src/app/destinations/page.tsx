@@ -6,6 +6,8 @@ import south_america from '@/app/destinations/south_america.png'
 import europe from '@/app/destinations/europe.png'
 import asia from '@/app/destinations/asia.png'
 import destinations_banner from '@/app/destinations/destinations.png'
+import continents_label from '@/app/destinations/continents_label.png'
+
 import madeira_post from '@/app/destinations/europe/madeira/madeira_post.png'
 import rio_post from '@/app/destinations/south_america/brazil/rio_de_janeiro/rio_post.png'
 import kalalau_post from '@/app/destinations/north_america/hawaii/kauai/kalalau_trail/kalalau_post.png'
@@ -91,7 +93,18 @@ export default function DestinationsPage() {
           You'll then be directed to subregions within that continent, where you can browse all related city posts.
           Enjoy exploring!
         </p>
-        <h2 className="mt-4 text-4xl font-bold text-[#4B0082] font-spectrum text-center">Continents</h2>     
+        </p>
+        <div className="relative mt-4">
+          {/* Underline */}
+          <span className="absolute inset-x-0 top-1/2 h-1 bg-purple-200 opacity-70 transform -translate-y-1/2"></span>
+          {/* Label Image */}
+          <Image
+            src={continents_label}
+            alt="Continents"
+            width={300}
+            height={80}
+            className="relative z-10"
+          />   
       </div>
 
       <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
