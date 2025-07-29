@@ -13,6 +13,10 @@ import madeira_post from '@/app/destinations/europe/madeira/madeira_post.png'
 import rio_post from '@/app/destinations/south_america/brazil/rio_de_janeiro/rio_post.png'
 import kalalau_post from '@/app/destinations/north_america/hawaii/kauai/kalalau_trail/kalalau_post.png'
 import cappadocia_post from '@/app/destinations/asia/turkey/cappadocia/cappadocia_post.png'
+import venice_post from '@/app/destinations/europe/italy/venice/venice_post.png'
+import czech_post from '@/app/destinations/europe/czech_republic/czech_post.png'
+import sao_paolo_post from '@/app/destinations/south_america/brazil/sao_paolo/sao_paolo_post.png'
+import barcelona_post from '@/app/destinations/europe/barcelona/barcelona_post.png
 
 
 export default function DestinationsPage() {
@@ -69,6 +73,37 @@ export default function DestinationsPage() {
       image: cappadocia_post,
       description: 'Explore the Road to Hana and Haleakalā.',
     },
+    {
+      title: 'Venice',
+      slug: 'europe/venice',
+      image: venice_post,
+      description: 'Explore the Road to Hana and Haleakalā.',
+    },
+    {
+      title: 'Czech Republic',
+      slug: 'europe/czech_republic',
+      image: czech_post,
+      description: 'Explore the Road to Hana and Haleakalā.',
+    },
+    {
+      title: 'Sao Paolo',
+      slug: 'south_america/brazil/sao_paolo',
+      image: sao_paolo_post,
+      description: 'Explore the Road to Hana and Haleakalā.',
+    },
+    {
+      title: 'Barcelona',
+      slug: 'europe/barcelona',
+      image: barcelona_post,
+      description: 'Explore the Road to Hana and Haleakalā.',
+    },
+    {
+      title: 'Marrakech',
+      slug: 'africa/morocco',
+      image: barcelona_post,
+      description: 'Explore the Road to Hana and Haleakalā.',
+    },
+    
   ]
 
   return (
@@ -145,7 +180,7 @@ export default function DestinationsPage() {
         {destinations.map((dest) => (
           <Link
             key={dest.slug}
-            href={`/destinations/europe/${dest.slug}`}
+            href={`/destinations/${dest.slug}`}
             className="block border border-gray-300 rounded-lg overflow-hidden hover:shadow-lg transition"
           >
             <div className="relative w-full h-64">
