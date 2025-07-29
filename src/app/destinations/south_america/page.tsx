@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import south_america from '@/app/destinations/south_america/south_america_top.png'
 import brazil from '@/app/destinations/south_america/brazil.png'
 import peru from '@/app/destinations/south_america/peru.png'
 import manaus_post from '@/app/destinations/south_america/brazil/manaus/manaus_post.png'
@@ -24,7 +25,6 @@ export default function SouthAmericaPage() {
     },
   ]
   const destinations = [
-    const posts = [
     {
       title: 'Rio',
       slug: 'brazil/rio_de_janeiro',
