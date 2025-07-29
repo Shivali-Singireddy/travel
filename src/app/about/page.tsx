@@ -11,6 +11,13 @@ import {
 } from '@/components/SocialIcons'
 import portraitImage from '@/images/portrait.jpg'
 
+import { Spectral } from 'next/font/google'
+
+const spectral = Spectral({
+  subsets: ['latin'],
+  weight: ['400', '700', '800'],
+})
+
 function SocialLink({
   className,
   href,
@@ -45,7 +52,7 @@ export default function About() {
     <Container className="mt-6 sm:mt-10">
       <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] lg:gap-x-2 gap-y-16">
         {/* Left side: all text */}
-        <div className="lg:pr-8">
+        <div className={spectral.className + " lg:pr-8"}>
           <h1 className="text-4xl font-bold tracking-tight text-purple-900 sm:text-5xl dark:text-purple-200 mb-6">
             A little about my story …
           </h1>
