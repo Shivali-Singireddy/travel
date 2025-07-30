@@ -11,31 +11,32 @@ function Article({ article }: { article: ArticleWithSlug }) {
   return (
     <article className="md:grid md:grid-cols-4 md:items-baseline">
       <Card className="md:col-span-3">
-        <Card.Title href={`/blog/${article.slug}`}>
+        <Card.Title href={`/blog/${article.slug}`} className="text-2xl md:text-3xl font-semibold">
           {article.title}
         </Card.Title>
         <Card.Eyebrow
           as="time"
           dateTime={article.date}
-          className="md:hidden"
+          className="md:hidden text-sm md:text-base"
           decorate
         >
           {formatDate(article.date)}
         </Card.Eyebrow>
-        <Card.Description>{article.description}</Card.Description>
-        <Card.Cta>Read article</Card.Cta>
+        <Card.Description className="text-lg md:text-xl">
+          {article.description}
+        </Card.Description>
+        <Card.Cta className="text-base md:text-lg">Read article</Card.Cta>
       </Card>
       <Card.Eyebrow
         as="time"
         dateTime={article.date}
-        className="mt-1 max-md:hidden"
+        className="mt-1 max-md:hidden text-sm md:text-base"
       >
         {formatDate(article.date)}
       </Card.Eyebrow>
     </article>
   )
 }
-
 export const metadata: Metadata = {
   title: 'Personal Blog',
   description:
@@ -63,7 +64,7 @@ export default async function BlogIndex() {
 
       {/* Centered content */}
       <div className="flex justify-center">
-        <div className="w-full max-w-6xl md:border-l md:border-zinc-100 md:pl-8 md:dark:border-zinc-700/40">
+        <div className="w-full max-w-4xl md:border-l md:border-zinc-100 md:pl-8 md:dark:border-zinc-700/40">
           {/* Increased spacing between articles */}
           <div className="flex flex-col space-y-20">
             {articles.map((article) => (
