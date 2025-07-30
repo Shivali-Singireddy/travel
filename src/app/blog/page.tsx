@@ -1,11 +1,7 @@
 // app/blog/page.tsx
-import { type Metadata } from 'next'
-import Image from 'next/image'
-import blog from '@/app/blog/blog_top.png'
 import { Card } from '@/components/Card'
-import { SimpleLayout } from '@/components/SimpleLayout'
-import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
+import type { ArticleWithSlug } from '@/lib/articles'
 import { Spectral } from 'next/font/google'
 
 const spectralBold = Spectral({ subsets: ['latin'], weight: ['700'] })
@@ -20,6 +16,7 @@ function Article({ article }: { article: ArticleWithSlug }) {
         >
           {article.title}
         </Card.Title>
+
         <Card.Eyebrow
           as="time"
           dateTime={article.date}
@@ -28,11 +25,18 @@ function Article({ article }: { article: ArticleWithSlug }) {
         >
           {formatDate(article.date)}
         </Card.Eyebrow>
-        <Card.Description className="text-lg text-zinc-600 dark:text-zinc-400 mb-6">
+
+        {/* Wrap the description in a styled <div> instead */}
+        <div className="text-lg text-zinc-600 dark:text-zinc-400 mb-6">
           {article.description}
-        </Card.Description>
-        <Card.Cta className="text-lg">Read article</Card.Cta>
+        </div>
+
+        {/* Wrap CTA similarly */}
+        <div className="text-lg">
+          <Card.Cta>Read article</Card.Cta>
+        </div>
       </Card>
+
       <Card.Eyebrow
         as="time"
         dateTime={article.date}
@@ -43,6 +47,7 @@ function Article({ article }: { article: ArticleWithSlug }) {
     </article>
   )
 }
+
 
 export const metadata: Metadata = {
   title: 'Personal Blog',
