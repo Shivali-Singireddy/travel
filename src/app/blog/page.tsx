@@ -11,32 +11,43 @@ function Article({ article }: { article: ArticleWithSlug }) {
   return (
     <article className="md:grid md:grid-cols-4 md:items-baseline">
       <Card className="md:col-span-3">
-        <Card.Title href={`/blog/${article.slug}`} className="text-2xl md:text-3xl font-semibold">
-          {article.title}
+        <Card.Title href={`/blog/${article.slug}`}>
+          <p className="text-2xl md:text-3xl font-semibold">
+            {article.title}
+          </p>
         </Card.Title>
         <Card.Eyebrow
           as="time"
           dateTime={article.date}
-          className="md:hidden text-sm md:text-base"
+          className="md:hidden"
           decorate
         >
-          {formatDate(article.date)}
+          <span className="text-sm md:text-base">
+            {formatDate(article.date)}
+          </span>
         </Card.Eyebrow>
-        <Card.Description className="text-lg md:text-xl">
-          {article.description}
+        <Card.Description>
+          <p className="text-lg md:text-xl">
+            {article.description}
+          </p>
         </Card.Description>
-        <Card.Cta className="text-base md:text-lg">Read article</Card.Cta>
+        <Card.Cta>
+          <span className="text-base md:text-lg">Read article</span>
+        </Card.Cta>
       </Card>
       <Card.Eyebrow
         as="time"
         dateTime={article.date}
-        className="mt-1 max-md:hidden text-sm md:text-base"
+        className="mt-1 max-md:hidden"
       >
-        {formatDate(article.date)}
+        <span className="text-sm md:text-base">
+          {formatDate(article.date)}
+        </span>
       </Card.Eyebrow>
     </article>
   )
 }
+
 export const metadata: Metadata = {
   title: 'Personal Blog',
   description:
