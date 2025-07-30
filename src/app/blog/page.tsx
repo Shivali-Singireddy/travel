@@ -46,9 +46,9 @@ export default async function BlogIndex() {
   let articles = await getAllArticles()
 
   return (
-    <div className="w-full min-h-screen bg-white px-6 pt-0 pb-10 max-w-screen-xl mx-auto">
+    <div className="w-full bg-white px-6 pt-0 pb-10 max-w-screen-xl mx-auto">
       
-      {/* Top Banner Image */}
+      {/* Banner */}
       <div className="relative w-full h-90">
         <Image
           src={blog}
@@ -58,13 +58,14 @@ export default async function BlogIndex() {
         />
       </div>
 
-      {/* Spacer between banner and content */}
+      {/* Spacing between banner and articles */}
       <div className="mt-12" />
 
-      {/* Main Content */}
+      {/* Centered content */}
       <div className="flex justify-center">
-        <div className="w-full max-w-3xl md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
-          <div className="flex flex-col space-y-16">
+        <div className="w-full max-w-4xl md:border-l md:border-zinc-100 md:pl-8 md:dark:border-zinc-700/40">
+          {/* Increased spacing between articles */}
+          <div className="flex flex-col space-y-20">
             {articles.map((article) => (
               <Article key={article.slug} article={article} />
             ))}
