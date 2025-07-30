@@ -9,26 +9,31 @@ import blog from '@/app/blog/blog_top.png'
 
 function Article({ article }: { article: ArticleWithSlug }) {
   return (
-    <article className="md:grid md:grid-cols-4 md:items-baseline">
-      <Card className="md:col-span-3">
-        <Card.Title href={`/blog/${article.slug}`}>
+    <article className="md:grid md:grid-cols-4 md:items-start">
+      <Card className="md:col-span-3 p-6">
+        <Card.Title
+          href={`/blog/${article.slug}`}
+          className={`${spectralBold.className} text-3xl leading-tight mb-2 text-purple-800 hover:text-teal-600 transition`}
+        >
           {article.title}
         </Card.Title>
         <Card.Eyebrow
           as="time"
           dateTime={article.date}
-          className="md:hidden"
+          className="md:hidden text-lg text-zinc-700 dark:text-zinc-400 mb-4"
           decorate
         >
           {formatDate(article.date)}
         </Card.Eyebrow>
-        <Card.Description>{article.description}</Card.Description>
-        <Card.Cta>Read article</Card.Cta>
+        <Card.Description className="text-lg text-zinc-600 dark:text-zinc-400 mb-6">
+          {article.description}
+        </Card.Description>
+        <Card.Cta className="text-lg">Read article</Card.Cta>
       </Card>
       <Card.Eyebrow
         as="time"
         dateTime={article.date}
-        className="mt-1 max-md:hidden"
+        className="mt-3 text-base text-zinc-600 dark:text-zinc-400 md:mt-0 text-right"
       >
         {formatDate(article.date)}
       </Card.Eyebrow>
