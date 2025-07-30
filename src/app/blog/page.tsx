@@ -6,13 +6,22 @@ import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 import Image from 'next/image'
 import blog from '@/app/blog/blog_top.png'
+import { Spectral } from 'next/font/google'
+
+const spectral = Spectral({
+  subsets: ['latin'],
+  weight: ['400', '700', '800'],
+})
 
 function Article({ article }: { article: ArticleWithSlug }) {
   return (
     <article className="md:grid md:grid-cols-4 md:items-baseline">
       <Card className="md:col-span-3">
         <Card.Title href={`/blog/${article.slug}`}>
-          <p className="text-2xl md:text-3xl font-semibold">
+          <p
+            className={`${spectral.className} text-2xl md:text-3xl font-semibold`}
+            style={{ color: '#7A5E8A' }}
+          >
             {article.title}
           </p>
         </Card.Title>
