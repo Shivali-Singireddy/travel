@@ -1,11 +1,14 @@
+// app/blog/page.tsx
 import { type Metadata } from 'next'
-
+import Image from 'next/image'
+import blog from '@/app/blog/blog_top.png'
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
-import Image from 'next/image'
-import blog from '@/app/blog/blog_top.png'
+import { Spectral } from 'next/font/google'
+
+const spectralBold = Spectral({ subsets: ['latin'], weight: ['700'] })
 
 function Article({ article }: { article: ArticleWithSlug }) {
   return (
@@ -43,33 +46,25 @@ function Article({ article }: { article: ArticleWithSlug }) {
 
 export const metadata: Metadata = {
   title: 'Personal Blog',
-  description:
-    'All of my non travel related stories',
+  description: 'All of my non‑travel related stories',
 }
 
 export default async function BlogIndex() {
-  let articles = await getAllArticles()
+  const articles = await getAllArticles()
 
   return (
-    <div className="w-full bg-white px-6 pt-0 pb-10 max-w-screen-xl mx-auto">
-      
-      {/* Banner */}
-      <div className="relative w-full h-90">
-        <Image
-          src={blog}
-          alt="Personal Blog"
-          fill
-          style={{ objectFit: 'cover' }}
-        />
+    <SimpleLayout
+      title="Taking life one weekend at a time."
+      intro="All of my non‑travel related stories"
+    >
+      {/* Top Banner */}
+      <div className="relative w-full h-[350px] bg-[#FAF5EF] mb-12 overflow-visible">
+        <Image src={blog} alt="Personal Blog" fill style={{ objectFit: 'cover' }} />
       </div>
 
-      {/* Spacing between banner and articles */}
-      <div className="mt-12" />
-
-      {/* Centered content */}
+      {/* Centered Articles Container */}
       <div className="flex justify-center">
         <div className="w-full max-w-4xl md:border-l md:border-zinc-100 md:pl-8 md:dark:border-zinc-700/40">
-          {/* Increased spacing between articles */}
           <div className="flex flex-col space-y-20">
             {articles.map((article) => (
               <Article key={article.slug} article={article} />
@@ -77,6 +72,6 @@ export default async function BlogIndex() {
           </div>
         </div>
       </div>
-    </div>
+    </SimpleLayout>
   )
 }
