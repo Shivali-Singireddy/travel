@@ -57,11 +57,18 @@ export default async function BlogIndex() {
           style={{ objectFit: 'cover' }}
         />
       </div>
-      <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
-        <div className="flex max-w-3xl flex-col space-y-16">
-          {articles.map((article) => (
-            <Article key={article.slug} article={article} />
-          ))}
+
+      {/* Spacer between banner and content */}
+      <div className="mt-12" />
+
+      {/* Main Content */}
+      <div className="flex justify-center">
+        <div className="w-full max-w-3xl md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
+          <div className="flex flex-col space-y-16">
+            {articles.map((article) => (
+              <Article key={article.slug} article={article} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
