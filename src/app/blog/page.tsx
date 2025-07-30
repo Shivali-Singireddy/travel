@@ -19,7 +19,7 @@ function Article({ article }: { article: ArticleWithSlug }) {
       <Card className="md:col-span-3">
         <Card.Title href={`/blog/${article.slug}`}>
           <p
-            className={`${spectral.className} text-xl md:text-2xl font-semibold`}
+            className={`${spectral.className} text-lg md:text-xl font-semibold`}
             style={{ color: '#7A5E8A' }}
           >
             {article.title}
@@ -31,17 +31,17 @@ function Article({ article }: { article: ArticleWithSlug }) {
           className="md:hidden"
           decorate
         >
-          <span className="text-xs md:text-sm">
+          <span className="text-[0.7rem] md:text-xs">
             {formatDate(article.date)}
           </span>
         </Card.Eyebrow>
         <Card.Description>
-          <p className="text-base md:text-lg">
+          <p className="text-sm md:text-base">
             {article.description}
           </p>
         </Card.Description>
         <Card.Cta>
-          <span className="text-sm md:text-base">Read article</span>
+          <span className="text-xs md:text-sm">Read article</span>
         </Card.Cta>
       </Card>
       <Card.Eyebrow
@@ -49,7 +49,7 @@ function Article({ article }: { article: ArticleWithSlug }) {
         dateTime={article.date}
         className="mt-1 max-md:hidden"
       >
-        <span className="text-xs md:text-sm">
+        <span className="text-[0.7rem] md:text-xs">
           {formatDate(article.date)}
         </span>
       </Card.Eyebrow>
