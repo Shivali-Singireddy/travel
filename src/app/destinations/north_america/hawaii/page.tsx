@@ -4,6 +4,7 @@ import maui_post from '@/app/destinations/north_america/hawaii/maui/maui_post.pn
 import kauai_post from '@/app/destinations/north_america/hawaii/kauai/kauai_post.png'
 import kalalau_post from '@/app/destinations/north_america/hawaii/kauai/kalalau_trail/kalalau_post.png'
 import big_island_post from '@/app/destinations/north_america/hawaii/big_island/big_island_post.png'
+import hawaii from '@/app/destinations/north_america/hawaii/hawaii_top.png'
 
 
 export default function HawaiiPage() {
@@ -35,9 +36,18 @@ export default function HawaiiPage() {
   ]
 
   return (
-    <div className="w-full min-h-screen bg-white px-6 py-10 max-w-screen-xl mx-auto">
-      <h1 className="text-3xl font-bold mb-8 text-center text-purple-900">Explore Hawaii</h1>
-
+     <div className="w-full min-h-screen bg-white px-6 pt-0 pb-10 max-w-screen-xl mx-auto">
+      
+      {/* Top Banner Image */}
+      <div className="relative w-full h-90">
+        <Image
+          src={hawaii}
+          alt="Hawaii"
+          fill
+          style={{ objectFit: 'cover' }}
+        />
+      </div>
+       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {posts.map((post) => (
           <Link
