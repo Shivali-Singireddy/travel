@@ -47,28 +47,38 @@ export default function HawaiiPage() {
           style={{ objectFit: 'cover' }}
         />
       </div>
+
+       <div className="w-full flex flex-col items-center mt10 mb-0">
+        <p className="w-1/2 mt-2 text-center text-[#4B0082] text-base font-spectrum">
+          Welcome to North America! This has been my home for the past 22 years.
+          Most of my early adventures here took place during childhood trips with my parents, and while many of those memories aren’t documented on this site just yet, 
+          I hope to revisit them and share more once I dig through some old photos.
+          Of all the places I’ve explored in North America, Hawaii is by far my favorite. 
+          It has it all from its beautiful hikes, waterfalls, mountains, and beaches.
+        </p>
        
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {posts.map((post) => (
-          <Link
-            key={post.slug}
-            href={`/destinations/north_america/hawaii/${post.slug}`}
-            className="block border border-gray-300 rounded-lg overflow-hidden hover:shadow-lg transition"
-          >
-            <div className="relative w-full h-64">
-              <Image
-                src={post.image}
-                alt={post.title}
-                fill
-                style={{ objectFit: 'cover' }}
-              />
-            </div>
-            <div className="p-4 bg-white text-center">
-              <h2 className="text-xl font-semibold text-purple-800 mb-2">{post.title}</h2>
-              <p className="text-gray-700 text-sm">{post.description}</p>
-            </div>
-          </Link>
-        ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {posts.map((post) => (
+            <Link
+              key={post.slug}
+              href={`/destinations/north_america/hawaii/${post.slug}`}
+              className="block border border-gray-300 rounded-lg overflow-hidden hover:shadow-lg transition"
+            >
+              <div className="relative w-full h-64">
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  fill
+                  style={{ objectFit: 'cover' }}
+                />
+              </div>
+              <div className="p-4 bg-white text-center">
+                <h2 className="text-xl font-semibold text-purple-800 mb-2">{post.title}</h2>
+                <p className="text-gray-700 text-sm">{post.description}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   )
