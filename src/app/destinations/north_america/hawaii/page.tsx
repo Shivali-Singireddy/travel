@@ -50,11 +50,12 @@ export default function HawaiiPage() {
 
        <div className="w-full flex flex-col items-center mt10 mb-0">
         <p className="w-1/2 mt-2 text-center text-[#4B0082] text-base font-spectrum">
-          Welcome to North America! This has been my home for the past 22 years.
-          Most of my early adventures here took place during childhood trips with my parents, and while many of those memories aren’t documented on this site just yet, 
-          I hope to revisit them and share more once I dig through some old photos.
-          Of all the places I’ve explored in North America, Hawaii is by far my favorite. 
-          It has it all from its beautiful hikes, waterfalls, mountains, and beaches.
+          Welcome to Hawaii! I spent about a month exploring the islands, with my home base on Kauai while participating in a Workaway program.
+          Honestly Hawaii is just so beautiful with it's dramatic landscapes and beautiful beaches. 
+          Some of the most unique geological formations and landscapes I’ve ever seen can be found here.
+          The residents of Hawaii are extremely friendly and they have such a peaceful way of living. 
+          It’s one of the few places where I felt deeply connected to nature every single day.
+          Two of my favorite landscapes in Hawaii are the Nā Pali Coast in Haena State Park on Kauai and the Papakōlea Green Sand Beach on the Big Island.
         </p>
 
         <div className="relative w-full flex justify-center my-20">
