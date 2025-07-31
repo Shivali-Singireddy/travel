@@ -5,7 +5,7 @@ import kauai_post from '@/app/destinations/north_america/hawaii/kauai/kauai_post
 import kalalau_post from '@/app/destinations/north_america/hawaii/kauai/kalalau_trail/kalalau_post.png'
 import big_island_post from '@/app/destinations/north_america/hawaii/big_island/big_island_post.png'
 import hawaii from '@/app/destinations/north_america/hawaii/hawaii_top.png'
-
+import feat_dest from '@/app/destinations/feat_dest.png'
 
 export default function HawaiiPage() {
   const posts = [
@@ -56,29 +56,44 @@ export default function HawaiiPage() {
           Of all the places I’ve explored in North America, Hawaii is by far my favorite. 
           It has it all from its beautiful hikes, waterfalls, mountains, and beaches.
         </p>
+
+        <div className="relative w-full flex justify-center my-20">
+          <div className="w-full">
+            <hr className="border-t-2 border-[#7A5E8A] opacity-90" />
+          </div>
+          <Image
+            src={feat_dest}
+            alt="Featured Destinations"
+            width={700}
+            height={200}
+            className="absolute top-1/2 transform -translate-y-1/2 z-10"
+          />
+        </div>      
+      </div>
+
+      
        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {posts.map((post) => (
-            <Link
-              key={post.slug}
-              href={`/destinations/north_america/hawaii/${post.slug}`}
-              className="block border border-gray-300 rounded-lg overflow-hidden hover:shadow-lg transition"
-            >
-              <div className="relative w-full h-64">
-                <Image
-                  src={post.image}
-                  alt={post.title}
-                  fill
-                  style={{ objectFit: 'cover' }}
-                />
-              </div>
-              <div className="p-4 bg-white text-center">
-                <h2 className="text-xl font-semibold text-purple-800 mb-2">{post.title}</h2>
-                <p className="text-gray-700 text-sm">{post.description}</p>
-              </div>
-            </Link>
-          ))}
-        </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {posts.map((post) => (
+          <Link
+            key={post.slug}
+            href={`/destinations/north_america/hawaii/${post.slug}`}
+            className="block border border-gray-300 rounded-lg overflow-hidden hover:shadow-lg transition"
+          >
+            <div className="relative w-full h-64">
+              <Image
+                src={post.image}
+                alt={post.title}
+                fill
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
+            <div className="p-4 bg-white text-center">
+              <h2 className="text-xl font-semibold text-purple-800 mb-2">{post.title}</h2>
+              <p className="text-gray-700 text-sm">{post.description}</p>
+            </div>
+          </Link>
+        ))}
       </div>
     </div>
   )
