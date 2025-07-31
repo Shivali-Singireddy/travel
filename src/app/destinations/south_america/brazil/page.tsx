@@ -58,7 +58,7 @@ export default function BrazilPage() {
 
        <div className="w-full flex flex-col items-center mt10 mb-0">
         <p className="w-1/2 mt-2 text-center text-[#4B0082] text-base font-spectrum">
-          I spent three unforgettable months based in São Paulo, conducting research during the week and exploring other Brazilian cities on the weekends.
+          Welcome to Brasil! I spent three unforgettable months based in São Paulo, conducting research during the week and exploring other Brazilian cities on the weekends.
           If you're planning to travel within Brazil, having some knowledge of Portuguese is highly recommended, as English isn't widely spoken in many areas.
           I completely fell in love with the vibrant culture of South America. 
           Whether it was taking forró dance lessons, joining in the festive June parties, or browsing a lively Sunday market in São Paulo, every experience left a lasting impression.
