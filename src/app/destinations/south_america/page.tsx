@@ -83,7 +83,7 @@ export default function SouthAmericaPage() {
         <p className="w-1/2 mt-2 text-center text-[#4B0082] text-base font-spectrum">
           Welcome to South America!
           I spent about three months based in São Paulo doing research and explored other Brazilian cities on weekends. 
-          Afterward, I traveled for two weeks across Peru.
+          Afterward, I traveled for three weeks across Peru.
           I absolutely fell in love with the culture of South America, whether it be attending forro dance lessons, attending June parties, or visiting a Sunday market, South America will always have a special place in my heart.
           My favorite cities are Rio de Janeiro and Cusco, both home to one of the seven wonders. 
           Rio offers hikes, beaches, nightlife, museums, and rich culture, while Cusco is the perfect base for nature day trips.
