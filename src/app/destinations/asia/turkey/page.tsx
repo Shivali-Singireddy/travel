@@ -36,13 +36,14 @@ export default function TurkeyPage() {
 
        <div className="w-full flex flex-col items-center mt10 mb-0">
         <p className="w-1/2 mt-2 text-center text-[#4B0082] text-base font-spectrum">
-          Welcome to Turkey! I spent a week travelling around Cappadocia and Istanbul.
-          I absolutely loved Cappadocia and how welcoming everyone in the town was. Cappdocia during sunrise is absolutely magical.
-          Cappadocia had the most activities out of all the places I've travelled to, and the activities felt focused on learning as opposed to performing.
-          Istanbul is much more fastpaced, and I definately would visit this place with a group of friends. 
-          My favorite part of Istanbul was definately Balat Neighborhood, and you could easily spend a whole day here.
-          For female travelers, it's a good idea to dress modestly, especially when visiting religious or traditional areas. 
-          Covering your legs and avoiding tight-fitting clothing will help you feel more comfortable and respectful of local customs.
+          Welcome to Turkey! I spent a week exploring Cappadocia and Istanbul, and both places offered completely different yet equally memorable experiences.
+          Cappadocia was a personal favorite. The people were incredibly welcoming, and watching the sunrise over its unique landscape was truly magical.
+          Out of all the places I've traveled, Cappadocia had the most engaging activities, and the activities felt focused on learning the art as opposed to just performing it.
+          Istanbul, on the other hand, was much more fast-paced. It’s the kind of city I’d recommend visiting with friends to really enjoy everything it has to offer. 
+          My favorite part was the Balat neighborhood, a colorful and vibrant area where you could easily spend an entire day wandering through its streets, shops, and cafés.
+          For female travelers, it's wise to dress modestly, especially in religious or traditional areas. Wearing loose-fitting clothing and covering your legs will help you feel more comfortable and respectful of local customs.
+
+
         </p>
 
         <div className="relative w-full flex justify-center my-20">
