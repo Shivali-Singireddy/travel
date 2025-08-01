@@ -29,6 +29,7 @@ function ArrowLeftIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 }
 
 export default function SouthAmericaPage() {
+  const router = useRouter()
   const posts = [
     {
       title: 'Brazil',
