@@ -29,17 +29,17 @@ export default function United_States_Page() {
   ]
 
   return (
-    <div className="w-full min-h-screen bg-white px-6 pt-0 pb-10 max-w-screen-xl mx-auto">
-      
-      {/* Top Banner Image */}
-      <div className="relative w-full h-90">
-        <Image
-          src={uk_top}
-          alt="United Kingdom"
-          fill
-          style={{ objectFit: 'cover' }}
-        />
-      </div>
+      <div className="w-full min-h-screen bg-white px-6 pt-0 pb-10 max-w-screen-xl mx-auto">
+        
+        {/* Top Banner Image */}
+        <div className="relative w-full h-90">
+          <Image
+            src={italy}
+            alt="Italy"
+            fill
+            style={{ objectFit: 'cover' }}
+          />
+        </div>
 
        <div className="w-full flex flex-col items-center mt10 mb-0">
         <p className="w-1/2 mt-2 text-center text-[#4B0082] text-base font-spectrum">
@@ -52,6 +52,8 @@ export default function United_States_Page() {
           During my visit to Ireland, one of the highlights was a day trip from Belfast to the Giant’s Causeway. 
           Formed by ancient lava flows, the unique hexagonal rock formations make it unlike anywhere else in the world.
           Keep in mind that both Ireland and Scotland tend to get a lot of rain, even in summer, so be sure to pack accordingly.
+        </p>
+
         <div className="relative w-full flex justify-center my-20">
           <div className="w-full">
             <hr className="border-t-2 border-[#7A5E8A] opacity-90" />
@@ -65,7 +67,7 @@ export default function United_States_Page() {
           />
         </div>      
       </div>
-      
+    
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {posts.map((post) => (
           <Link
