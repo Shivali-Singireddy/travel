@@ -316,11 +316,11 @@ export default async function Home() {
       <div className="mt-15 mb-5 w-full px-4">
         <ContinentCarousel />
       </div>
-      <div className="mt-10 mb-10 w-full px-4">
+      <div className="mt-10 mb-2 w-full px-4">
         <MiniAbout />
       </div>
       
-      <Container className="mt-10 md:mt-28">
+      <Container className="mt-5 md:mt-10">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
             {articles.map((article) => (
