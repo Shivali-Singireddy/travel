@@ -31,8 +31,6 @@ export default function MauiPostPage() {
           <h2 className="text-2xl font-semibold text-purple-800 mb-4">
             Where to Stay in Maui on a Budget
           </h2>
-
-          <h3 className="text-xl font-semibold mb-2">Why Aloha Surf Hostel Was the Perfect Base for Our Trip</h3>
           <p className="text-base text-gray-800 leading-relaxed">
             We stayed at the Aloha Surf Hostel for this trip, and it felt worth it to me. 
             The price was around $70 per night including tax. 
