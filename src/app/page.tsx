@@ -315,9 +315,6 @@ export default async function Home() {
 
       <div className="mt-28 mb-16 w-full px-4">
         <ContinentCarousel />
-      </div>
-
-      <div className="mt-28 mb-16 w-full px-4">
         <MiniAbout />
       </div>
       
