@@ -82,6 +82,6 @@ export default function MauiPostPage() {
           </p>
         </section>
       </div>
-
+    </div>
   )
 }
