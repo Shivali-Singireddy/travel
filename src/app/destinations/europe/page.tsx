@@ -117,6 +117,15 @@ export default function EuropePage() {
           fill
           style={{ objectFit: 'cover' }}
         />
+        {/* Back Button Overlay */}
+        <button
+          type="button"
+          onClick={() => router.back()}
+          aria-label="Go back"
+          className="group absolute top-4 left-4 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-white shadow-md ring-1 ring-zinc-900/5 transition hover:ring-zinc-900 dark:bg-zinc-800 dark:ring-white/10"
+        >
+          <ArrowLeftIcon className="h-4 w-4 stroke-zinc-500 group-hover:stroke-zinc-700 dark:stroke-zinc-400 dark:group-hover:stroke-zinc-300" />
+        </button>
       </div>
 
       <div className="w-full flex flex-col items-center mt10 mb-0">
