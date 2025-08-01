@@ -23,9 +23,10 @@ export default function MiniAbout() {
               A Little About Me
             </h2>
             <p className="text-lg text-zinc-800 mb-6">
-              Hi, I’m Shivali! I grew up in a small town in Indiana and since starting college at MIT, I have been travelling to different parts of the world during my breaks. 
-              From my experiences during college to international internships, I’ve built this blog to share my travel, hobbies, and reflections. 
-              Whether it’s taekwondo, hiking, or painting — I document it all here.
+              I grew up in a small town in Indiana with a childhood full of outdoor adventures. 
+              At MIT, I double-majored in Business Analytics and Artificial Intelligence, and minored in Economics. 
+              I’ve completed international internships through MIT’s MISTI program, which helped me explore new cultures while working abroad. 
+              Besides academics and travel, I enjoy taekwondo, painting, hiking, and dance. Soon, I’ll start as a business analyst at McKinsey in San Francisco, eager for new professional and personal experiences.
             </p>
             <Link
               href="/about"
