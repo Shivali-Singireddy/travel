@@ -23,6 +23,7 @@ import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 import { RotatingImages } from '@/components/RotatingImages' 
 import ContinentCarousel from '@/components/ContinentCarousel'
+import MiniAbout from '@/components/MiniAbout'
 import type { StaticImageData } from 'next/image'
 import { Spectral } from 'next/font/google'
 
@@ -315,6 +316,8 @@ export default async function Home() {
       <div className="mt-28 mb-16 w-full px-4">
         <ContinentCarousel />
       </div>
+
+      <MiniAbout />
       
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
