@@ -3,7 +3,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import aboutBoardImage from '@/images/about_board.png'
+import aboutBoardImage from '@/images/about_horizontal.png'
 import portraitImage from '@/images/portrait.jpg'
 import { Spectral } from 'next/font/google'
 
