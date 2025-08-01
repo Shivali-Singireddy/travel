@@ -51,9 +51,9 @@ export default function Italy_Page() {
 
        <div className="w-full flex flex-col items-center mt10 mb-0">
         <p className="w-1/2 mt-2 text-center text-[#4B0082] text-base font-spectrum">
-          I spent a month in Italy teaching high school seniors, which gave me a unique opportunity to connect with local students and immerse myself in Italian life.
+          Welcome to Italy! I spent a month in Italy teaching high school seniors, which gave me a unique opportunity to connect with local students and immerse myself in Italian life.
           I was based in a small town near Bologna with a host family, which made it easy to explore different cities on the weekends and fully experience the culture.
-         The food in Italy is truly next level. Make sure to try local specialties because the right meal can completely elevate your experience.
+          The food in Italy is truly next level. Make sure to try local specialties because the right meal can completely elevate your experience.
           Italy is also full of history and has countless museums, making it a fascinating place to visit for anyone interested in culture and the arts.
           My favorite city was Venice. It had always been a dream of mine to visit, and being there in person was every bit as magical as I had imagined.
         </p>
