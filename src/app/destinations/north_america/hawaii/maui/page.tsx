@@ -67,9 +67,9 @@ export default function MauiPostPage() {
 
             <ul className="list-disc pl-6 mt-2 space-y-1 text-gray-800">
               <li>Wednesday: Arrive and signed up for Road to Hana Tour</li>
-              <li>Thursday: Road to Hana</li>
-              <li>Friday: Signed up for Waihee Ridge and then left for Haleakala</li>
-              <li>Saturday: Waihee Ridge and catch evening flight</li>
+              <li>Thursday: Road to Hana Tour</li>
+              <li>Friday: Signed up for Waihee Ridge Tour and then left for Haleakala</li>
+              <li>Saturday: Waihee Ridge Tour and catch evening flight</li>
             </ul>
 
             <p className="text-base text-gray-800 leading-relaxed mt-4">
