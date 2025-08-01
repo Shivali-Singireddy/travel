@@ -15,6 +15,8 @@ import czech_post from '@/app/destinations/europe/czech_republic/czech_post.png'
 import brussels_post from '@/app/destinations/europe/brussels/brussels_post.png'
 import madeira_post from '@/app/destinations/europe/madeira/madeira_post.png'
 import santorini_post from '@/app/destinations/europe/santorini/santorini_post.png'
+import italy from '@/app/destinations/europe/italy.png'
+import united_kingdom from '@/app/destinations/europe/united_kingdom.png'
 import { useRouter } from 'next/navigation'
 
 function ArrowLeftIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
@@ -29,10 +31,6 @@ function ArrowLeftIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
     </svg>
   )
 }
-
-import italy from '@/app/destinations/europe/italy.png'
-import united_kingdom from '@/app/destinations/europe/united_kingdom.png'
-
 
 export default function EuropePage() {
   const router = useRouter()
