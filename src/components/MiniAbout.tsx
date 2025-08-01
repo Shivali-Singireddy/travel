@@ -32,7 +32,7 @@ export default function MiniAbout() {
               href="/about"
               className="inline-block bg-[#7A5E8A] text-white px-6 py-2 rounded-md font-semibold hover:bg-[#6b4f7c] transition"
             >
-              See more →
+              Learn more →
             </Link>
           </div>
 
