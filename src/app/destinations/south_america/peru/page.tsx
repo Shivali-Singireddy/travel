@@ -43,16 +43,14 @@ export default function PeruPage() {
 
        <div className="w-full flex flex-col items-center mt10 mb-0">
         <p className="w-1/2 mt-2 text-center text-[#4B0082] text-base font-spectrum">
-          Welcome to Peru! I spent three incredible weeks traveling around Peru. 
-          I explored on my own during the first week and then continued the journey with my family in the second.
+          Welcome to Peru! I spent three incredible weeks traveling around Peru and it was by far one of my favorite countries. 
           Peru is incredibly welcoming to backpackers and solo travelers, especially in Cusco, which serves as a hub for most tours and excursions. 
           You can book many experiences directly from Cusco, although it’s important to plan ahead for Machu Picchu. 
           I recommend booking Machu Picchu tours or treks at least three months in advance, as spots fill up quickly. 
           One of the most fascinating things about Peru is its diverse climate. 
           The country is home to 28 of the world's 32 recognized climate zones, making it a dream destination for nature lovers. 
-          From mountains and deserts to jungles and coastlines, the variety is simply breathtaking.
-          The culture is rich and vibrant, and the people I met along the way were incredibly warm and kind. Peru is a place that truly stays with you.
-          
+          From mountains and deserts to jungles and coastlines, the variety is simply breathtaking. 
+          This means there’s a lot of diversity in nature among the country, so I would pack clothes for both the desert along with clothes for the colder areas with higher altitudes.
         </p>
 
         <div className="relative w-full flex justify-center my-20">
