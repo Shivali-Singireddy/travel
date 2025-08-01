@@ -34,8 +34,8 @@ export default function United_States_Page() {
         {/* Top Banner Image */}
         <div className="relative w-full h-90">
           <Image
-            src={italy}
-            alt="Italy"
+            src={uk_top}
+            alt="United Kingdom"
             fill
             style={{ objectFit: 'cover' }}
           />
