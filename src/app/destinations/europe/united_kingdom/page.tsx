@@ -6,7 +6,7 @@ import scotland_post from '@/app/destinations/europe/united_kingdom/scotland/sco
 import feat_dest from '@/app/destinations/feat_dest.png'
 import uk_top from '@/app/destinations/europe/united_kingdom/uk_top.png'
 
-export default function United_States_Page() {
+export default function United_Kingdom_Page() {
   const posts = [
     {
       title: 'London',
@@ -44,14 +44,14 @@ export default function United_States_Page() {
        <div className="w-full flex flex-col items-center mt10 mb-0">
         <p className="w-1/2 mt-2 text-center text-[#4B0082] text-base font-spectrum">
           Welcome to the UK! 
-          I spent three months in England doing a company internship, which gave me a great chance to experience daily life and explore the country’s rich history and landscapes. 
-          The culture is relaxed and easygoing, making it an enjoyable place to explore at your own pace.
-          If you get the chance to travel to the Scottish Highlands, you might even catch a glimpse of the legendary Loch Ness Monster, Nessie. 
-          One of the most stunning sights I came across while I was here was Eilean Donan Castle. 
-          With its dramatic setting and partially ruined medieval look, it felt like stepping into a storybook.
-          During my visit to Ireland, one of the highlights was a day trip from Belfast to the Giant’s Causeway. 
-          Formed by ancient lava flows, the unique hexagonal rock formations make it unlike anywhere else in the world.
-          Keep in mind that both Ireland and Scotland tend to get a lot of rain, even in summer, so be sure to pack accordingly.
+          I spent three months in England doing a company internship, which gave me the chance to experience daily life and explore the country’s rich history and landscapes. 
+          The culture is relaxed and easygoing, making it a great place to travel at your own pace.
+          If you visit the Scottish Highlands, you might even catch a glimpse of the legendary Loch Ness Monster, Nessie. 
+          One of the most breathtaking sights I saw was Eilean Donan Castle. 
+          With its dramatic location and partially ruined medieval look, it felt like something out of a storybook.
+          While in Ireland, a highlight was a day trip from Belfast to the Giant’s Causeway. 
+          Formed by ancient lava flows, its unique hexagonal rock formations make it truly one of a kind.
+          Both Ireland and Scotland get plenty of rain, even in summer, so be sure to pack a good waterproof jacket.
         </p>
 
         <div className="relative w-full flex justify-center my-20">
