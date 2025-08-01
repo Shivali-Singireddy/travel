@@ -13,8 +13,8 @@ const spectral = Spectral({
 
 export default function MiniAbout() {
   return (
-    <div className="w-full bg-[#FAF5EF] py-16 px-6 sm:px-12">
-      <div className="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-10">
+    <div className="w-full bg-[#FAF5EF] py-16">
+      <div className="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-10 px-6">
         
         {/* Left Side: Text + Bottom Image */}
         <div className="flex flex-col justify-between">
@@ -35,7 +35,7 @@ export default function MiniAbout() {
             </Link>
           </div>
 
-          {/* Bottom image under text (no rounded corners) */}
+          {/* Bottom image under text (not rounded) */}
           <div className="mt-10 hidden lg:block">
             <Image
               src={aboutBoardImage}
@@ -56,8 +56,8 @@ export default function MiniAbout() {
           </div>
         </div>
 
-        {/* On small screens: bottom image shown below all content (still no rounding) */}
-        <div className="lg:hidden mt-10">
+        {/* On small screens: bottom image shown below all content (not rounded) */}
+        <div className="lg:hidden mt-10 px-6">
           <Image
             src={aboutBoardImage}
             alt="Travel board"
