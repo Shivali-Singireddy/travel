@@ -24,48 +24,64 @@ export default function MauiPostPage() {
       {/* Text Section */}
       <div className="mt-8 max-w-3xl text-left">
         <section className="mb-6">
-          <h3 className="text-xl font-semibold mb-2">Hostel Stay & Tours</h3>
+          <h3 className="text-xl font-semibold mb-2 text-purple-800 dark:text-purple-300">Accommodation:</h3>
           <p className="text-base text-gray-800 dark:text-gray-200 leading-relaxed">
-            We stayed at a hostel for this one and it was honestly the move. They do free tours so you don’t have to do any planning. While the tours are free, it’s recommended you tip ~$20-$30 which is reasonable given that outside tours are at least $100. The main things we did were Road to Hana, Haleakala, and Waihee Ridge.
+            We stayed at the Aloha Surf Hostel for this trip, and it felt worth it to me. 
+            The price was around $70 per night including tax. 
+            Accommodation and food across the Hawaiian islands tend to be pricey, which isn’t surprising given that Hawaii is a remote island chain that relies heavily on imported goods. 
+            Still, the experience made it a great value for what we got.
           </p>
           <p className="text-base text-gray-800 dark:text-gray-200 leading-relaxed mt-2">
-            Another positive about a tour is that you don’t have to drive Road to Hana, which is difficult to drive due to lots of twists and turns and the driver also misses the views.
+            However, what attracts me to a hostel for this island was the built-in “free” organized tours they run with the hostel. 
+            I put the “free” in quotations because it is recommended that you tip ~$20-$30 to your guide. 
+            However, considering that guided tours on sites such as GetYourGuide and Viator are around $100, this is still a steal.
+          </p>
+          <p className="text-base text-gray-800 dark:text-gray-200 leading-relaxed mt-2">
+            Another reason I chose to stay at a hostel for this trip was the sense of community. 
+            I really enjoyed connecting with other travelers, whether it was in my room or during the organized hostel tours. 
+            After the day’s adventures, there was always a group of friendly, like-minded people hanging out in the common areas, eager to explore more of the island or just relax together. 
+            It was easy to find someone up for joining in on any activity, which made the whole experience even more memorable.
+          </p>
+          <p className="text-base text-gray-800 dark:text-gray-200 leading-relaxed mt-2">
+            With Aloha Surf in particular, there was a hot tub to relax our muscles in after a long hike and a cozy firepit for s’mores, which I loved. 
+            Plus, every morning they had ingredients to make a free pancake breakfast with coffee. 
+            Here’s my confession for this post: I actually learned to make chocolate chip pancakes for the first time (please don’t judge me, I’m a little spoiled)
           </p>
         </section>
-
+      
         <section className="mb-6">
-          <h3 className="text-xl font-semibold mb-2">Road to Hana</h3>
+          <h3 className="text-xl font-semibold mb-2 text-purple-800 dark:text-purple-300">Road to Hana</h3>
           <p className="text-base text-gray-800 dark:text-gray-200 leading-relaxed">
-            Road to Hana has a bunch of waterfalls with waterholes that you can swim in, the most famous one being the 7 sacred pools.
+            Road to Hana has a bunch of waterfalls with waterholes...
           </p>
         </section>
-
+      
         <section className="mb-6">
-          <h3 className="text-xl font-semibold mb-2">Haleakala</h3>
+          <h3 className="text-xl font-semibold mb-2 text-purple-800 dark:text-purple-300">Haleakala</h3>
           <p className="text-base text-gray-800 dark:text-gray-200 leading-relaxed">
-            We did Haleakala on our own and rented a car. Haleakala also has no food or service after a certain point so it’s important that you pack lunch or buy to go to eat there, unless you plan on coming back down the mountain and going back up.
+            We did Haleakala on our own and rented a car...
           </p>
           <p className="text-base text-gray-800 dark:text-gray-200 leading-relaxed mt-2">
-            There are two sides to Haleakala: the dry side and the wet/more rainforest side. We chose the dry side and went to the Leleiwi Overlook and the Kalahaku Lookout. We also did part of the Sliding Sands Trail. The descent is much faster than the ascent so expect the return trek to take about 1.5 times as long as the time it took to get to your current location and budget time accordingly.
+            There are two sides to Haleakala: the dry side and the wet...
           </p>
           <p className="text-base text-gray-800 dark:text-gray-200 leading-relaxed mt-2">
-            There are two options for sunset. Either you can watch at the Pu’u Ulaulu summit or Leleiwi Overlook. The summit is the more popular destination as it’s known for its sunrise. In fact, it’s gotten so crowded for sunrise that you now have to make reservations in advance if you want to go for sunrise although it’s only $1, but you don’t need a reservation for sunset. The other option is Leleiwi Overlook. The cool thing here is that right before sunset, you can observe the Brocken Spectre which can only be seen in high mountains and when certain light conditions are met.
+            There are two options for sunset...
           </p>
           <p className="text-base text-gray-800 dark:text-gray-200 leading-relaxed mt-2">
-            While we did not go to the wet side, I read that the Pipiwau Trail (2-4 hours) was a big highlight on that side.
+            While we did not go to the wet side, I read that the Pipiwau Trail...
           </p>
         </section>
-
+      
         <section className="mb-6">
-          <h3 className="text-xl font-semibold mb-2">Waihee Ridge & Other Hikes</h3>
+          <h3 className="text-xl font-semibold mb-2 text-purple-800 dark:text-purple-300">Waihee Ridge & Other Hikes</h3>
           <p className="text-base text-gray-800 dark:text-gray-200 leading-relaxed">
-            My favorite part of Maui was Waihee Ridge which was a 3-4 mile hike we did with the hostel. The views were spectacular and the trail was so nice I ran it on my way down.
+            My favorite part of Maui was Waihee Ridge which was a 3-4 mile hike...
           </p>
           <p className="text-base text-gray-800 dark:text-gray-200 leading-relaxed mt-2">
             Another hike I would recommend that we didn’t have time for is Iao Valley.
           </p>
         </section>
       </div>
-    </div>
+
   )
 }
