@@ -3,7 +3,7 @@ import Link from 'next/link'
 import cappadocia_post from '@/app/destinations/asia/turkey/cappadocia/cappadocia_post.png'
 import istanbul_post from '@/app/destinations/asia/turkey/istanbul/istanbul_post.png'
 import feat_dest from '@/app/destinations/feat_dest.png'
-import turkey from '@/app/destinations/asia/turkey_top.png'
+import turkey from '@/app/destinations/asia/turkey/turkey_top.png'
 
 export default function TurkeyPage() {
   const posts = [
