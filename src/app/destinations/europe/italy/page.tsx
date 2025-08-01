@@ -4,6 +4,8 @@ import venice_post from '@/app/destinations/europe/italy/venice/venice_post.png'
 import rome_post from '@/app/destinations/europe/italy/rome/rome_post.png'
 import florence_post from '@/app/destinations/europe/italy/florence/florence_post.png'
 import italy_post from '@/app/destinations/europe/italy/northern_italy/italy_post.png'
+import feat_dest from '@/app/destinations/feat_dest.png'
+import italy from '@/app/destinations/europe/italy/italy_top.png'
 
 
 export default function Italy_Page() {
@@ -35,8 +37,40 @@ export default function Italy_Page() {
   ]
 
   return (
-    <div className="w-full min-h-screen bg-white px-6 py-10 max-w-screen-xl mx-auto">
-      <h1 className="text-3xl font-bold mb-8 text-center text-purple-900">Explore the Italy</h1>
+   <div className="w-full min-h-screen bg-white px-6 pt-0 pb-10 max-w-screen-xl mx-auto">
+      
+      {/* Top Banner Image */}
+      <div className="relative w-full h-90">
+        <Image
+          src={italy}
+          alt="Italy"
+          fill
+          style={{ objectFit: 'cover' }}
+        />
+      </div>
+
+       <div className="w-full flex flex-col items-center mt10 mb-0">
+        <p className="w-1/2 mt-2 text-center text-[#4B0082] text-base font-spectrum">
+          I spent a month in Italy teaching high school seniors, which gave me a unique opportunity to connect with local students and immerse myself in Italian life.
+          I was based in a small town near Bologna with a host family, which made it easy to explore different cities on the weekends and fully experience the culture.
+         The food in Italy is truly next level. Make sure to try local specialties because the right meal can completely elevate your experience.
+          Italy is also full of history and has countless museums, making it a fascinating place to visit for anyone interested in culture and the arts.
+          My favorite city was Venice. It had always been a dream of mine to visit, and being there in person was every bit as magical as I had imagined.
+        </p>
+
+        <div className="relative w-full flex justify-center my-20">
+          <div className="w-full">
+            <hr className="border-t-2 border-[#7A5E8A] opacity-90" />
+          </div>
+          <Image
+            src={feat_dest}
+            alt="Featured Destinations"
+            width={700}
+            height={200}
+            className="absolute top-1/2 transform -translate-y-1/2 z-10"
+          />
+        </div>      
+      </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {posts.map((post) => (
