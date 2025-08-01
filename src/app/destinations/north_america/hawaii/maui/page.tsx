@@ -73,7 +73,8 @@ export default function MauiPostPage() {
             </ul>
 
             <p className="text-base text-gray-800 leading-relaxed mt-4">
-              If I were to plan this again, I would try to arrive on Tuesday to try to sign up for the ʻĪao Valley tour on Wednesday since I’ve heard amazing things about this hike as well.
+              If I were to plan this again, I would try to arrive on Tuesday to try to sign up for the Īao Valley tour on Wednesday since I’ve heard amazing things about this hike as well.
+              Now that we’ve gotten into where to stay, let’s dig into our itinerary for the trip:
             </p>
           </div>
         </section>
@@ -81,31 +82,70 @@ export default function MauiPostPage() {
         {/* Section: Itinerary Overview */}
         <section className="mb-10">
           <h2 className="text-2xl font-semibold text-purple-800 mb-4">
-            Our 4-Day Maui Itinerary
+            Day 0: Arrive in Maui and Relax at the Beach
           </h2>
 
-          <ul className="list-disc pl-6 text-gray-800 space-y-1">
-            <li><strong>Day 1:</strong> Arrival & Road to Hana Tour Sign-Up</li>
-            <li><strong>Day 2:</strong> Full-Day Road to Hana Adventure</li>
-            <li><strong>Day 3:</strong> Sunrise in Haleakalā & Sign-Up for Waihee Ridge</li>
-            <li><strong>Day 4:</strong> Waihee Ridge Hike & Evening Departure</li>
-          </ul>
+          <p className="text-base text-gray-800 leading-relaxed mt-4">
+            After landing at Maui airport, we took a bus to the city center of Paia, which was luckily just a 15-minute walk from the hostel. 
+            Depending on where you are staying there are different buses to different parts of the island. 
+            They run maybe once every one to two hours depending on which bus you are taking. 
+            You can also take an Uber if you have a lot of luggage, but since we were going on a quick weekend trip we did not have that much.
+          </p>
+          <p className="text-base text-gray-800 leading-relaxed mt-4">
+            Once you arrive at your accommodation and check in, I would spend the rest of the day relaxing at the beach and soaking in the Maui sun. 
+            I personally walked to Ho’okipa Beach from our hostel and found it super relaxing. 
+            It was about an hour walk from Aloha Surf and I ended up getting a ride back for free.
+          </p>
+          
         </section>
 
         {/* Section: Road to Hana */}
         <section className="mb-10">
           <h2 className="text-2xl font-semibold text-purple-800 mb-4">
-            Road to Hana
+            Day 1: Road to Hana
           </h2>
           <p className="text-base text-gray-800 leading-relaxed">
-            Road to Hana has a bunch of waterfalls with waterholes...
+            The Road to Hana is perhaps one of the most iconic activities to do while in Maui. 
+            The road is 64 miles stretch of 600 twists and turns and 50 one lane bridges. 
+            The scenery is filled with waterfalls and rainforest on the northeast coast.
+          </p>
+          <p className="text-base text-gray-800 leading-relaxed">
+            <strong>Tip:</strong> One of the reasons I recommend doing this with a guided tour is because this drive is difficult with all the sharp turns, and the person volunteering to drive may get stressed and tired during the drive and will miss out on the views. 
+          </p>
+          <p className="text-base text-gray-800 leading-relaxed">
+            Luckily for us, our hostel did run a tour for this, so we were able to relax and enjoy the ride. 
+            It also removed the stress of having to plan which waterholes we need to stop at and what we needed to see. 
+          </p>
+          <p className="text-base text-gray-800 leading-relaxed">
+            Our first stop on this tour was at Twin Falls, a waterfall hole you can swim in. 
+            There are numerous of these waterfall swimming holes along the road to Hana and you can honestly choose to stop in any of them.
+          </p>
+          <p className="text-base text-gray-800 leading-relaxed">
+            After we enjoyed swimming in the water hole for a little bit, we continued on the tour until we stopped at some Rainbow Eucalyptus Trees. 
+            This was honestly one of my favorite stops on the tour because I had never seen these types of trees before. 
+            I’m not sure the exactly location my tour group stopped at, but I know that these trees can be found at Ke’anae Arboretum.
+          </p>
+          <p className="text-base text-gray-800 leading-relaxed">
+            Next we stopped by Ke’anae Peninsula which had some beautiful rock formations.
+          </p>
+          <p className="text-base text-gray-800 leading-relaxed">
+            After that we stopped at a local shop: Aunty Sandy's famous banana bread. 
+            I was skeptical at first because I did not really see why the banana bread in this particular area would be so much better than the bread I might be able to get at home, but I was proven wrong. 
+            Luckily, one of the other travelers on our tour shared some of their banana bread with me and it was honestly so good I had to buy more at the next stop. 
+            There are multiple stops for banana bread, so if you aren’t able to find this particular one don’t worry as there are more stops further down the road.
+          </p>
+          <p className="text-base text-gray-800 leading-relaxed">
+            After this we made a quick stop at Upper Waikani Falls (3 Bears Falls). After that we went to a beach and another waterfall swimming hole before turning back to make our way back to Paia.
+          </p>
+          <p className="text-base text-gray-800 leading-relaxed">
+            One stop we didn’t make but drove past was the 7 sacred waterfalls. If I were to go on this drive again, I would try to choose a tour that covered this.
           </p>
         </section>
 
         {/* Section: Haleakalā */}
         <section className="mb-10">
           <h2 className="text-2xl font-semibold text-purple-800 mb-4">
-            Haleakalā National Park
+            Day 2: Haleakalā National Park
           </h2>
           <p className="text-base text-gray-800 leading-relaxed">
             We did Haleakala on our own and rented a car...
@@ -115,10 +155,14 @@ export default function MauiPostPage() {
         {/* Section: Waihee Ridge */}
         <section className="mb-10">
           <h2 className="text-2xl font-semibold text-purple-800 mb-4">
-            Waihee Ridge & Other Hikes
+            Day 3: Waihee Ridge
           </h2>
           <p className="text-base text-gray-800 leading-relaxed">
-            My favorite part of Maui was Waihee Ridge...
+            Waihee Ridge was my favorite part of the whole trip. We did it with the hostel crew, and it was the perfect end to our 3-day adventure. 
+            The combination of hiking, stunning lush green valleys, panoramic ridge views, and a good group of people made it the most memorable. 
+            The hike itself is 3-4 miles round trip, however it never felt strenuous. 
+            In fact the trail was so nice that I ran it on the way down with my hands up to feel the breeze. 
+            Did I look crazy? Probably. Was it worth it? 100%.
           </p>
         </section>
 
