@@ -313,8 +313,10 @@ export default async function Home() {
         </div>
       </div>
 
-      <div className="mt-28 mb-16 w-full px-4">
+      <div className="mt-15 mb-5 w-full px-4">
         <ContinentCarousel />
+      </div>
+      <div className="mt-10 mb-10 w-full px-4">
         <MiniAbout />
       </div>
       
